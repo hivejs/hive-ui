@@ -1,0 +1,26 @@
+{
+  "name": "hive-ui",
+  "version": "0.0.1",
+  "description": "Http ui for hive.js",
+  "main": "index.js",
+  "dependencies": {
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hivejs/hive-http.git"
+  },
+  "keywords": [
+    "hivejs",
+    "hive.js"
+  ],
+  "author": "Marcel Klehr <mklehr@gmx.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hivejs/hive-http/issues"
+  },
+  "homepage": "https://github.com/hivejs/hive-http"
+}
