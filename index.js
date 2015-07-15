@@ -1,15 +1,10 @@
-var readFile = function(name) {return function(cb) {require('fs').readFile(name, cb)}}
-
 module.exports = setup
-module.exports.consumes = ['http', 'orm']
+module.exports.consumes = ['assets']
 
 function setup(plugin, imports, register) {
-  var http = imports.http
+  var assets = imports.assets
 
-  http.get('/document/:document', function*(next) {
-    this.set('content-type', 'text/html')
-    this.body = yield readFile(__dirname+'/index.html')
-  })
+  assets.registerModule(__dirname+'/client.js')
 
   register()
 }
