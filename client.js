@@ -10,7 +10,8 @@ function setup(plugin, imports, register) {
     start: function() {
       page()
     },
-    page: page
+    page: page,
+    baseURL: document.location.origin // XXX: Won't work if hive is loaded in a subdir
   }
   register(null, {ui: ui})
 }
