@@ -1,10 +1,11 @@
 {
   "name": "hive-ui",
   "version": "0.0.2",
-  "description": "Http ui for hive.js",
+  "description": "Http ui client for hive.js",
   "main": "index.js",
   "dependencies": {
     "hive-api-client": "*"
+  , "page": "1.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
