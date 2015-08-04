@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "hive-api-client": "*",
-    "page": "1.x"
+    "page": "1.x",
+    "koa-static-cache": "3.x",
+    "koa-mount":"1.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

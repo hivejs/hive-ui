@@ -16,6 +16,8 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 var path = require('path')
+  , staticCache = require('koa-static-cache')
+  , mount = require('koa-mount')
 
 module.exports = setup
 module.exports.consumes = ['assets', 'http', 'hooks']
@@ -28,12 +30,17 @@ function setup(plugin, imports, register) {
   assets.registerModule(path.join(__dirname, 'client.js'))
   
   hooks.on('http:listening', function*() {
-    http.get('/build.js', function*() {
+    http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
       this.body = yield assets.bundle()
     })
-
-    http.get('/:id', assets.bootstrapMiddleware())
+    
+    Object.keys(assets.dirs).forEach(function(dir) {
+      var dirName = path.posix.join('/static/', dir.substr(assets.rootPath.length).split(path.sep).join(path.posix.sep))
+      http.router.get(dirName+'/*', mount(dirName, staticCache(dir, assets.dirs[dir])))
+    })
+    
+    http.router.get('/:id', assets.bootstrapMiddleware())
   })
 
   register()
