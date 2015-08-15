@@ -27,19 +27,20 @@ function setup(plugin, imports, register) {
     , http = imports.http
     , hooks = imports.hooks
 
+  assets.registerStaticDir(path.join(__dirname, 'bootstrap'))
   assets.registerModule(path.join(__dirname, 'client.js'))
-  
+
   hooks.on('http:listening', function*() {
     http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
       this.body = yield assets.bundle()
     })
-    
+
     Object.keys(assets.dirs).forEach(function(dir) {
       var dirName = path.posix.join('/static/', dir.substr(assets.rootPath.length).split(path.sep).join(path.posix.sep))
       http.router.get(dirName+'/*', mount(dirName, staticCache(dir, assets.dirs[dir])))
     })
-    
+
     http.router.get('/:id', assets.bootstrapMiddleware())
   })
 
