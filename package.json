@@ -4,7 +4,6 @@
   "description": "Http ui client for hive.js",
   "main": "index.js",
   "dependencies": {
-    "hive-api-client": "*",
     "page": "1.x",
     "koa-static-cache": "3.x",
     "koa-mount":"1.x"
