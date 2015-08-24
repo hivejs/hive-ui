@@ -41,7 +41,7 @@ function setup(plugin, imports, register) {
       http.router.get(dirName+'/*', mount(dirName, staticCache(dir, assets.dirs[dir])))
     })
 
-    http.router.get('/:id', assets.bootstrapMiddleware())
+    http.router.get('/documents/:id', assets.bootstrapMiddleware())
   })
 
   register()
