@@ -24,15 +24,16 @@ module.exports.provides = ['ui']
 function setup(plugin, imports, register) {
   var hooks = imports.hooks
   var ui = {
-    start: function() {
+    start: function(baseURL) {
       co(function*() {
         var opts = {}
+        ui.baseURL = baseURL
         yield hooks.callHook('ui:start', opts)
         page(opts)
       }).then(function(){})
     },
     page: page,
-    baseURL: document.location.origin // XXX: Won't work if hive is loaded in a subdir
+    baseURL: null
   }
 
   var bootstrapLink = document.createElement('link')
