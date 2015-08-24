@@ -23,17 +23,18 @@ module.exports.consumes = ['hooks']
 module.exports.provides = ['ui']
 function setup(plugin, imports, register) {
   var hooks = imports.hooks
+
+  var src = document.getElementById('buildjs').getAttribute('src')
   var ui = {
-    start: function(baseURL) {
+    start: function() {
       co(function*() {
         var opts = {}
-        ui.baseURL = baseURL
         yield hooks.callHook('ui:start', opts)
         page(opts)
       }).then(function(){})
     },
     page: page,
-    baseURL: null
+    baseURL: src.substr(0, src.lastIndexOf('/build.js'))
   }
 
   var bootstrapLink = document.createElement('link')
