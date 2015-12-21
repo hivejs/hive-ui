@@ -70,7 +70,7 @@ function setup(plugin, imports, register) {
 
           ctx.models = yield models.load(ctx.client)
 
-          ui.state.put('user', new ctx.models.user({id: ui.state.grant.user}))
+          ui.state.put('user', models.toObserv(new ctx.models.user({id: ui.state.grant.user})))
           yield function(cb) {
             ui.state.user.fetch({
               success: function(){cb()}
