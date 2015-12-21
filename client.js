@@ -132,7 +132,7 @@ function setup(plugin, imports, register) {
     // as the sate changes, the page will be re-rendered
     ui.state(function(snapshot) {
       var newtree = render(snapshot)
-      vdom.pach(rootNode, vdom.diff(tree, newtree))
+      vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
     })
 
