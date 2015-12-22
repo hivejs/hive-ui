@@ -27,10 +27,16 @@ function setup(plugin, imports, register) {
     , http = imports.http
     , hooks = imports.hooks
 
-  assets.registerStaticDir(path.join(__dirname, 'bootstrap'))
+  assets.registerStylesheet(path.join(__dirname, 'bootstrap/css/bootstrap.min.css'))
   assets.registerModule(path.join(__dirname, 'client.js'))
 
   hooks.on('http:listening', function*() {
+    http.router.get('/build.css', function*() {
+      if(yield this.cashed()) return
+      this.type = 'text/css; charset=utf-8'
+      this.body = yield assets.bundleStylesheets()
+    })
+
     http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
       this.body = yield assets.bundle()

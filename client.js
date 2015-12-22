@@ -90,12 +90,6 @@ function setup(plugin, imports, register) {
     }
   }
 
-
-  var bootstrapLink = document.createElement('link')
-  bootstrapLink.setAttribute('rel', "stylesheet")
-  bootstrapLink.setAttribute('href', "/static/hive-ui/bootstrap/css/bootstrap.min.css")//"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-  document.head.appendChild(bootstrapLink)
-
   ui.page(function(ctx, next) {
     // initialize state
     if(loadState) {
