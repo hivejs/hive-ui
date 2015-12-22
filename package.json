@@ -14,7 +14,6 @@
     "virtual-dom": "2.x",
     "observ-varhash": "1.x",
     "observ-emitter": "1.x",
-    "observ-array": "3.x",
     "tiny-cookie": "0.5.x",
     "co": "4.x"
   },
