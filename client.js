@@ -19,10 +19,8 @@ var page = require('page')
   , co = require('co')
   , ObservVarhash = require('observ-varhash')
   , ObservEmitter = require('observ-emitter')
-  , ObservArray = require('observ-array')
   , vdom = require('virtual-dom')
   , h = vdom.h
-  , createElement = vdom.create
   , domDelegator = require('dom-delegator')()
   , url = require('url')
   , cookie = require('tiny-cookie')
@@ -111,6 +109,8 @@ function setup(plugin, imports, register) {
       'ui:renderNavbar': ObservEmitter()
     , 'ui:renderBody': ObservEmitter()
     }))
+
+    hooks.callHook('ui:initState', ui.state)
 
     ui.state.put('errors', [])
 
