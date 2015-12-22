@@ -110,11 +110,11 @@ function setup(plugin, imports, register) {
     , 'ui:renderBody': ObservEmitter()
     }))
 
-    hooks.callHook('ui:initState', ui.state)
-
     ui.state.put('errors', [])
 
-    next()
+    co(function *() {
+      yield hooks.callHook('ui:initState', ui.state)
+    }).then(next, function(er) {throw er})
   })
 
   function main(ctx) {
