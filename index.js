@@ -21,13 +21,14 @@ var path = require('path')
 
 module.exports = setup
 module.exports.consumes = ['assets', 'http', 'hooks']
+module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
   var assets = imports.assets
     , http = imports.http
     , hooks = imports.hooks
 
-  assets.registerStylesheet(path.join(__dirname, 'bootstrap/css/bootstrap.min.css'))
+  assets.registerStaticDir(path.join(__dirname, 'bootstrap'))
   assets.registerModule(path.join(__dirname, 'client.js'))
 
   hooks.on('http:listening', function*() {
@@ -50,5 +51,5 @@ function setup(plugin, imports, register) {
     http.router.get('/documents/:id', assets.bootstrapMiddleware())
   })
 
-  register()
+  register(null, {ui: {}})
 }

@@ -28,6 +28,16 @@ var page = require('page')
 var Client = require('hive-client-rest-api')
   , Stream = require('hive-client-shoe')
 
+// Determine baseURL
+var src = document.getElementById('buildjs').getAttribute('src')
+, baseURL = src.substr(0, src.lastIndexOf('/build.js'))
+
+// Include bootstrap
+var link = document.createElement('link')
+link.setAttribute('href', baseURL+'/static/hive-ui/bootstrap/css/bootstrap.min.css')
+link.setAttribute('rel', 'stylesheet')
+document.head.insertBefore(link, document.head.firstChild)
+
 module.exports = setup
 module.exports.consumes = ['hooks', 'auth', 'models']
 module.exports.provides = ['ui']
@@ -36,8 +46,6 @@ function setup(plugin, imports, register) {
     , auth = imports.auth
     , models = imports.models
 
-  var src = document.getElementById('buildjs').getAttribute('src')
-    , baseURL = src.substr(0, src.lastIndexOf('/build.js'))
   var loadState = null
   var ui = {
     start: function() {
