@@ -18,38 +18,104 @@
 var path = require('path')
   , staticCache = require('koa-static-cache')
   , mount = require('koa-mount')
+  , browserify = require('browserify')
+  , fs = require('fs')
 
 module.exports = setup
 module.exports.consumes = ['assets', 'http', 'hooks']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
-  var assets = imports.assets
-    , http = imports.http
+  var http = imports.http
     , hooks = imports.hooks
+    , config = imports.config
 
-  assets.registerStaticDir(path.join(__dirname, 'bootstrap'))
-  assets.registerModule(path.join(__dirname, 'client.js'))
+  var b = browserify()
+
+  var ui = {
+    modules: {}
+  , stylesheets: {}
+  , dirs: {}
+  , rootPath: path.join(process.cwd(), 'node_modules')
+    /**
+     * Register a client-side module
+     */
+  , registerModule: function(file) {
+     file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
+     if(this.modules[file]) return true
+     b.require(file)
+     this.modules[file] = true
+     return true
+   }
+  , registerStylesheet: function(file) {
+      if(this.modules[file]) return true
+      this.stylesheets[file] = true
+      return true
+    }
+    /**
+     * Register a static asset folder
+     */
+  , registerStaticDir: function(dir, options) {
+     if(this.dirs[dir]) return true
+     this.dirs[dir] = options||{}
+
+     if(dir.indexOf(this.rootPath) !== 0) {
+       throw new Error('Supplied path is not in the hive instance directory')
+     }
+    }
+  , bundleStylesheets: function*() {
+      return (yield Object.keys(ui.stylesheets)
+      .map(function(file) {
+        return function(cb) {
+          fs.readFile(file, cb)
+        }
+      }))
+      .join('\r\n')
+    }
+  , getBootstrapCode: function() {
+      var baseURL = config.get('ui:baseURL')
+        , buildpath = baseURL+'/build.js'
+        , stylesheet = baseURL+'/build.css'
+      var list = Object.keys(ui.modules).length? Object.keys(ui.modules).map(JSON.stringify).join(',') : ''
+      return'<!DOCTYPE html><html><head><title>Hive.js</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" href="'+stylesheet+'" /></head><body><script src="'+buildpath+'" id="buildjs"></script><script>require("architect").createApp(['+list+'].map(function(file) {var module = require(file); if(typeof(module) != "function") throw new Error("Component "+file+" doesn\'t expose a setup function for registering."); return {packagePath: file, setup: module, provides: module.provides || [], consumes: module.consumes || []}}), function(er, app) {if(er) throw er; app.getService("ui").start()})</script></body></html>'
+    }
+  , bootstrapMiddleware: function() {
+      return function*(next) {
+        this.body = ui.getBootstrapCode()
+      }
+    }
+  , bundle: function*() {
+      return yield function(cb) {
+        b.transform('babelify', {presets: ['es2015', 'stage-3']})
+        b.bundle(cb)
+      }
+    }
+  }
+
+  b.require('architect')
+
+  ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
+  ui.registerModule(path.join(__dirname, 'client.js'))
 
   hooks.on('http:listening', function*() {
     http.router.get('/build.css', function*() {
       if(yield this.cashed()) return
       this.type = 'text/css; charset=utf-8'
-      this.body = yield assets.bundleStylesheets()
+      this.body = yield ui.bundleStylesheets()
     })
 
     http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
-      this.body = yield assets.bundle()
+      this.body = yield ui.bundle()
     })
 
-    Object.keys(assets.dirs).forEach(function(dir) {
-      var dirName = path.posix.join('/static/', dir.substr(assets.rootPath.length).split(path.sep).join(path.posix.sep))
-      http.router.get(dirName+'/*', mount(dirName, staticCache(dir, assets.dirs[dir])))
+    Object.keys(ui.dirs).forEach(function(dir) {
+      var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
+      http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.dirs[dir])))
     })
 
-    http.router.get('/documents/:id', assets.bootstrapMiddleware())
+    http.router.get('/documents/:id', ui.bootstrapMiddleware())
   })
 
-  register(null, {ui: {}})
+  register(null, {ui: ui})
 }
