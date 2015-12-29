@@ -16,17 +16,13 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 var page = require('page')
-  , co = require('co')
-  , ObservVarhash = require('observ-varhash')
-  , ObservEmitter = require('observ-emitter')
+  , AtomicEmitter = require('atomic-emitter')
   , vdom = require('virtual-dom')
   , h = vdom.h
   , domDelegator = require('dom-delegator')()
-  , url = require('url')
-  , cookie = require('tiny-cookie')
-
-var Client = require('hive-client-rest-api')
-  , Stream = require('hive-client-shoe')
+  , redux = require('redux')
+  , reduxPromise = require('redux-promise')
+  , reducerMiddleware = require('./reducer-middleware')
 
 // Determine baseURL
 var src = document.getElementById('buildjs').getAttribute('src')
@@ -39,120 +35,73 @@ link.setAttribute('rel', 'stylesheet')
 document.head.insertBefore(link, document.head.firstChild)
 
 module.exports = setup
-module.exports.consumes = ['hooks', 'auth', 'models']
+module.exports.consumes = []
 module.exports.provides = ['ui']
 function setup(plugin, imports, register) {
-  var hooks = imports.hooks
-    , auth = imports.auth
-    , models = imports.models
-
-  var loadState = null
   var ui = {
     start: function() {
-      co(function*() {
-        var opts = {}
-        yield hooks.callHook('ui:start', opts)
-        ui.page(main) // Register catch-all route, for kicking off rendering
-        ui.page(opts)
-      }).then(function(){})
+      var reducerMap = {}
+      ui.onStart.emit(reducerMap)
+      ui.reduxReducers.push(redux.combineReducers(reducerMap))
+      var createStore = redux.applyMiddleware.call(null, ui.reduxMiddleware)(redux.createStore)
+      ui.store = createStore(reducerMiddleware(ui.reduxReducers))
+      main() // kick off rendering
+      ui.page()
+      ui.onReady.emit()
     }
-  , login: function() {
-      return function(ctx, next) {
-        co(function*() {
-          if(!ui.state.grant) {
-            var grant = yield auth.authenticate(ui.baseURL)
-            // remember token for future use
-            var basePath = url.parse(baseURL).pathname
-            cookie.set('token', grant.access_token, {path: basePath})
-            ui.state.put('grant', grant)
-          }
-
-          ctx.client = Client(ui.baseURL, ui.state.grant.access_token)
-          window.client = ctx.client
-
-          yield function(cb) {
-            ctx.stream = Stream(ui.baseURL, ui.state.grant.access_token, cb)
-          }
-
-          ctx.models = yield models.load(ctx.client)
-
-          ui.state.put('user', models.toObserv(new ctx.models.user({id: ui.state.grant.user})))
-          yield function(cb) {
-            ui.state.user.fetch({
-              success: function(){cb()}
-            , error: function(m, resp){cb(new Error('Server returned '+resp.status))}
-            })
-          }
-          next()
-        }).then(function() {})
-      }
-    }
+  , onRenderNavbar: AtomicEmitter()
+  , onRenderBody: AtomicEmitter()
+  , onStart: AtomicEmitter()
+  , onReady: AtomicEmitter()
   , page: page
   , baseURL: baseURL
-  , state: ObservVarhash({ })
-  , loadState: function(state) {
-      loadState = state
-      ui.page(state.path)
-    }
+  , reduxMiddleware: [reduxPromise]
+  , reduxReducers: []
   }
 
+  var dispose
   ui.page(function(ctx, next) {
-    // initialize state
-    if(loadState) {
-      ui.state.set(loadState)
-      loadState = null
-    }else if(ctx.state.appState) {
-      // get it from pushState
-      ui.state.set(ctx.state.appState)
+    if(ctx.state.appState) {
+      ui.store.dispatch(ui.action_loadState(ctx.state.appState))
     }else{
-      // Should we really discard everything here?
-      // At least a reset of the events is necessary
-      var state = {
-        path: ctx.path
-      }
-      ui.state.set(state)
+      ui.store.dispatch(ui.action_route(ctx.path))
     }
 
-    ui.state.put('events', ObservVarhash({
-      'ui:renderNavbar': ObservEmitter()
-    , 'ui:renderBody': ObservEmitter()
-    }))
+    // when the state changes, save it
+    dispose = ui.store.subscribe(function() {
+      ctx.appState = ui.store.getState()
+      ctx.save()
+    })
 
-    ui.state.put('errors', [])
-
-    co(function *() {
-      yield hooks.callHook('ui:initState', ui.state)
-    }).then(next, function(er) {throw er})
+    next()
+  })
+  ui.page.exit(function() {
+    dispose()
   })
 
-  function main(ctx) {
-    var tree = render(ui.state())
+
+  function main() {
+    var tree = render(ui.store.getState())
       , rootNode = document.body
     rootNode.innerHTML = ''
     vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
     // as the sate changes, the page will be re-rendered
-    ui.state(function(snapshot) {
+    ui.store.subscribe(function(snapshot) {
       var newtree = render(snapshot)
       vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
     })
-
-    // when the state changes,
-    ui.state(function() {
-      ctx.appState = ui.state()
-      ctx.save()
-    })
   }
 
-  function render(state) {
+  function render(store) {
     return h('body', [
-      renderNavbar(state)
-    , renderBody(state)
+      renderNavbar(store)
+    , renderBody(store)
     ])
   }
 
-  function renderNavbar(state) {
+  function renderNavbar(store) {
     return h('div.navbar.navbar-default.navbar-static-top', [
       h('div.container-fluid', [
         h('div.navbar-header', [
@@ -173,14 +122,15 @@ function setup(plugin, imports, register) {
         ]),
         h('div.collapse.navbar-collapse', {attributes: {id:'navigation'}},[
           h('ul.nav.navbar-nav.navbar-right',
-            extensible('ui:renderNavbar', state, [])
+            extensible('onRenderNavbar', store, [])
           )
         ])
       ])
     ])
   }
 
-  function renderBody(state) {
+  function renderBody(store) {
+    var state = store.getState()
     return h('div.body', {style: {
         position: 'absolute'
       , top: '50px'
@@ -188,14 +138,14 @@ function setup(plugin, imports, register) {
       , bottom: '0px'
       , right: '0px'
       }},
-      extensible('ui:renderBody', state, state.errors.map(function(error) {
+      extensible('onRenderBody', store, state.errors.map(function(error) {
         return h('.div.alert.alert-danger', {role:"alert"}, error)
       }))
     )
   }
 
-  function extensible(hookName, state, children) {
-    state.events[hookName](state, children)
+  function extensible(hookName, store, children) {
+    ui[hookName].emit(store, children)
     return children
   }
 
