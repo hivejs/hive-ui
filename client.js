@@ -21,7 +21,7 @@ var page = require('page')
   , h = vdom.h
   , domDelegator = require('dom-delegator')()
   , redux = require('redux')
-  , reduxPromise = require('redux-promise')
+  , reduxGen = require('redux-gen')
   , reducerMiddleware = require('./reducer-middleware')
 
 // Determine baseURL
@@ -55,7 +55,7 @@ function setup(plugin, imports, register) {
   , onReady: AtomicEmitter()
   , page: page
   , baseURL: baseURL
-  , reduxMiddleware: [reduxPromise]
+  , reduxMiddleware: [reduxGen]
   , reduxReducers: []
   }
 
