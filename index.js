@@ -22,7 +22,7 @@ var path = require('path')
   , fs = require('fs')
 
 module.exports = setup
-module.exports.consumes = ['http', 'hooks']
+module.exports.consumes = ['http', 'hooks', 'config']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
@@ -86,7 +86,7 @@ function setup(plugin, imports, register) {
     }
   , bundle: function*() {
       return yield function(cb) {
-        b.transform('babelify', {presets: ['es2015', 'stage-3']})
+        b.transform('babelify', {presets: ['es2015', 'stage-2']})
         b.bundle(cb)
       }
     }
