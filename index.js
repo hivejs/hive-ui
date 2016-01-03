@@ -30,10 +30,11 @@ function setup(plugin, imports, register) {
     , hooks = imports.hooks
     , config = imports.config
 
-  var b = browserify()
+  var b = browserify({debug: true})
   b.transform('babelify', {
     presets: ['es2015', 'stage-2']
   , global: true
+  , ignore: /node_modules\/(?!hive-)(?!redux)(?!reducers)(?!flux)/
   })
 
   var ui = {
