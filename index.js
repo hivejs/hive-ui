@@ -22,7 +22,7 @@ var path = require('path')
   , fs = require('fs')
 
 module.exports = setup
-module.exports.consumes = ['assets', 'http', 'hooks']
+module.exports.consumes = ['http', 'hooks']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
