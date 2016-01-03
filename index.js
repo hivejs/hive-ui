@@ -31,6 +31,10 @@ function setup(plugin, imports, register) {
     , config = imports.config
 
   var b = browserify()
+  b.transform('babelify', {
+    presets: ['es2015', 'stage-2']
+  , global: true
+  })
 
   var ui = {
     modules: {}
@@ -86,7 +90,6 @@ function setup(plugin, imports, register) {
     }
   , bundle: function*() {
       return yield function(cb) {
-        b.transform('babelify', {presets: ['es2015', 'stage-2']})
         b.bundle(cb)
       }
     }
