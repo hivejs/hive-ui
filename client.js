@@ -58,6 +58,16 @@ function setup(plugin, imports, register) {
   , baseURL: baseURL
   , reduxMiddleware: [reduxGen()]
   , reduxReducers: []
+  , action_route: function(path) {
+      return {type: 'ROUTE', payoad: path}
+    }
+  }
+
+  ui.reduxReducers.push(reducer)
+  function reducer(state, action) {
+    if('ROUTE' === action.type) {
+      return {route: action.payload, ...state}
+    }
   }
 
   var dispose
