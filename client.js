@@ -43,7 +43,7 @@ function setup(plugin, imports, register) {
       var reducerMap = {}
       ui.onStart.emit(reducerMap)
       ui.reduxReducers.push(redux.combineReducers(reducerMap))
-      var createStore = redux.applyMiddleware.call(null, ui.reduxMiddleware)(redux.createStore)
+      var createStore = redux.applyMiddleware.apply(null, ui.reduxMiddleware)(redux.createStore)
       ui.store = createStore(reducerMiddleware(ui.reduxReducers))
       main() // kick off rendering
       ui.page()
