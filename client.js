@@ -21,8 +21,9 @@ var page = require('page')
   , h = vdom.h
   , domDelegator = require('dom-delegator')()
   , redux = require('redux')
-  , reduxGen = require('redux-gen')
   , reducerMiddleware = require('./reducer-middleware')
+
+import reduxGen from 'redux-gen'
 
 // Determine baseURL
 var src = document.getElementById('buildjs').getAttribute('src')
