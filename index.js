@@ -30,7 +30,7 @@ function setup(plugin, imports, register) {
     , hooks = imports.hooks
     , config = imports.config
 
-  var b = browserify({debug: true})
+  var b = browserify({debug: true, entries: ['node_modules/babel-polyfill']})
   b.transform('babelify', {
     presets: ['es2015', 'stage-2']
   , global: true
