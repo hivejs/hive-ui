@@ -82,14 +82,14 @@ function setup(plugin, imports, register) {
 
 
   function main() {
-    var tree = render(ui.store.getState())
+    var tree = render(ui.store)
       , rootNode = document.body
     rootNode.innerHTML = ''
     vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
     // as the sate changes, the page will be re-rendered
-    ui.store.subscribe(function(snapshot) {
-      var newtree = render(snapshot)
+    ui.store.subscribe(function() {
+      var newtree = render(ui.store)
       vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
     })
@@ -139,9 +139,7 @@ function setup(plugin, imports, register) {
       , bottom: '0px'
       , right: '0px'
       }},
-      extensible('onRenderBody', store, state.errors.map(function(error) {
-        return h('.div.alert.alert-danger', {role:"alert"}, error)
-      }))
+      extensible('onRenderBody', store, [])
     )
   }
 
