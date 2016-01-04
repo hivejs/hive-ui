@@ -56,10 +56,19 @@ function setup(plugin, imports, register) {
   , onReady: AtomicEmitter()
   , page: page
   , baseURL: baseURL
-  , reduxMiddleware: [reduxGen()]
+  , reduxMiddleware: [reduxGen(), loggerMiddleware]
   , reduxReducers: []
   , action_route: function(path) {
       return {type: 'ROUTE', payload: path}
+    }
+  }
+
+  function loggerMiddleware(store) {
+    return next => action => {
+      console.log('Dispatching action', action)
+      var result = next(action)
+      console.log('New state:', store.getState())
+      return result
     }
   }
 
