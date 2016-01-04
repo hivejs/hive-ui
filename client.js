@@ -56,7 +56,7 @@ function setup(plugin, imports, register) {
   , onReady: AtomicEmitter()
   , page: page
   , baseURL: baseURL
-  , reduxMiddleware: [reduxGen]
+  , reduxMiddleware: [reduxGen()]
   , reduxReducers: []
   }
 
