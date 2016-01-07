@@ -105,10 +105,10 @@ function setup(plugin, imports, register) {
 
   ui.reduxReducerMap.router = routerReducer
   function routerReducer(state, action) {
-    if(!state) return null
     if('ROUTE' === action.type) {
       return action.payload
     }
+    if(!state) return null
     return state
   }
 
