@@ -39,8 +39,10 @@ function setup(plugin, imports, register) {
 
   var ui = {
     modules: {}
+  , entries: {}
   , stylesheets: {}
   , dirs: {}
+  , config: {}
   , rootPath: path.join(process.cwd(), 'node_modules')
     /**
      * Register a client-side module
@@ -52,6 +54,21 @@ function setup(plugin, imports, register) {
      this.modules[file] = true
      return true
    }
+    /**
+     * Register a javascript module that is added to
+     * the browserify build as an entry file
+     */
+  , registerJavascript: function(file) {
+      file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
+      if(this.entries[file]) return true
+      b.add(file)
+      b.require(file)
+      this.entries[file] = true
+      return true
+    }
+    /**
+     * Register a stylesheet that will be appended to build.css
+     */
   , registerStylesheet: function(file) {
       if(this.modules[file]) return true
       this.stylesheets[file] = true
@@ -68,6 +85,9 @@ function setup(plugin, imports, register) {
        throw new Error('Supplied path is not in the hive instance directory')
      }
     }
+  , registerConfigEntry: function(name, val) {
+      this.config[name] = val
+    }
   , bundleStylesheets: function*() {
       return (yield Object.keys(ui.stylesheets)
       .map(function(file) {
@@ -82,10 +102,12 @@ function setup(plugin, imports, register) {
         , buildpath = baseURL+'/build.js'
         , stylesheet = baseURL+'/build.css'
       var list = Object.keys(ui.modules).length? Object.keys(ui.modules).map(JSON.stringify).join(',') : ''
-      return'<!DOCTYPE html><html><head><title>Hive.js</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" href="'+stylesheet+'" /></head><body><script src="'+buildpath+'" id="buildjs"></script><script>require("architect").createApp(['+list+'].map(function(file) {var module = require(file); if(typeof(module) != "function") throw new Error("Component "+file+" doesn\'t expose a setup function for registering."); return {packagePath: file, setup: module, provides: module.provides || [], consumes: module.consumes || []}}), function(er, app) {if(er) throw er; app.getService("ui").start()})</script></body></html>'
+        , configString = JSON.stringify(this.config)
+      return'<!DOCTYPE html><html><head><title>Hive.js</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" href="'+stylesheet+'" /></head><body><script src="'+buildpath+'" id="buildjs"></script><script>require("architect").createApp(['+list+'].map(function(file) {var module = require(file); if(typeof(module) != "function") throw new Error("Component "+file+" doesn\'t expose a setup function for registering."); return {packagePath: file, setup: module, provides: module.provides || [], consumes: module.consumes || []}}), function(er, app) {if(er) throw er; app.getService("ui").start('+configString+')})</script></body></html>'
     }
   , bootstrapMiddleware: function() {
       return function*(next) {
+        if(yield this.cashed()) return
         this.body = ui.getBootstrapCode()
       }
     }

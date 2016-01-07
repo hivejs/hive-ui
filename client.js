@@ -43,7 +43,8 @@ function setup(plugin, imports, register) {
     /**
      * Creates the redux store and emits ui.onStart
      */
-    start: function() {
+    start: function(config) {
+      ui.config = config
       ui.reduxRootReducers.push(redux.combineReducers(ui.reduxReducerMap))
       var createStore = redux.applyMiddleware.apply(null, ui.reduxMiddleware)(redux.createStore)
       ui.store = createStore(reducerMiddleware(ui.reduxRootReducers))
