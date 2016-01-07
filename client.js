@@ -15,13 +15,13 @@
  * You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-var page = require('page')
-  , AtomicEmitter = require('atomic-emitter')
+var AtomicEmitter = require('atomic-emitter')
   , vdom = require('virtual-dom')
   , h = vdom.h
   , domDelegator = require('dom-delegator')()
   , redux = require('redux')
   , reducerMiddleware = require('./reducer-middleware')
+  , pathToRegexp = require('path-to-regexp')
 
 import reduxGen from 'redux-gen'
 
@@ -40,26 +40,48 @@ module.exports.consumes = []
 module.exports.provides = ['ui']
 function setup(plugin, imports, register) {
   var ui = {
+    /**
+     * Creates the redux store and emits ui.onStart
+     */
     start: function() {
-      var reducerMap = {}
-      ui.onStart.emit(reducerMap)
-      ui.reduxReducers.push(redux.combineReducers(reducerMap))
+      ui.reduxRootReducers.push(redux.combineReducers(ui.reduxReducerMap))
       var createStore = redux.applyMiddleware.apply(null, ui.reduxMiddleware)(redux.createStore)
-      ui.store = createStore(reducerMiddleware(ui.reduxReducers))
-      main() // kick off rendering
-      ui.page()
-      ui.onReady.emit()
+      ui.store = createStore(reducerMiddleware(ui.reduxRootReducers))
+      window.store = ui.store
+      ui.onStart.emit()
+    }
+  /**
+   * Helper for redux middleware
+   * @param action the redux action being dispatched
+   * @param route an express-style route string
+   * @returns Bool|Object Either `false` or an object with the params specified in your route
+   */
+  , route: function(action, route) {
+      if('ROUTE' !== action.type) return false
+      var keys
+      var res = pathToRegexp(route, keys=[])
+      .exec(action.payload)
+      if(!res) return false
+      return res
+      .slice(1)
+      .reduce(function(obj, val, i) {
+        obj[keys[i].name] = val
+        return obj
+      }, {})
     }
   , onRenderNavbar: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onStart: AtomicEmitter()
   , onReady: AtomicEmitter()
-  , page: page
   , baseURL: baseURL
-  , reduxMiddleware: [reduxGen(), loggerMiddleware]
-  , reduxReducers: []
+  , reduxMiddleware: [reduxGen(), loggerMiddleware, routerMiddleware]
+  , reduxRootReducers: [loadStateReducer]
+  , reduxReducerMap: {}
   , action_route: function(path) {
       return {type: 'ROUTE', payload: path}
+    }
+  , action_loadState: function(state) {
+      return {type: 'LOAD_STATE', payload: state}
     }
   }
 
@@ -72,34 +94,59 @@ function setup(plugin, imports, register) {
     }
   }
 
-  ui.reduxReducers.push(reducer)
-  function reducer(state, action) {
-    if('ROUTE' === action.type) {
-      return {...state, route: action.payload}
+  function loadStateReducer(state, action) {
+    if('LOAD_STATE' === action.type) {
+      return action.payload
     }
     return state
   }
 
-  var dispose
-  ui.page(function(ctx, next) {
-    if(ctx.state.appState) {
-      ui.store.dispatch(ui.action_loadState(ctx.state.appState))
-    }else{
-      ui.store.dispatch(ui.action_route(ctx.path))
+  // Router
+
+  ui.reduxReducerMap.router = routerReducer
+  function routerReducer(state, action) {
+    if(!state) return null
+    if('ROUTE' === action.type) {
+      return action.payload
     }
+    return state
+  }
 
-    // when the state changes, save it
-    dispose = ui.store.subscribe(function() {
-      ctx.appState = ui.store.getState()
-      ctx.save()
-    })
+  function routerMiddleware(store) {
+    return next => action => {
+      if(action.type === 'ROUTE' && store.getState().router) {
+        // Only save state if this is not the first route
+        saveStateToHistory(store)
+      }
+      if(action.type === 'LOAD_STATE') {
+        var res = next(action)
+        store.dispatch(ui.action_route(action.payload.router))
+        return res
+      }
+      return next(action)
+    }
+  }
+  function saveStateToHistory(store) {
+    window.history.pushState(store.getState(), '', store.getState().router)
+  }
 
-    next()
+  function onpopstate(evt) {
+    if(evt.state) ui.store.dispatch(ui.action_loadState(evt.state))
+    else if(ui.store) ui.store.dispatch(ui.action_route(document.location.pathname))
+  }
+  window.addEventListener('popstate', onpopstate, false)
+
+  ui.onStart(function() {
+    if(window.history.state) {
+      ui.store.dispatch(ui.action_loadState(window.history.state))
+    }else {
+      ui.store.dispatch(ui.action_route(document.location.pathname))
+    }
   })
-  ui.page.exit(function() {
-    dispose()
-  })
 
+  // Render loop
+
+  ui.onStart(main)
 
   function main() {
     var tree = render(ui.store)
@@ -151,7 +198,6 @@ function setup(plugin, imports, register) {
   }
 
   function renderBody(store) {
-    var state = store.getState()
     return h('div.body', {style: {
         position: 'absolute'
       , top: '50px'
