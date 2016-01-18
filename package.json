@@ -8,7 +8,7 @@
     "koa-mount": "1.x",
     "virtual-dom": "2.x",
     "dom-delegator": "13.x",
-    "path-to-regexp": "1.x"
+    "path-to-regexp": "1.x",
     "atomic-emitter": "3.x",
     "browserify": "12.x",
     "babelify": "7.x",
