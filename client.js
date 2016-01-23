@@ -20,7 +20,7 @@ var AtomicEmitter = require('atomic-emitter')
   , h = vdom.h
   , domDelegator = require('dom-delegator')()
   , redux = require('redux')
-  , reducerMiddleware = require('./reducer-middleware')
+  , reduceReducers = require('reduce-reducers')
   , pathToRegexp = require('path-to-regexp')
   , throttlePerFrame = require('per-frame')
 
@@ -48,7 +48,7 @@ function setup(plugin, imports, register) {
       ui.config = config
       ui.reduxRootReducers.push(redux.combineReducers(ui.reduxReducerMap))
       var createStore = redux.applyMiddleware.apply(null, ui.reduxMiddleware)(redux.createStore)
-      ui.store = createStore(reducerMiddleware(ui.reduxRootReducers))
+      ui.store = createStore(reduceReducers.apply(null, ui.reduxRootReducers))
       window.store = ui.store
       ui.onStart.emit()
     }
