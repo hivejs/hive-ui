@@ -22,6 +22,7 @@ var AtomicEmitter = require('atomic-emitter')
   , redux = require('redux')
   , reducerMiddleware = require('./reducer-middleware')
   , pathToRegexp = require('path-to-regexp')
+  , throttlePerFrame = require('per-frame')
 
 import reduxGen from 'redux-gen'
 
@@ -156,11 +157,11 @@ function setup(plugin, imports, register) {
     vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
     // as the sate changes, the page will be re-rendered
-    ui.store.subscribe(function() {
+    ui.store.subscribe(throttlePerFrame(function() {
       var newtree = render(ui.store)
       vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
-    })
+    }))
   }
 
   function render(store) {
