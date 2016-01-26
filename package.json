@@ -24,7 +24,9 @@
     "mime-match": "1.x",
     "mux-dmx": "0.0.x",
     "redux-effects-cookie": "0.2.x",
-    "hive-client-shoe": "0.4.x"
+    "hive-client-shoe": "0.4.x",
+    "cldr-data": "latest",
+    "globalize": "1.1.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
