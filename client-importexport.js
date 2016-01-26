@@ -40,7 +40,7 @@ function setup(plugin, imports, register) {
       }
     }
     if(EXPORTING == action.type) {
-      return {...state, exporting: action.payload}
+      return {...state, exporting: action.payload, exportError: false}
     }
     if(EXPORTED == action.type && action.error) {
       return {...state
