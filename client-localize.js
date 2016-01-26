@@ -36,10 +36,10 @@ function setup(plugin, imports, register) {
           fetch(ui.baseURL+'/locales/'+action.payload+'.json')
           .then((res) => res.json())
           .then((json) => {
-            ui.onLocalize.emit(action.payload)
             globalize.loadMessages(json)
             globalize.locale(action.payload)
             next(action)
+            ui.onLocalize.emit(action.payload)
           })
           return
         }

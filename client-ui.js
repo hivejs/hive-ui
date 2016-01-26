@@ -151,17 +151,21 @@ function setup(plugin, imports, register) {
   ui.onStart(main)
 
   function main() {
-    var tree = render(ui.store)
-      , rootNode = document.body
-    rootNode.innerHTML = ''
-    vdom.patch(rootNode, vdom.diff(h('body'), tree))
+    var dispose = ui.onLocalize(() => {
+      dispose()
 
-    // as the sate changes, the page will be re-rendered
-    ui.store.subscribe(throttlePerFrame(function() {
-      var newtree = render(ui.store)
-      vdom.patch(rootNode, vdom.diff(tree, newtree))
-      tree = newtree
-    }))
+      var tree = render(ui.store)
+        , rootNode = document.body
+      rootNode.innerHTML = ''
+      vdom.patch(rootNode, vdom.diff(h('body'), tree))
+
+      // as the sate changes, the page will be re-rendered
+      ui.store.subscribe(throttlePerFrame(function() {
+        var newtree = render(ui.store)
+        vdom.patch(rootNode, vdom.diff(tree, newtree))
+        tree = newtree
+      }))
+    })
   }
 
   function render(store) {
