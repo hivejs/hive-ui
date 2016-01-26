@@ -198,6 +198,7 @@ function setup(plugin, imports, register) {
     }
     ui.registerConfigEntry('importexport:importTypes', importTypes)
 
+
     // bundle + pass down locales & register locale routes
 
     var locales = yield ui.bundleLocales()

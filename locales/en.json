@@ -20,5 +20,22 @@
     , "load-error-explanation": "An unexpected error occurred while loading the editor. Please try again."
     , "loading": "Loading..."
     }
+  , "importexport": {
+      "import": "Import"
+    , "import-browser-not-supported": "Your browser doesn't support this feature. Sorry."
+    , "importing": "Importing {file}..."
+    , "export": "Export"
+    , "exporting": "(Exporting...)"
+    , "format-text-plain": "Plain text"
+    , "format-text-html": "HTML"
+    , "format-image-svg+xml": "SVG"
+    , "format-image-png": "PNG"
+    , "format-text-markdown": "Markdown"
+    , "format-application-x-latex": "LaTex"
+    , "format-application-vnd.openxmlformats-officedocument.wordprocessingml.document": "Microsoft Word Document"
+    , "format-application-vnd.oasis.opendocument.text": "Open Text Document (LibreOffice)"
+    , "format-application-docbook-xml": "DocBook"
+    , "application-epub+zip": "EPUB"
+    }
   }
 }

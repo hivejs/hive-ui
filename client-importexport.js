@@ -158,7 +158,7 @@ function setup(plugin, imports, register) {
           , 'aria-expanded': state.showImportDropdown? 'true' : 'false'
           }
         }
-      , ['Import', h('span.caret') ]
+      , [ui._('importexport/import')(), h('span.caret') ]
       )
     , h('ul.dropdown-menu'
       , { attributes: {'aria-labelledby':'exportMenu'}
@@ -172,11 +172,11 @@ function setup(plugin, imports, register) {
     var state = store.getState().importexport
 
     if(!window.File || !window.FileReader || !window.FileList || !window.Blob) {
-      return h('li', h('a', 'Your browser doesn\'t support this feature. Sorry.'))
+      return h('li', h('a', ui._('importexport/import-browser-not-supported')()))
     }
 
     if(state.importing) {
-      return h('li', h('a', 'Importing '+state.importing+'...'))
+      return h('li', h('a', ui._('importexport/importing')({file:state.importing})))
     }
 
     var children = []
@@ -218,7 +218,7 @@ function setup(plugin, imports, register) {
           , 'aria-expanded': state.showDropdown? 'true' : 'false'
           }
         }
-      , ['Export', h('span.caret') ]
+      , [ui._('importexport/export')(), h('span.caret') ]
       )
     , h('ul.dropdown-menu'
       , { attributes: {'aria-labelledby':'exportMenu'}
@@ -229,7 +229,12 @@ function setup(plugin, imports, register) {
               , 'ev-click': evt => store.dispatch(
                   importexport.action_export(exportType))
               }
-            , exportType+(state.exporting === exportType? ' (Exporting...)' : '')))
+            , ui._('importexport/format-'+exportType.replace('/', '-'))()
+              +(state.exporting === exportType?
+                ' '+ui._('importexport/exporting')()
+                : ''
+                )
+            ))
           })
         ).concat([
           state.exportError?
