@@ -11,7 +11,8 @@
     , "logging-in": "Logging in..."
     }
   , "editor": {
-      "select-editor": "Select an editor"
+      "editor": "Editor"
+    , "select-editor": "Select an editor"
     , "choose-editor": "Choose an editor"
     , "choose-editor-explanation": "Choose one of the following editors for collaborating on {type} documents"
     , "not-found": "Not found!"

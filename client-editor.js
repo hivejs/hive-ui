@@ -181,11 +181,11 @@ function setup(plugin, imports, register) {
     var currentEditor = settings.getForUserDocument('editor:editor')
       , state = store.getState()
     return h('div', [
-      h('h4', 'Editor')
+      h('h4', ui._('editor/editor')())
     , h('ul.list-group', [
         h('li.list-group-item', [
           h('label', [
-            'Editor: '
+            ui._('editor/editor')()+': '
           , h('select'
             , { 'ev-change': evt =>
                   store.dispatch(settings.action_setForUserDocument(
