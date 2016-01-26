@@ -34,8 +34,8 @@
     , "format-application-x-latex": "LaTex"
     , "format-application-vnd.openxmlformats-officedocument.wordprocessingml.document": "Microsoft Word Document"
     , "format-application-vnd.oasis.opendocument.text": "Open Text Document (LibreOffice)"
-    , "format-application-docbook-xml": "DocBook"
-    , "application-epub+zip": "EPUB"
+    , "format-application-docbook+xml": "DocBook"
+    , "format-application-epub+zip": "EPUB"
     }
   }
 }
