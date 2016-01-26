@@ -20,6 +20,7 @@ var path = require('path')
   , mount = require('koa-mount')
   , browserify = require('browserify')
   , fs = require('fs')
+  , deap = require('deap')
 
 module.exports = setup
 module.exports.consumes = ['http', 'hooks', 'config', 'importexport']
@@ -121,12 +122,7 @@ function setup(plugin, imports, register) {
             fs.readFile(dir+'/'+file, cb)
           }
           var json = JSON.parse(buffer.toString('utf8'))
-          for(var locale in json) {
-            locales[locale] = {}
-            for(var message in json[locale]) {
-              locales[locale][message] = json[locale][message]
-            }
-          }
+          deap.extend(locales, json)
         })
       })
       return locales
