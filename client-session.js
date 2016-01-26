@@ -192,7 +192,7 @@ function setup(plugin, imports, register) {
       margin: '3cm auto'
     }}, [
       h('div.panel-body', [
-        h('p','Logging in...')
+        h('p', ui._('session/logging-in')())
       ])
     ])
   }
@@ -206,14 +206,14 @@ function setup(plugin, imports, register) {
       margin: '3cm auto'
     }}, [
       h('div.panel-heading', [
-        h('h3','Authenticate')
+        h('h3',ui._('session/authenticate')())
       ]),
       h('div.panel-body', [
         authfail
         ? h('p.alert.alert-warning', {attributes: { role:"alert"}}
           , 'Authentication failed!')
         : h('p', {style: {display: 'none'}}),
-        h('p','Authenticate using one of the following authentication methods:')
+        h('p',ui._('session/authenticate-explanation')())
       ]),
       h('ul.list-group', Object.keys(session.providers)
         .filter(provider => !!session.providers[provider].ask)

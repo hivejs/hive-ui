@@ -5,6 +5,11 @@
       "locale": "Locale"
     , "select-language": "Select your language"
     }
+  , "session": {
+      "authenticate": "Authenticate"
+    , "authenticate-explanation": "Authenticate using one of the following authentication methods:"
+    , "logging-in": "Logging in..."
+    }
   , "editor": {
       "select-editor": "Select an editor"
     , "choose-editor": "Choose an editor"
