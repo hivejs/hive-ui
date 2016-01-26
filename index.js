@@ -155,6 +155,7 @@ function setup(plugin, imports, register) {
   b.require('architect')
 
   ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
+  ui.registerStylesheet(path.join(__dirname, 'css', 'index.css'))
   ui.registerModule(path.join(__dirname, 'client-ui.js'))
   ui.registerModule(path.join(__dirname, 'client-api.js'))
   ui.registerModule(path.join(__dirname, 'client-editor.js'))

@@ -1,0 +1,14 @@
+.Settings {
+  position: absolute;
+  top: .5cm;
+  left:25%;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 7.5cm;
+  z-index: 11;
+  box-shadow: 0 0 20px #aaa;
+}
+
+.Settings__close {
+  float:right;
+}
