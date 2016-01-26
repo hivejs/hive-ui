@@ -22,13 +22,14 @@ var path = require('path')
   , fs = require('fs')
 
 module.exports = setup
-module.exports.consumes = ['http', 'hooks', 'config']
+module.exports.consumes = ['http', 'hooks', 'config', 'importexport']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
   var http = imports.http
     , hooks = imports.hooks
     , config = imports.config
+    , importexport = imports.importexport
 
   var b = browserify({debug: true, entries: ['node_modules/babel-polyfill']})
   b.transform('babelify', {
@@ -121,7 +122,12 @@ function setup(plugin, imports, register) {
   b.require('architect')
 
   ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
-  ui.registerModule(path.join(__dirname, 'client.js'))
+  ui.registerModule(path.join(__dirname, 'client-ui.js'))
+  ui.registerModule(path.join(__dirname, 'client-api.js'))
+  ui.registerModule(path.join(__dirname, 'client-editor.js'))
+  ui.registerModule(path.join(__dirname, 'client-importexport.js'))
+  ui.registerModule(path.join(__dirname, 'client-session.js'))
+  ui.registerModule(path.join(__dirname, 'client-settings.js'))
 
   hooks.on('http:listening', function*() {
     http.router.get('/build.css', function*() {
@@ -141,6 +147,18 @@ function setup(plugin, imports, register) {
     })
 
     http.router.get('/documents/:id', ui.bootstrapMiddleware())
+
+    var exportTypes = {}
+    for(var docType in importexport.exports) {
+      exportTypes[docType] = Object.keys(importexport.exports[docType])
+    }
+    ui.registerConfigEntry('importexport:exportTypes', exportTypes)
+
+    var importTypes = {}
+    for(var docType in importexport.imports) {
+      importTypes[docType] = Object.keys(importexport.imports[docType])
+    }
+    ui.registerConfigEntry('importexport:importTypes', importTypes)
   })
 
   register(null, {ui: ui})
