@@ -18,7 +18,9 @@
     "babel-polyfill": "6.x",
     "redux-gen": "0.2.x",
     "redux": "3.x",
-    "reduce-reducers": "0.1.x"
+    "reduce-reducers": "0.1.x",
+    "cldr-data": "latest",
+    "globalize": "1.1.x"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

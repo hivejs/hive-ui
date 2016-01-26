@@ -1,0 +1,19 @@
+{
+  "en": {
+    "language-name": "English"
+  , "ui": {
+      "locale": "Locale"
+    , "select-language": "Select your language"
+    }
+  , "editor": {
+      "select-editor": "Select an editor"
+    , "choose-editor": "Choose an editor"
+    , "choose-editor-explanation": "Choose one of the following editors for collaborating on {type} documents"
+    , "not-found": "Not found!"
+    , "not-found-explanation": "It seems we can't find your document. Sorry."
+    , "load-error": "Error!"
+    , "load-error-explanation": "An unexpected error occurred while loading the editor. Please try again."
+    , "loading": "Loading..."
+    }
+  }
+}
