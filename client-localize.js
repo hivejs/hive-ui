@@ -49,7 +49,7 @@ function setup(plugin, imports, register) {
   }
 
   ui.reduxReducerMap.locale = function(state, action) {
-    if(!state) return 'en'
+    if('undefined' === typeof state) return null
     if('SET_LOCALE' === action.type) {
       return action.payload
     }

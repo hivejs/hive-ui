@@ -148,24 +148,28 @@ function setup(plugin, imports, register) {
 
   // Render loop
 
-  ui.onStart(main)
+  ui.onStart(() => {
+    if(ui.store.getState().locale) main()
+    else {
+      var dispose = ui.onLocalize(() => {
+        dispose()
+        main()
+      })
+    }
+  })
 
   function main() {
-    var dispose = ui.onLocalize(() => {
-      dispose()
+    var tree = render(ui.store)
+      , rootNode = document.body
+    rootNode.innerHTML = ''
+    vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
-      var tree = render(ui.store)
-        , rootNode = document.body
-      rootNode.innerHTML = ''
-      vdom.patch(rootNode, vdom.diff(h('body'), tree))
-
-      // as the sate changes, the page will be re-rendered
-      ui.store.subscribe(throttlePerFrame(function() {
-        var newtree = render(ui.store)
-        vdom.patch(rootNode, vdom.diff(tree, newtree))
-        tree = newtree
-      }))
-    })
+    // as the sate changes, the page will be re-rendered
+    ui.store.subscribe(throttlePerFrame(function() {
+      var newtree = render(ui.store)
+      vdom.patch(rootNode, vdom.diff(tree, newtree))
+      tree = newtree
+    }))
   }
 
   function render(store) {
