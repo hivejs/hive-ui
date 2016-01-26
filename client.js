@@ -74,10 +74,9 @@ function setup(plugin, imports, register) {
   , onRenderNavbar: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onStart: AtomicEmitter()
-  , onReady: AtomicEmitter()
   , baseURL: baseURL
   , reduxMiddleware: [reduxGen(), loggerMiddleware, routerMiddleware]
-  , reduxRootReducers: [loadStateReducer]
+  , reduxRootReducers: []
   , reduxReducerMap: {}
   , action_route: function(path) {
       return {type: 'ROUTE', payload: path}
@@ -96,6 +95,7 @@ function setup(plugin, imports, register) {
     }
   }
 
+  ui.reduxRootReducers.push(loadStateReducer)
   function loadStateReducer(state, action) {
     if('LOAD_STATE' === action.type) {
       return action.payload
