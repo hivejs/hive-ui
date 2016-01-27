@@ -38,5 +38,17 @@
     , "format-application-docbook+xml": "DocBook"
     , "format-application-epub+zip": "EPUB"
     }
+  , "oauth": {
+      "authorization-required": "Authorization required"
+    , "hello": "Hey {user},"
+    , "authorization-explanation": "The application at {app_url} wants access to the following functionality of your hive.js account:"
+    , "scope-all": "all of your account"
+    , "question": "Do you want to grant access?"
+    , "warning": "Warning!"
+    , "warning-explanation": "The application is communicating via an insecure protocol!"
+    , "deny": "Deny access"
+    , "grant": "Grant access"
+    , "redirecting": "Redirecting..."
+    }
   }
 }

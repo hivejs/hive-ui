@@ -104,24 +104,28 @@ function setup(plugin, imports, register) {
       margin: '3cm auto'
     }}, [
       h('div.panel-heading', [
-        h('h3','Authorization required')
+        h('h3',ui._('oauth/authorization-required')())
       ]),
       h('div.panel-body.form-inline', [
-        h('p', 'Hey '+state.session.user.name+',')
-      , h('p',['The application at ', h('span.mark', app_url.host), ' wants access to the following functionality of your hive.js account:'])
+        h('p', ui._('oauth/hello')({user: state.session.user.name}))
+      , h('p', ui._('oauth/authorization-explanation')({app_url: app_url.host}))
       , h('ul', state.oauth.scope? state.oauth.scope.split(' ').map(function(scope) {
             return h('li', scope)
-          }): h('li', 'all of your account')
+          }): h('li', ui._('oauth/scope-all')())
         )
-      , protocolWarn? h('div.alert.alert-warning', [h('strong', 'Warning!'), ' '+app_url.host+' is communicating via an insecure protocol!']) : ''
-      , h('p', 'Do you want to grant access?')
+      , protocolWarn?
+          h('div.alert.alert-warning', [
+            h('strong', ui._('oauth/warning')())
+          , ' '+ui._('oauth/warning-explanation')()])
+        : ''
+      , h('p', ui._('oauth/question')())
       , h('div.pull-right', [
           h('button.btn.btn-default', {attributes:{type: 'submit'},
             'ev-click': evt => store.dispatch(oauth.action_grant(false))
-          }, 'Deny access'), ' '
+          }, ui._('oauth/deny')()), ' '
         , h('button.btn.btn-primary', {attributes:{type: 'submit'},
             'ev-click': evt => store.dispatch(oauth.action_grant(true))
-          }, 'Grant access')
+          }, ui._('oauth/grant')())
         ])
       ])
     ])
@@ -134,7 +138,7 @@ function setup(plugin, imports, register) {
       margin: '3cm auto'
     }}, [
       h('div.panel-body', [
-        h('p', 'Redirecting...')
+        h('p', ui._('oauth/redirecting')())
       ])
     ])
   }
