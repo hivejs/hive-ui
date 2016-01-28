@@ -122,7 +122,9 @@ function setup(plugin, imports, register) {
             fs.readFile(dir+'/'+file, cb)
           }
           var json = JSON.parse(buffer.toString('utf8'))
-          deap.extend(locales, json)
+            , locale = file.split('.')[0]
+          if(!locales[locale]) locales[locale] = {}
+          deap.extend(locales[locale], json)
         })
       })
       return locales
