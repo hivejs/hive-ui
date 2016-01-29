@@ -46,6 +46,14 @@ function setup(plugin, imports, register) {
     if('EDITOR_ACTIVATE' === action.type) {
       return {...state, active: true}
     }
+    if('EDITOR_DEACTIVATE' === action.type) {
+      return {...state
+      , active: false
+      , notFound: false
+      , loadError: false
+      , document: null
+      }
+    }
     if('EDITOR_DOCUMENT_LOAD' === action.type && action.error) {
       return {...state, notFound: true}
     }
@@ -60,6 +68,23 @@ function setup(plugin, imports, register) {
     }
     return state
   }
+
+  ui.reduxMiddleware.push(function(store) {
+    return next => action => {
+      var params
+      if(params = ui.route(action, '/documents/:id')) {
+        session.onceLoggedIn(_ => {
+          ui.store.dispatch(editor.action_activate())
+          ui.store.dispatch(editor.action_loadDocument(params.id))
+        })
+      }
+      if(ui.exitRoute(store, action, '/document/:id')) {
+        editor.closeEditor()
+        ui.store.dispatch(editor.action_deactivate())
+      }
+      return next(action)
+    }
+  })
 
   var editor = {
     editors: {}
@@ -126,6 +151,9 @@ function setup(plugin, imports, register) {
   , action_activate: function() {
       return {type: 'EDITOR_ACTIVATE'}
     }
+  , action_deactivate: function() {
+      return {type: 'EDITOR_DEACTIVATE'}
+    }
   , action_loadDocument: function*(id) {
       try {
         var doc = yield api.action_document_get(id)
@@ -150,19 +178,6 @@ function setup(plugin, imports, register) {
   ui.onRenderBody((store, children) => {
     var state = ui.store.getState()
     if(state.editor.active) children.push(render(ui.store))
-  })
-
-  ui.reduxMiddleware.push(function(store) {
-    return next => action => {
-      var params
-      if(params = ui.route(action, '/documents/:id')) {
-        session.onceLoggedIn(_ => {
-          ui.store.dispatch(editor.action_activate())
-          ui.store.dispatch(editor.action_loadDocument(params.id))
-        })
-      }
-      return next(action)
-    }
   })
 
   editor.onLoad(_=> {
