@@ -71,6 +71,14 @@ function setup(plugin, imports, register) {
         return obj
       }, {})
     }
+  , exitRoute: function(store, action, route) {
+      var keys
+      var regex = pathToRegexp(route, keys=[])
+      var matchesOld = regex.exec(store.getState().router)
+      var matchesNew = regex.exec(action.payload)
+      if(matchesOld && !matchesNew) return true
+      return false
+    }
   , onRenderNavbar: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onStart: AtomicEmitter()
