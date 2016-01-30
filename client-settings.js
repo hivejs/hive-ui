@@ -135,6 +135,7 @@ function setup(plugin, imports, register) {
   , action_setView: function(view) {
       return {type: SET_VIEW, payload: view}
     }
+  , render
   , onRenderUserSettings: AtomicEmitter()
   , onRenderDocumentSettings: AtomicEmitter()
   , onRenderUserDocumentSettings: AtomicEmitter()

@@ -130,6 +130,10 @@ function setup(plugin, imports, register) {
   , action_importing: function(filename) {
       return {type: IMPORTING, payload:filename}
     }
+  , renderImport
+  , renderImportDropdown
+  , renderExport
+  , renderExportDropdown
   }
 
   ui.onRenderNavbar((store, children) => {
@@ -205,7 +209,6 @@ function setup(plugin, imports, register) {
   }
 
   function renderExport(store) {
-    var document = store.getState().editor.document
     var state = store.getState().importexport
     return h('li.dropdown'+(state.showExportDropdown? '.open' : ''), [
       h('a.dropdown-toggle', {
@@ -223,27 +226,34 @@ function setup(plugin, imports, register) {
     , h('ul.dropdown-menu'
       , { attributes: {'aria-labelledby':'exportMenu'}
         }
-      , (state.exportTypes[document.type].map(exportType => {
-            return h('li', h('a'
-            , { href:'javascript:void(0)'
-              , 'ev-click': evt => store.dispatch(
-                  importexport.action_export(exportType))
-              }
-            , ui._('importexport/format-'+exportType.replace('/', '-'))()
-              +(state.exporting === exportType?
-                ' '+ui._('importexport/exporting')()
-                : ''
-                )
-            ))
-          })
-        ).concat([
-          state.exportError?
-            h('li', h('div.alert.alert-danger', [
-              h('strong', 'Error'), ' '+state.exportError
-            ]))
-          : ''
-        ])
+      , renderExportDropdown(store)
       )
+    ])
+  }
+
+  function renderExportDropdown(store) {
+    var document = store.getState().editor.document
+    var state = store.getState().importexport
+    return (
+      state.exportTypes[document.type].map(exportType => {
+        return h('li', h('a'
+        , { href:'javascript:void(0)'
+          , 'ev-click': evt => store.dispatch(
+              importexport.action_export(exportType))
+          }
+        , ui._('importexport/format-'+exportType.replace('/', '-'))()
+        +(state.exporting === exportType?
+            ' '+ui._('importexport/exporting')()
+          : ''
+        )
+        ))
+      })
+    ).concat([
+      state.exportError?
+        h('li', h('div.alert.alert-danger', [
+          h('strong', 'Error'), ' '+state.exportError
+        ]))
+      : ''
     ])
   }
 

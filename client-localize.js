@@ -10,12 +10,11 @@ globalize.load(require('cldr-data/supplemental/ordinals.json'))// for ordinals
 
 
 module.exports = setup
-module.exports.consumes = ['ui', 'settings', 'session']
+module.exports.consumes = ['ui', 'settings']
 
 function setup(plugin, imports, register) {
   var ui = imports.ui
     , settings = imports.settings
-    , session = imports.Session
 
   // Monkeypatch ui
 
@@ -25,6 +24,7 @@ function setup(plugin, imports, register) {
   ui.action_setLcoale =  function(locale) {
     return {type: 'SET_LOCALE', payload: locale}
   }
+  ui.renderLocaleSetting = renderLocaleSetting
 
   // SET_LOCALE middleware + reducer
 
@@ -62,7 +62,9 @@ function setup(plugin, imports, register) {
 
   // Locale setting
 
-  settings.onRenderUserSettings((children) => children.push(renderLocaleSetting(ui.store)))
+  settings.onRenderUserSettings((children) => {
+    children.push(renderLocaleSetting(ui.store))
+  })
 
   function renderLocaleSetting(store) {
     var currentLanguage = store.getState().locale

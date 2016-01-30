@@ -179,6 +179,11 @@ function setup(plugin, imports, register) {
       return {type: 'EDITOR_LOAD', error: true, payload: e}
     }
   , onLoad: AtomicEmitter()
+  , render
+  , renderLoadError
+  , renderChooseEditor
+  , renderNotFound
+  , renderLoading
   }
 
   // create editor element

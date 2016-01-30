@@ -84,6 +84,9 @@ function setup(plugin, imports, register) {
       if(res.access_token) return yield {type: 'OAUTH_GRANT', payload: res.access_token}
       else return yield {type: 'OAUTH_GRANT', paload: false}
     }
+  , render
+  , renderAskPermission
+  , renderRedirecting
   }
 
   function render(store) {

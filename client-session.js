@@ -187,6 +187,11 @@ function setup(plugin, imports, register) {
   , action_loadStream: createActionFactory('SESSION_STREAM_LOAD')
   , action_streamConnected: createActionFactory('SESSION_STREAM_CONNECTED')
   , action_streamDisconnected: createActionFactory('SESSION_STREAM_DISCONNECTED')
+  , render
+  , renderLoggingIn
+  , renderChooseAuthMethod
+  , renderAsk
+  , renderDisconnected
   , onLogin: AtomicEmitter()
   , onLoadStream: AtomicEmitter()
   , onStreamConnect: AtomicEmitter()

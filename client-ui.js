@@ -93,6 +93,9 @@ function setup(plugin, imports, register) {
   , action_loadState: function(state) {
       return {type: 'LOAD_STATE', payload: state}
     }
+  , render: render
+  , renderNavbar: renderNavbar
+  , renderBody: renderBody
   }
 
   function loggerMiddleware(store) {
