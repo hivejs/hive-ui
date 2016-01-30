@@ -158,6 +158,20 @@ function setup(plugin, imports, register) {
     }
   })
 
+  // Toggle main Menu
+
+  ui.reduxReducerMap.displayMainMenu = (state, action) => {
+    if('undefined' === typeof state) return false
+    if('UI_TOGGLE_MAIN_MENU' === action.type) {
+      return !state
+    }
+    return state
+  }
+
+  ui.action_toggleMainMenu = function() {
+    return {type: 'UI_TOGGLE_MAIN_MENU'}
+  }
+
   // Render loop
 
   ui.onStart(() => {
@@ -192,26 +206,28 @@ function setup(plugin, imports, register) {
   }
 
   function renderNavbar(store) {
+    var displayMainMenu = store.getState().displayMainMenu
     return h('div.navbar.navbar-default.navbar-static-top', [
       h('div.container-fluid', [
         h('div.navbar-header',
         extensible('onRenderHeader', store, [
-          h('button.navbar-toggle.collapsed', { attributes:
-            { type:"button"
-            , "data-toggle":"collapse"
-            , "data-target":"#navigation"
-            , "aria-expanded":"false"
+          h('button.navbar-toggle'+(displayMainMenu? '' : '.collapsed')
+          , { attributes:
+              { type:"button"
+              , "aria-expanded":displayMainMenu? 'true' : 'false'
+              }
+            , 'ev-click': evt => store.dispatch(ui.action_toggleMainMenu())
             }
-          },
-          [
-          h('span.sr-only', 'Toggle navigation'),
-          h('span.icon-bar'),
-          h('span.icon-bar'),
-          h('span.icon-bar'),
+          , [
+            h('span.sr-only', 'Toggle navigation'),
+            h('span.icon-bar'),
+            h('span.icon-bar'),
+            h('span.icon-bar'),
           ]),
           h('a.navbar-brand', {href:"#"}, 'Hive')
         ])),
-        h('div.collapse.navbar-collapse', {attributes: {id:'navigation'}},[
+        h('div.collapse.navbar-collapse'+(displayMainMenu? '.in' : '')
+        ,[
           h('ul.nav.navbar-nav.navbar-right',
             extensible('onRenderNavbar', store, [])
           )
