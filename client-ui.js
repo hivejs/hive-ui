@@ -81,6 +81,7 @@ function setup(plugin, imports, register) {
     }
   , onRenderNavbar: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
+  , onRenderHeader: AtomicEmitter()
   , onStart: AtomicEmitter()
   , baseURL: baseURL
   , reduxMiddleware: [reduxGen(), loggerMiddleware, routerMiddleware]
@@ -190,7 +191,8 @@ function setup(plugin, imports, register) {
   function renderNavbar(store) {
     return h('div.navbar.navbar-default.navbar-static-top', [
       h('div.container-fluid', [
-        h('div.navbar-header', [
+        h('div.navbar-header',
+        extensible('onRenderHeader', store, [
           h('button.navbar-toggle.collapsed', { attributes:
             { type:"button"
             , "data-toggle":"collapse"
@@ -205,7 +207,7 @@ function setup(plugin, imports, register) {
           h('span.icon-bar'),
           ]),
           h('a.navbar-brand', {href:"#"}, 'Hive')
-        ]),
+        ])),
         h('div.collapse.navbar-collapse', {attributes: {id:'navigation'}},[
           h('ul.nav.navbar-nav.navbar-right',
             extensible('onRenderNavbar', store, [])

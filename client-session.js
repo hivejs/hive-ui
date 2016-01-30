@@ -35,11 +35,15 @@ function setup(plugin, imports, register) {
   ui.reduxReducerMap.session = reducer
   ui.reduxMiddleware.push(cookieEffects())
   ui.reduxMiddleware.push(store => next => action => {
-    if('SESSION_LOAD_STREAM' === action.type) {
+    if('SESSION_STREAM_LOAD' === action.type) {
       var state = store.getState()
       return Stream(ui.baseURL, action.payload)
       .then(stream => {
         session.stream = stream
+        session.onLoadStream.emit()
+      })
+      .catch(er => {
+        store.dispatch({type: 'SESSION_LOGIN', error: true, payload: er})
       })
     }
     return next(action)
@@ -52,12 +56,18 @@ function setup(plugin, imports, register) {
     }
   })
 
+  ui.onRenderHeader((store, children) => {
+    var state = store.getState()
+    if(!state.session.streamConnected) {
+      children.push(renderDisconnected(store))
+    }
+  })
+
   ui.onStart(function() {
-    // Synchronize stream/API client with state.grant
     var sessionUserId
     ui.store.subscribe(function() {
       var state = ui.store.getState()
-      // if session.grant has changed, re-load stream
+      // if session.grant has changed, emit onLogin
       if(state.session.grant && state.session.grant.user != sessionUserId) {
         sessionUserId = state.session.grant.user
         session.onLogin.emit()
@@ -69,7 +79,21 @@ function setup(plugin, imports, register) {
   })
 
   function reducer(state, action) {
-    if(!state) return {authMethod: null, grant: null, user: null, loggingIn: false}
+    if(!state) {
+      return {
+        authMethod: null
+      , grant: null
+      , user: null
+      , loggingIn: false
+      , streamConnected: true
+      }
+    }
+    if('SESSION_STREAM_CONNECTED' === action.type) {
+      return {...state, streamConnected: true}
+    }
+    if('SESSION_STREAM_DISCONNECTED' === action.type) {
+      return {...state, streamConnected: false}
+    }
     if('SESSION_CHOOSE_AUTH_METHOD' === action.type) {
       return {...state, authMethod: action.payload}
     }
@@ -160,8 +184,12 @@ function setup(plugin, imports, register) {
      */
   , action_chooseAuthMethod: createActionFactory('SESSION_CHOOSE_AUTH_METHOD')
   , action_loggingIn: createActionFactory('SESSION_LOGGING_IN')
-  , action_loadStream: createActionFactory('SESSION_LOAD_STREAM')
+  , action_loadStream: createActionFactory('SESSION_STREAM_LOAD')
+  , action_streamConnected: createActionFactory('SESSION_STREAM_CONNECTED')
+  , action_streamDisconnected: createActionFactory('SESSION_STREAM_DISCONNECTED')
   , onLogin: AtomicEmitter()
+  , onLoadStream: AtomicEmitter()
+  , onStreamConnect: AtomicEmitter()
   , onceLoggedIn: function(cb) {
       if(ui.store.getState().session.user) return setImmediate(cb)
       var dispose = session.onLogin(function() {
@@ -170,6 +198,16 @@ function setup(plugin, imports, register) {
       })
     }
   }
+
+  session.onLoadStream(() => {
+    session.stream.on('disconnect', () => {
+      ui.store.dispatch(session.action_streamDisconnected())
+    })
+    session.stream.on('connect', () => {
+      ui.store.dispatch(session.action_streamConnected())
+      session.onStreamConnect.emit()
+    })
+  })
 
   function render(store) {
     var state = store.getState()
@@ -238,6 +276,13 @@ function setup(plugin, imports, register) {
       'min-width': '7.5cm',
       margin: '3cm auto'
     }}, children)
+  }
+
+  function renderDisconnected(store) {
+    return h('span.Session__offlineTag', [
+      h('i.glyphicon.glyphicon-plane')
+    , ' '+ui._('session/offline')()
+    ])
   }
 
   register(null, {session: session})

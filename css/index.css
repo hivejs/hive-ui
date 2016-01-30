@@ -12,3 +12,8 @@
 .Settings__close {
   float:right;
 }
+
+.Session__offlineTag {
+  display: inline-block;
+  padding: 15px 15px;
+}

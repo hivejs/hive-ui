@@ -126,6 +126,12 @@ function setup(plugin, imports, register) {
         var broadcast = MuxDmx()
         var upstreamBroadcast = session.stream.open('/document/'+id+'/broadcast')
         broadcast.pipe(upstreamBroadcast).pipe(broadcast)
+        session.onStreamConnect(() => {
+          broadcast.unpipe()
+          upstreamBroadcast.unpipe()
+          upstreamBroadcast = session.stream.open('/document/'+id+'/broadcast')
+          broadcast.pipe(upstreamBroadcast).pipe(broadcast)
+        })
 
         //link to the server
         var uplink = session.stream.open('/document/'+id+'/sync')
@@ -134,6 +140,12 @@ function setup(plugin, imports, register) {
         uplink
         .pipe(masterLink = editableDoc.masterLink({credentials: access_token}))
         .pipe(uplink)
+        session.onStreamConnect(() => {
+          uplink.unpipe()
+          masterLink.unpipe()
+          uplink = session.stream.open('/document/'+id+'/sync')
+          uplink.pipe(masterLink).pipe(uplink)
+        })
 
         this.onClose(_=> {
           broadcast.unpipe()

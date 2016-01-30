@@ -8,6 +8,7 @@
     "authenticate": "Authenticate"
   , "authenticate-explanation": "Authenticate using one of the following authentication methods:"
   , "logging-in": "Logging in..."
+  , "offline": "Offline"
   }
 , "editor": {
     "editor": "Editor"
