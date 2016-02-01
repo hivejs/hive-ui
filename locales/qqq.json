@@ -1,0 +1,53 @@
+{
+  "language-name": "The name of the language you are translating to. (Don't translate 'English'!)"
+, "ui": {
+    "locale": "A heading for the locale setting."
+  , "select-language": "Label for a language select field"
+  }
+, "session": {
+    "authenticate": "A heading of a modal that prompts the user to authenticate"
+  , "authenticate-explanation": "Text displayed above a list of possible authentication methods"
+  , "logging-in": "Displayed while the authentication process is running."
+  , "offline": "Displayed in the header as an indicator that there's currently no internet connection"
+  }
+, "editor": {
+    "editor": "A heading for editor settings"
+  , "select-editor": "A label for a select field, allowing the user to choose from available editors"
+  , "choose-editor": "A heading for a model prompting the user to pick an editor"
+  , "choose-editor-explanation": "Text displayed above a list of options for choosing an editor. {type} is a MIME type"
+  , "not-found": "Bold, heading-like text in an error message"
+  , "not-found-explanation": "an error message"
+  , "load-error": "Bold, heading-like text in an error message"
+  , "load-error-explanation": "An error message"
+  , "loading": "Displayed while loading the editor"
+  }
+, "importexport": {
+    "import": "A menu item for a dropdown"
+  , "import-browser-not-supported": "Error message."
+  , "importing": "Displayed while importing a file. {file} looks like this: document.txt"
+  , "export": "A menu item for a dropdown"
+  , "exporting": "Displayed next to an export format, if the user chose to export the document to this format."
+  , "format-text-plain": "An export format option"
+  , "format-text-html": "An export format option"
+  , "format-image-svg+xml": "An export format option"
+  , "format-image-png": "An export format option"
+  , "format-text-markdown": "An export format option"
+  , "format-application-x-latex": "An export format option"
+  , "format-application-vnd.openxmlformats-officedocument.wordprocessingml.document": "An export format option"
+  , "format-application-vnd.oasis.opendocument.text": "An export format option"
+  , "format-application-docbook+xml": "An export format option"
+  , "format-application-epub+zip": "An export format option"
+  }
+, "oauth": {
+    "authorization-required": "A heading for a modal
+  , "hello": "{user} is the user's name"
+  , "authorization-explanation": "Displayed above a list of functionality. {app_url} is the web address of the other app."
+  , "scope-all": "Displayed if the other app wants access to all of the user's account"
+  , "question": ""
+  , "warning": "Bold, heading-like text in a warning message"
+  , "warning-explanation": "warning message"
+  , "deny": "Button text"
+  , "grant": "Button text"
+  , "redirecting": "Displayed while the user's browser is being redirected"
+  }
+}
