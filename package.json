@@ -1,6 +1,6 @@
 {
   "name": "hive-ui",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Http ui client for hive.js",
   "main": "index.js",
   "dependencies": {
