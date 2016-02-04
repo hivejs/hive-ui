@@ -39,7 +39,7 @@
   , "format-application-epub+zip": "An export format option"
   }
 , "oauth": {
-    "authorization-required": "A heading for a modal
+    "authorization-required": "A heading for a modal"
   , "hello": "{user} is the user's name"
   , "authorization-explanation": "Displayed above a list of functionality. {app_url} is the web address of the other app."
   , "scope-all": "Displayed if the other app wants access to all of the user's account"
