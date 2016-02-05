@@ -265,13 +265,13 @@ function setup(plugin, imports, register) {
         if(chosenEditor = settings.getForUserDocument('editor:editor'))
           setTimeout(function() {
             store.dispatch(editor.action_chooseEditor(chosenEditor))
-          }, 0)
+          }, 50)
         else
           return renderChooseEditor(store)
       }else
         setTimeout(function() {
           store.dispatch(editor.action_chooseEditor(chooseableEditors[0].name))
-        }, 0)
+        }, 50)
     }
 
     else if(state.editor.notFound)
