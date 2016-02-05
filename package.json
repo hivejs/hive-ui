@@ -24,7 +24,7 @@
     "mime-match": "1.x",
     "mux-dmx": "0.0.x",
     "redux-effects-cookie": "0.2.x",
-    "hive-client-shoe": "0.4.x",
+    "hive-client-shoe": "0.6.x",
     "cldr-data": "latest",
     "globalize": "1.1.x",
     "deap": "1.x"
