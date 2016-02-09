@@ -162,6 +162,7 @@ function setup(plugin, imports, register) {
   ui.registerModule(path.join(__dirname, 'client-settings.js'))
   ui.registerModule(path.join(__dirname, 'client-localize.js'))
   ui.registerModule(path.join(__dirname, 'client-oauth.js'))
+  ui.registerModule(path.join(__dirname, 'client-authToken.js'))
   ui.registerLocaleDir(path.join(__dirname, 'locales'))
 
   hooks.on('http:listening', function*() {
