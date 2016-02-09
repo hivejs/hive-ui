@@ -143,7 +143,7 @@ function setup(plugin, imports, register) {
   }
 
 
-  ui.onRenderNavbar((store, children) => {
+  ui.onRenderNavbarRight((store, children) => {
     if(!store.getState().session.user) return
     children.push(
       h('li', h('a', {
