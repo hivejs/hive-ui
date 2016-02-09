@@ -22,7 +22,6 @@
     "reduce-reducers": "0.1.x",
     "hive-client-rest-api": "2.x",
     "redux-actions": "0.9.x",
-    "mime-match": "1.x",
     "mux-dmx": "0.0.x",
     "redux-effects-cookie": "0.2.x",
     "hive-client-shoe": "0.6.x",

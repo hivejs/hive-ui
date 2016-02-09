@@ -157,7 +157,6 @@ function setup(plugin, imports, register) {
   ui.registerModule(path.join(__dirname, 'client-ui.js'))
   ui.registerModule(path.join(__dirname, 'client-api.js'))
   ui.registerModule(path.join(__dirname, 'client-editor.js'))
-  ui.registerModule(path.join(__dirname, 'client-importexport.js'))
   ui.registerModule(path.join(__dirname, 'client-session.js'))
   ui.registerModule(path.join(__dirname, 'client-settings.js'))
   ui.registerModule(path.join(__dirname, 'client-localize.js'))
