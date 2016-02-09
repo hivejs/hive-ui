@@ -79,7 +79,7 @@ function setup(plugin, imports, register) {
       if(matchesOld && !matchesNew) return true
       return false
     }
-  , onRenderNavbar: AtomicEmitter()
+  , onRenderNavbarRight: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onRenderHeader: AtomicEmitter()
   , onStart: AtomicEmitter()
@@ -229,7 +229,7 @@ function setup(plugin, imports, register) {
         h('div.collapse.navbar-collapse'+(displayMainMenu? '.in' : '')
         ,[
           h('ul.nav.navbar-nav.navbar-right',
-            extensible('onRenderNavbar', store, [])
+            extensible('onRenderNavbarRight', store, [])
           )
         ])
       ])
