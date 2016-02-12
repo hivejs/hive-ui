@@ -102,7 +102,7 @@ function setup(plugin, imports, register) {
     var locale = settings.getForUser('ui:locale')
     if(locale && ui.store.getState().locale !== locale) {
       ui.store.dispatch(ui.action_setLcoale(locale))
-      document.body.dir = ui.config.locales[locale].direction
+      document.documentElement.dir = ui.config.locales[locale].direction
     }
   })
 
