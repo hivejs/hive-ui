@@ -150,7 +150,10 @@ function setup(plugin, imports, register) {
         href: 'javascript:void(0)'
       , 'ev-click': evt => ui.store.dispatch(settings.action_setView('User'))
       , title: ui._('settings/settings')()
-      }, h('i.glyphicon.glyphicon-cog')))
+      }, [
+        h('i.glyphicon.glyphicon-cog')
+      , h('span.sr-only', ui._('settings/settings')())
+      ]))
     )
   })
 
