@@ -20,23 +20,6 @@
   , "load-error-explanation": "An error message"
   , "loading": "Displayed while loading the editor"
   }
-, "importexport": {
-    "import": "A menu item for a dropdown"
-  , "import-browser-not-supported": "Error message."
-  , "importing": "Displayed while importing a file. {file} looks like this: document.txt"
-  , "export": "A menu item for a dropdown"
-  , "exporting": "Displayed next to an export format, if the user chose to export the document to this format."
-  , "format-text-plain": "An export format option"
-  , "format-text-html": "An export format option"
-  , "format-image-svg+xml": "An export format option"
-  , "format-image-png": "An export format option"
-  , "format-text-markdown": "An export format option"
-  , "format-application-x-latex": "An export format option"
-  , "format-application-vnd.openxmlformats-officedocument.wordprocessingml.document": "An export format option"
-  , "format-application-vnd.oasis.opendocument.text": "An export format option"
-  , "format-application-docbook+xml": "An export format option"
-  , "format-application-epub+zip": "An export format option"
-  }
 , "settings": {
     "settings": "Used as a menu item and panel heading"
   , "user-settings": "Label for this user's settings"
