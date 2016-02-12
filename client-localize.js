@@ -38,6 +38,7 @@ function setup(plugin, imports, register) {
           .then((json) => {
             globalize.loadMessages(json)
             globalize.locale(action.payload)
+            document.documentElement.dir = ui.config.locales[action.payload].direction
             next(action)
             ui.onLocalize.emit(action.payload)
           })
@@ -102,7 +103,6 @@ function setup(plugin, imports, register) {
     var locale = settings.getForUser('ui:locale')
     if(locale && ui.store.getState().locale !== locale) {
       ui.store.dispatch(ui.action_setLcoale(locale))
-      document.documentElement.dir = ui.config.locales[locale].direction
     }
   })
 
