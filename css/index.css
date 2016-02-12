@@ -16,9 +16,14 @@
   }
 }
 
-.Settings__close {
+html[dir="ltr"] .Settings__close {
   float:right;
 }
+
+html[dir="rtl"] .Settings__close {
+  float:right;
+}
+
 
 .Session__offlineTag {
   display: inline-block;
