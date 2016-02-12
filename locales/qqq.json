@@ -38,6 +38,12 @@
   , "format-application-docbook+xml": "An export format option"
   , "format-application-epub+zip": "An export format option"
   }
+, "settings": {
+    "settings": "Used as a menu item and panel heading"
+  , "user-settings": "Label for this user's settings"
+  , "document-settings": "Label for this document's settings (for everyone viewing it)"
+  , "personal-document-settings": "Label for this user's personal settings for this document."
+  }
 , "oauth": {
     "authorization-required": "A heading for a modal"
   , "hello": "{user} is the user's name"

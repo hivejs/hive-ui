@@ -149,7 +149,8 @@ function setup(plugin, imports, register) {
       h('li', h('a', {
         href: 'javascript:void(0)'
       , 'ev-click': evt => ui.store.dispatch(settings.action_setView('User'))
-      }, 'Settings'))
+      , title: ui._('settings/settings')()
+      }, h('i.glyphicon.glyphicon-cog')))
     )
   })
 
@@ -165,7 +166,7 @@ function setup(plugin, imports, register) {
           href:'javascript:void(0)'
         , 'ev-click': ev => store.dispatch(settings.action_setView(false))
         })
-      , h('h3','Settings')
+      , h('h3',ui._('settings/settings')())
       ]),
       h('div.panel-body', [
         h('ul.nav.nav-tabs.nav-justified',{style:{'margin-bottom': '10px'}},[
@@ -173,20 +174,20 @@ function setup(plugin, imports, register) {
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('User'))
             }
-          , 'User'))
+          , ui._('settings/user-settings')()))
         , state.editor.document?
           h('li'+(state.settings.active=='Document'? '.active': ''), h('a'
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('Document'))
             }
-          , 'This document (for everyone)'))
+          , ui._('settings/document-settings')()))
           : ''
         , state.editor.document?
           h('li'+(state.settings.active=='UserDocument'? '.active': ''), h('a'
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('UserDocument'))
             }
-          , 'This document (for you)'))
+          , ui._('settings/personal-document-settings')()))
           : ''
         ])
       , h('div', extend([]))

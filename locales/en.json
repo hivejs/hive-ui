@@ -21,6 +21,12 @@
   , "load-error-explanation": "An unexpected error occurred while loading the editor. Please try again."
   , "loading": "Loading..."
   }
+, "settings": {
+    "settings": "Settings"
+  , "user-settings": "User"
+  , "document-settings": "This document (for everyone)"
+  , "personal-document-settings": "This document (for you)"
+  }
 , "oauth": {
     "authorization-required": "Authorization required"
   , "hello": "Hey {user},"
