@@ -1,6 +1,5 @@
 {
-  "language-name": "English"
-, "ui": {
+  "ui": {
     "locale": "Locale"
   , "select-language": "Select your language"
   }

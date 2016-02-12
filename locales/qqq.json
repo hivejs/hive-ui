@@ -1,6 +1,5 @@
 {
-  "language-name": "The name of the language you are translating to. (Don't translate 'English'!)"
-, "ui": {
+  "ui": {
     "locale": "A heading for the locale setting."
   , "select-language": "Label for a language select field"
   }

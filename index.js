@@ -21,6 +21,7 @@ var path = require('path')
   , browserify = require('browserify')
   , fs = require('fs')
   , deap = require('deap')
+  , languages = require('languages')
 
 module.exports = setup
 module.exports.consumes = ['http', 'hooks', 'config', 'importexport']
@@ -204,7 +205,7 @@ function setup(plugin, imports, register) {
 
     ui.registerConfigEntry('locales', Object.keys(locales)
       .reduce((o, locale) => {
-        o[locale] = locales[locale]['language-name']
+        o[locale] = languages.getLanguageInfo(locale)
         return o
       }, {})
     )

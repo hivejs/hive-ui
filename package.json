@@ -27,6 +27,7 @@
     "hive-client-shoe": "0.6.x",
     "cldr-data": "latest",
     "globalize": "1.1.x",
+    "languages": "0.1.x",
     "deap": "1.x"
   },
   "scripts": {

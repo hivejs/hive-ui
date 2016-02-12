@@ -81,7 +81,7 @@ function setup(plugin, imports, register) {
                 , { value: locale
                   , attributes: currentLanguage == locale? {selected: true} : {}
                   }
-                , ui.config.locales[locale]
+                , ui.config.locales[locale].nativeName
                 )
               }))
           ])
@@ -99,9 +99,10 @@ function setup(plugin, imports, register) {
   // Integrate with settings
 
   settings.onChange(() => {
-    if(ui.store.getState().locale !== settings.getForUser('ui:locale') &&
-       settings.getForUser('ui:locale')) {
-      ui.store.dispatch(ui.action_setLcoale(settings.getForUser('ui:locale')))
+    var locale = settings.getForUser('ui:locale')
+    if(locale && ui.store.getState().locale !== locale) {
+      ui.store.dispatch(ui.action_setLcoale(locale))
+      document.body.dir = ui.config.locales[locale].direction
     }
   })
 
