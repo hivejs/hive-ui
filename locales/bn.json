@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aftabuzzaman"
+		]
+	},
+	"ui": {
+		"locale": "স্থানীয়",
+		"select-language": "আপনার ভাষা নির্বাচন করুন"
+	},
+	"session": {
+		"authenticate": "সপ্রমাণ করা",
+		"authenticate-explanation": "প্রমাণ করা নিম্নলিখিত প্রমাণীকরণ পদ্ধতি ব্যবহার করছে:",
+		"logging-in": "লগইন হচ্ছে...",
+		"offline": "অফলাইন"
+	},
+	"editor": {
+		"editor": "সম্পাদক",
+		"select-editor": "একটি সম্পাদক নির্বাচন",
+		"choose-editor": "একটি সম্পাদক চয়ন করুন",
+		"choose-editor-explanation": "{type} নথিতে সহযোগীতা করার জন্য নিম্নলিখিত একটি সম্পাদক চয়ন করুন",
+		"not-found": "পাওয়া যায়নি!",
+		"not-found-explanation": "আমরা আপনার নথি খুঁজে পাচ্ছি না বলে মনে হচ্ছে। দুঃখিত।",
+		"load-error": "ত্রুটি!",
+		"load-error-explanation": "সম্পাদক লোড হওয়ার সময় একটি অপ্রত্যাশিত ত্রুটি ঘটেছে। অনুগ্রহপূর্বক আবার চেষ্টা করুন।",
+		"loading": "লোড হচ্ছে..."
+	},
+	"settings": {
+		"settings": "সেটিংস",
+		"user-settings": "ব্যবহারকারী",
+		"document-settings": "এই নথি (সবার জন্য)",
+		"personal-document-settings": "এই নথি (আপনার জন্য)"
+	},
+	"oauth": {
+		"authorization-required": "অনুমোদন আবশ্যক",
+		"hello": "প্রিয় {user},",
+		"authorization-explanation": "{app_url}-এ অ্যাপ্লিকেশনটি আপনার hive.js অ্যাকাউন্টের নিম্নলিখিত কার্যকারিতায় প্রবেশাধিকার চায়:",
+		"scope-all": "আপনার সব অ্যাকাউন্ট",
+		"question": "আপনি কি প্রবেশাধিকার মঞ্জুর করতে চান?",
+		"warning": "সতর্কীকরণ!",
+		"warning-explanation": "অ্যাপলিকেশনটি একটি অনিরাপদ প্রোটোকলের মাধ্যমে যোগাযোগ করছে!",
+		"deny": "প্রবেশাধিকার অস্বীকার",
+		"grant": "প্রবেশাধিকার মঞ্জুর",
+		"redirecting": "পুনর্নির্দেশ করা হচ্ছে..."
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Macofe",
+			"Nemo bis"
+		]
+	},
+	"ui": {
+		"locale": "Localizzazione",
+		"select-language": "Seleziona la tua lingua"
+	},
+	"session": {
+		"authenticate": "Autenticazione",
+		"authenticate-explanation": "Autenticati utilizzando uno dei seguenti metodi di autenticazione:",
+		"offline": "Non connesso"
+	},
+	"editor": {
+		"not-found": "Non trovato!",
+		"not-found-explanation": "Sembra che non riusciamo a trovare il documento. Spiacenti.",
+		"load-error": "Errore!"
+	},
+	"settings": {
+		"settings": "Impostazioni",
+		"user-settings": "Utente",
+		"document-settings": "Questo documento (per tutti)",
+		"personal-document-settings": "Questo documento (per te)"
+	},
+	"oauth": {
+		"authorization-required": "Autorizzazione richiesta",
+		"hello": "Ehi {user},",
+		"scope-all": "tutte le tue utenze",
+		"question": "Vuoi consentire l'accesso?",
+		"warning": "Attenzione!",
+		"warning-explanation": "L'applicazione sta comunicando con un protocollo insicuro!",
+		"deny": "Nega accesso",
+		"grant": "Concedi accesso"
+	}
+}

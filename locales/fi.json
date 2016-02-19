@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nike"
+		]
+	},
+	"ui": {
+		"locale": "Kieli",
+		"select-language": "Valitse kieli"
+	},
+	"session": {
+		"authenticate": "Sisäänkirjautuminen",
+		"authenticate-explanation": "Kirjaudu sisään jollakin seuraavista tavoista:",
+		"logging-in": "Kirjaudutaan...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Muokkain",
+		"select-editor": "Valitse muokkain",
+		"choose-editor": "Muokkaimen valinta",
+		"choose-editor-explanation": "Valitse jokin seuraavista muokkaimista {type}-asiakirjoille",
+		"not-found": "Ei löytynyt!",
+		"not-found-explanation": "Asiakirjojasi ei löydy.",
+		"load-error": "Virhe!",
+		"load-error-explanation": "Muokkainen lataus epäonnistui. Yritä uudelleen.",
+		"loading": "Ladataan..."
+	},
+	"settings": {
+		"settings": "Asetukset",
+		"user-settings": "Käyttäjä",
+		"document-settings": "Tämä asiakirja (kaikki)",
+		"personal-document-settings": "Tämä asiakirja (sinulle)"
+	},
+	"oauth": {
+		"authorization-required": "Lupa tarvitaan",
+		"hello": "Hei {user},",
+		"authorization-explanation": "Sovellus {app_url} haluaa käyttää seuraavia toimintoja hive.js-tililläsi:",
+		"scope-all": "kaikki toiminnot",
+		"question": "Haluatko sallia nämä toiminnot?",
+		"warning": "Varoitus!",
+		"warning-explanation": "Tämä sovellus käyttää turvatonta protokollaa.",
+		"deny": "Estä",
+		"grant": "Salli",
+		"redirecting": "Ohjataan..."
+	}
+}

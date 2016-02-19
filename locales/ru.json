@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras"
+		]
+	},
+	"ui": {
+		"locale": "Язык",
+		"select-language": "Выберите язык"
+	},
+	"session": {
+		"authenticate": "Авторизация",
+		"authenticate-explanation": "Выполните проверку подлинности с помощью одного из следующих методов:",
+		"logging-in": "Вход в систему…",
+		"offline": "Не в сети"
+	},
+	"editor": {
+		"editor": "Редактор",
+		"select-editor": "Выберите редактор",
+		"choose-editor": "Выберите редактор",
+		"choose-editor-explanation": "Выберите одного из следующих редакторов для совместной работы на {type}-документами",
+		"not-found": "Не найдено!",
+		"not-found-explanation": "Кажется, мы не можем найти ваш документ. Простите.",
+		"load-error": "Ошибка!",
+		"load-error-explanation": "Произошла непредвиденная ошибка при загрузке редактора. Пожалуйста, попробуйте ещё раз.",
+		"loading": "Загрузка…"
+	},
+	"settings": {
+		"settings": "Настройки",
+		"user-settings": "Участник",
+		"document-settings": "Этот документ (для всех)",
+		"personal-document-settings": "Этот документ (для вас)"
+	},
+	"oauth": {
+		"authorization-required": "Необходима авторизация",
+		"hello": "Привет, {user},",
+		"authorization-explanation": "Приложение по адресу {app_url} хочет доступ к следующей функциональности вашей учётной записи hive.js:",
+		"scope-all": "все",
+		"question": "Вы действительно хотите предоставить доступ?",
+		"warning": "Внимание!",
+		"warning-explanation": "Приложение обменивается данными через небезопасный протокол!",
+		"deny": "Запретить доступ",
+		"grant": "Предоставить доступ",
+		"redirecting": "Перенаправление…"
+	}
+}

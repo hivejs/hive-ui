@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elisardojm"
+		]
+	},
+	"ui": {
+		"locale": "Local",
+		"select-language": "Seleccione a súa lingua"
+	},
+	"session": {
+		"authenticate": "Autenticación",
+		"authenticate-explanation": "Autenticar usando un dos seguintes métodos de autenticación:",
+		"logging-in": "Accedendo ao sistema...",
+		"offline": "Desconectado"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Seleccionar un editor",
+		"choose-editor": "Escoller un editor",
+		"choose-editor-explanation": "Escoller un dos seguintes editores para colaborar nos documentos {type}",
+		"not-found": "Non se atopou!",
+		"not-found-explanation": "Parece que non podemos atopar o seu documento. Sentímolo.",
+		"load-error": "Erro!",
+		"load-error-explanation": "Houbo un erro inesperado mentres se cargaba o editor. Por favor, inténteo de novo.",
+		"loading": "Cargando..."
+	},
+	"settings": {
+		"settings": "Configuración",
+		"user-settings": "Usuario",
+		"document-settings": "Este documento (para todo o mundo)",
+		"personal-document-settings": "Este documento (para vostede)"
+	},
+	"oauth": {
+		"authorization-required": "Autorización necesaria",
+		"hello": "Boas {user},"
+	}
+}

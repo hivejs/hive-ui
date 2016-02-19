@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"ui": {
+		"locale": "Taalinstelling",
+		"select-language": "Selecteer een taal"
+	},
+	"session": {
+		"authenticate": "Aanmelden",
+		"authenticate-explanation": "Meld u aan met een van de volgende authenticatiemethoden:",
+		"logging-in": "Bezig met aanmelden...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Tekstverwerker",
+		"select-editor": "Selecteer een tekstverwerker",
+		"choose-editor": "Kies een tekstverwerker",
+		"choose-editor-explanation": "Kies een van de volgende tekstverwerkers om samen te werken aan documenten van het type {type}",
+		"not-found": "Niet gevonden",
+		"not-found-explanation": "Uw document is helaas niet te vinden.",
+		"load-error": "Fout",
+		"load-error-explanation": "Er is een onverwachte fout opgetreden tijdens het laden van de tekstverwerker. Probeer het opnieuw.",
+		"loading": "Bezig met laden…"
+	},
+	"settings": {
+		"settings": "Instellingen",
+		"user-settings": "Gebruiker",
+		"document-settings": "Dit document (voor iedereen)",
+		"personal-document-settings": "Dit document (voor u alleen)"
+	},
+	"oauth": {
+		"authorization-required": "Aanmelden verplicht",
+		"hello": "Hallo {user},",
+		"authorization-explanation": "Het programma op {app_url} wil toegang tot de volgende functionaliteit van uw hive.js-account:",
+		"scope-all": "uw volledige account",
+		"question": "Wilt u toegang verlenen?",
+		"warning": "Waarschuwing",
+		"warning-explanation": "Het programma communiceert via een onbeveiligd protocol.",
+		"deny": "Toegang weigeren",
+		"grant": "Toegang verlenen",
+		"redirecting": "Doorsturen..."
+	}
+}

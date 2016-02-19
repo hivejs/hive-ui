@@ -1,0 +1,47 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64",
+			"Mklehr"
+		]
+	},
+	"ui": {
+		"locale": "Sprachumgebung",
+		"select-language": "Wähle deine Sprache aus"
+	},
+	"session": {
+		"authenticate": "Authentifizieren",
+		"authenticate-explanation": "Mit einer der folgenden Authentifizierungsmethoden authentifizieren:",
+		"logging-in": "Anmelden…",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Wähle einen Editor aus",
+		"choose-editor": "Wähle einen Editor aus",
+		"choose-editor-explanation": "Wähle einen der folgenden Editoren zur Zusammenarbeit an {type}-Dokumenten aus",
+		"not-found": "Nicht gefunden!",
+		"not-found-explanation": "Es scheint so, als ob wir dein Dokument nicht finden können. Das tut uns leid.",
+		"load-error": "Fehler!",
+		"load-error-explanation": "Beim Laden des Editors ist ein unerwarteter Fehler aufgetreten. Bitte erneut versuchen.",
+		"loading": "Laden…"
+	},
+	"settings": {
+		"settings": "Einstellungen",
+		"user-settings": "Benutzer",
+		"document-settings": "Dieses Dokument (für jeden)",
+		"personal-document-settings": "Dieses Dokument (für dich)"
+	},
+	"oauth": {
+		"authorization-required": "Berechtigung erforderlich",
+		"hello": "Hallo {user},",
+		"authorization-explanation": "Die Anwendung unter {app_url} möchte Zugriff auf folgende Funktionen deines hive.js-Kontos:",
+		"scope-all": "Auf alles von deinem Benutzerkonto zugreifen",
+		"question": "Möchtest du Zugriff gewähren?",
+		"warning": "Warnung!",
+		"warning-explanation": "Die Anwendung kommuniziert über ein unsicheres Protokoll!",
+		"deny": "Zugriff ablehnen",
+		"grant": "Zugriff gewähren",
+		"redirecting": "Weiterleiten…"
+	}
+}

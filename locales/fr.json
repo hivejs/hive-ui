@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"ui": {
+		"locale": "Régional",
+		"select-language": "Sélectionner votre langue"
+	},
+	"session": {
+		"authenticate": "Authentification",
+		"authenticate-explanation": "S’authentifier en utilisant une des méthodes suivantes :",
+		"logging-in": "Connexion…",
+		"offline": "Hors connexion"
+	},
+	"editor": {
+		"editor": "Éditeur",
+		"select-editor": "Sélectionner un éditeur",
+		"choose-editor": "Choisir un éditeur",
+		"choose-editor-explanation": "Choisir un des éditeurs suivants pour collaborer sur les documents {type}",
+		"not-found": "Non trouvé !",
+		"not-found-explanation": "Il semble que nous n’avons pas pu trouver le document. Désolé.",
+		"load-error": "Erreur !",
+		"load-error-explanation": "Une erreur inattendue s’est produite lors du chargement de l’éditeur. Veuillez réessayer.",
+		"loading": "Chargement…"
+	},
+	"settings": {
+		"settings": "Paramètres",
+		"user-settings": "Utilisateur",
+		"document-settings": "Ce document (pour tout le monde)",
+		"personal-document-settings": "Ce document (pour vous)"
+	},
+	"oauth": {
+		"authorization-required": "Autorisation nécessaire",
+		"hello": "Bonjour {user},",
+		"authorization-explanation": "L’application à {app_url} veut accéder aux fonctionnalités suivantes de votre compte hive.js :",
+		"scope-all": "tout votre compte",
+		"question": "Voulez-vous accorder l’accès ?",
+		"warning": "Attention !",
+		"warning-explanation": "L’application communique à travers un protocole non sécurisé !",
+		"deny": "Interdire l’accès",
+		"grant": "Accorder l’accès",
+		"redirecting": "Redirection…"
+	}
+}

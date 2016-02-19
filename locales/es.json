@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Macofe"
+		]
+	},
+	"ui": {
+		"locale": "Localización",
+		"select-language": "Selecciona tu idioma"
+	},
+	"session": {
+		"authenticate": "Autentícate",
+		"authenticate-explanation": "Autentícate usando uno de los siguientes métodos de autenticación:",
+		"logging-in": "Iniciando sesión…",
+		"offline": "Sin conexión"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Selecciona un editor",
+		"choose-editor": "Elige un editor",
+		"choose-editor-explanation": "Elige uno de los siguientes editores para colaborar en documentos {type}",
+		"not-found": "No se encuentra",
+		"not-found-explanation": "Parece que no podemos encontrar tu documento. Disculpas.",
+		"load-error": "Error",
+		"load-error-explanation": "Se produjo un error inesperado mientras se cargaba el editor. Inténtalo de nuevo.",
+		"loading": "Cargando..."
+	},
+	"settings": {
+		"settings": "Configuración",
+		"user-settings": "Usuario",
+		"document-settings": "Este documento (para todos)",
+		"personal-document-settings": "Este documento (para ti)"
+	},
+	"oauth": {
+		"authorization-required": "Se requiere autorización",
+		"hello": "Hola {user},",
+		"authorization-explanation": "La aplicación en {app_url} quiere tener acceso a la siguiente funcionalidad de tu cuenta hive.js:",
+		"scope-all": "toda tu cuenta",
+		"question": "¿Quieres conceder el acceso?",
+		"warning": "Advertencia",
+		"warning-explanation": "La aplicación se comunica a través de un protocolo inseguro.",
+		"deny": "Denegar el acceso",
+		"grant": "Conceder el acceso",
+		"redirecting": "Redirigiendo..."
+	}
+}

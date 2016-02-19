@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"ui": {
+		"locale": "区域",
+		"select-language": "选择您的语言"
+	},
+	"session": {
+		"authenticate": "认证",
+		"authenticate-explanation": "使用以下身份验证方式之一进行认证：",
+		"logging-in": "正在登录...",
+		"offline": "离线"
+	},
+	"editor": {
+		"editor": "编辑器",
+		"select-editor": "选择编辑器",
+		"choose-editor": "选择编辑器",
+		"choose-editor-explanation": "选择以下编辑器之一以在{type}文档上协作",
+		"not-found": "找不到！",
+		"not-found-explanation": "看起来我们不能找到您的文档。对不起。",
+		"load-error": "错误！",
+		"load-error-explanation": "加载编辑器时发生意外错误。请重试。",
+		"loading": "正在载入..."
+	},
+	"settings": {
+		"settings": "设置",
+		"user-settings": "用户",
+		"document-settings": "该文档（用于所有人）",
+		"personal-document-settings": "该文档（用于您）"
+	},
+	"oauth": {
+		"authorization-required": "需要授权",
+		"hello": "嘿{user}，",
+		"authorization-explanation": "位于{app_url}的应用程序希望访问您的hive.js账户的以下功能：",
+		"scope-all": "您所有的账户",
+		"question": "您是否希望授予访问权？",
+		"warning": "警告！",
+		"warning-explanation": "应用程序正在通过不安全的协议进行数据传递！",
+		"deny": "拒绝访问权",
+		"grant": "授予访问权",
+		"redirecting": "正在重定向..."
+	}
+}
