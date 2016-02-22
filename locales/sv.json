@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"ui": {
+		"select-language": "Välj ditt språk"
+	},
+	"session": {
+		"authenticate": "Autentisera",
+		"logging-in": "Loggar in...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Redigerare",
+		"select-editor": "Välj en redigerare",
+		"choose-editor": "Välj en redigerare",
+		"not-found": "Hittades inte!",
+		"load-error": "Fel!",
+		"loading": "Läser in..."
+	},
+	"settings": {
+		"settings": "Inställningar",
+		"user-settings": "Användare"
+	},
+	"oauth": {
+		"hello": "Hej {user},",
+		"scope-all": "alla dina konton",
+		"warning": "Varning!",
+		"redirecting": "Omdirigerar..."
+	}
+}

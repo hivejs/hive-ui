@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"ui": {
+		"locale": "Localizacion",
+		"select-language": "Seleccionatz vòstra lenga"
+	},
+	"session": {
+		"authenticate": "Autentificacion",
+		"logging-in": "Connexion en cors…",
+		"offline": "Fòra connexion"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Seleccionar un editor",
+		"choose-editor": "Causir un editor",
+		"not-found": "Pas trobat !",
+		"load-error": "Error !",
+		"loading": "Cargament…"
+	},
+	"settings": {
+		"settings": "Paramètres",
+		"user-settings": "Utilizaire"
+	},
+	"oauth": {
+		"hello": "Bonjorn {user},",
+		"warning": "Atencion !",
+		"deny": "Interdire l’accès",
+		"grant": "Acordar l’accès",
+		"redirecting": "Redireccion…"
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sfic"
+		]
+	},
+	"ui": {
+		"locale": "भाषा",
+		"select-language": "अपना भाषा चुनें"
+	},
+	"session": {
+		"authenticate": "प्रमाणित",
+		"authenticate-explanation": "प्रमाणित करने के लिए कुछ विधि:",
+		"logging-in": "लॉग इन हो रहा है...",
+		"offline": "ओफ़लाइन"
+	},
+	"editor": {
+		"editor": "संपादक",
+		"select-editor": "संपादक चुनें",
+		"choose-editor": "संपादक चुनें",
+		"not-found": "नहीं मिला !",
+		"not-found-explanation": "क्षमा करें, आप जो खोज रहे थे वो दस्तावेज हमें नहीं मिला।",
+		"load-error": "त्रुटि!",
+		"load-error-explanation": "संपादक के लोड होते समय कुछ अज्ञात त्रुटि हुआ। कृपया फिर से प्रयास करें।",
+		"loading": "लोड हो रहा है..."
+	},
+	"settings": {
+		"settings": "पसंद",
+		"user-settings": "सदस्य",
+		"document-settings": "यह (सभी के लिए)",
+		"personal-document-settings": "यह (केवल आपके लिए)"
+	},
+	"oauth": {
+		"hello": "नमस्ते {user},",
+		"scope-all": "आपके सभी खाते",
+		"warning": "चेतावनी!"
+	}
+}
