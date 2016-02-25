@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lxlalexlxl"
+		]
+	},
+	"ui": {
+		"locale": "Мова",
+		"select-language": "Виберіть мову"
+	},
+	"session": {
+		"authenticate": "Автентифікація",
+		"authenticate-explanation": "Виконайте перевірку достовірності одним з таких методів автентифікації:",
+		"logging-in": "Входимо до системи…",
+		"offline": "Не в мережі"
+	},
+	"editor": {
+		"editor": "Редактор",
+		"select-editor": "Виберіть редактор",
+		"choose-editor": "Вибір редактора",
+		"choose-editor-explanation": "Виберіть один з редакторів для спільної роботи над {type} документами",
+		"not-found": "Не знайдено!",
+		"not-found-explanation": "Здається ми не можемо знайти ваш документ. На жаль.",
+		"load-error": "Помилка!",
+		"load-error-explanation": "Неочікувана помилка при завантаженні редактора. Будь ласка, спробуйте ще раз.",
+		"loading": "Завантаження…"
+	},
+	"settings": {
+		"settings": "Налаштування",
+		"user-settings": "Користувач",
+		"document-settings": "Цей документ (для всіх)",
+		"personal-document-settings": "Цей документ (для вас)"
+	},
+	"oauth": {
+		"authorization-required": "Необхідна авторизація",
+		"hello": "Привіт, {user},",
+		"authorization-explanation": "Застосунок {app_url} хоче отримати доступ до такої функціональності вашого облікового запису hive.js:",
+		"scope-all": "все",
+		"question": "Ви дійсно хочете надати доступ?",
+		"warning": "Застереження!",
+		"warning-explanation": "Застосунок обмінюється даними через небезпечний протокол!",
+		"deny": "Заборонити доступ",
+		"grant": "Надати доступ",
+		"redirecting": "Перенаправлення..."
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gwenn-Ael"
+		]
+	},
+	"ui": {
+		"locale": "Lec'hel",
+		"select-language": "Dibab ho yezh"
+	},
+	"session": {
+		"authenticate": "Dilesa",
+		"authenticate-explanation": "Dilesa en ur implijout an doareoù-mañ :",
+		"logging-in": "Kevreañ...",
+		"offline": "Ezlinenn"
+	},
+	"editor": {
+		"editor": "Embannner",
+		"select-editor": "Dibab un embanner",
+		"choose-editor": "Dibab un embanner",
+		"choose-editor-explanation": "Dibabunan eus an embannerien-mañ evit kenlabourat war an teulioù {type}",
+		"not-found": "N'eo ket bet kavet !",
+		"not-found-explanation": "N'hon eus ket kavet an teul, war a seblant. Hon digarezit.",
+		"load-error": "Fazi !",
+		"load-error-explanation": "Ur fazi dic'hortoz zo c'hoarvezet pa'z eus bet cheñchet embanner. Klaskit en-dro, mar plij.",
+		"loading": "O kargañ..."
+	},
+	"settings": {
+		"settings": "Arventennoù",
+		"user-settings": "Implijer",
+		"document-settings": "An teul-mañ (evit an holl)",
+		"personal-document-settings": "An teul-mañ (evidoc'h)"
+	},
+	"oauth": {
+		"authorization-required": "Aotre ret",
+		"hello": "Demat {user},",
+		"scope-all": "holl ho kont",
+		"warning": "Diwallit!"
+	}
+}

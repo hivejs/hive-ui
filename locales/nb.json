@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"SuperPotato"
+		]
+	},
+	"ui": {
+		"select-language": "Velg ditt språk"
+	},
+	"session": {
+		"authenticate": "Autentisere",
+		"authenticate-explanation": "Autentiser ved bruk av en av disse autentiserings metodene:",
+		"logging-in": "Logger inn…",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Redigerer",
+		"select-editor": "Velg en redigerer",
+		"choose-editor": "Velg en redigerer",
+		"not-found": "Ikke funnet!",
+		"not-found-explanation": "Det ser ut som at vi ikke kan finne dokumentet ditt. Beklager.",
+		"load-error": "Feil!",
+		"load-error-explanation": "En uventet feil inntraff i innlastingen av redigerern. Vennligst prøv igjen.",
+		"loading": "Laster..."
+	},
+	"settings": {
+		"settings": "Innstillinger",
+		"user-settings": "Bruker",
+		"document-settings": "Dette dokumentet (for alle)",
+		"personal-document-settings": "Dette dokumentet (for deg)"
+	},
+	"oauth": {
+		"authorization-required": "Autentisering er nødvendig",
+		"hello": "Hei {user},",
+		"scope-all": "alle kontoene dine",
+		"question": "Vil du gi tilgang?",
+		"warning": "Advarsel!",
+		"deny": "Forby tilgang",
+		"grant": "Gi tilgang",
+		"redirecting": "Omdirigerer..."
+	}
+}
