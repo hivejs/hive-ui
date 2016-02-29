@@ -5,10 +5,12 @@
 		]
 	},
 	"ui": {
+		"locale": "Språk",
 		"select-language": "Välj ditt språk"
 	},
 	"session": {
 		"authenticate": "Autentisera",
+		"authenticate-explanation": "Autentisera med en av följande autentiseringsmetoder:",
 		"logging-in": "Loggar in...",
 		"offline": "Offline"
 	},
@@ -16,18 +18,29 @@
 		"editor": "Redigerare",
 		"select-editor": "Välj en redigerare",
 		"choose-editor": "Välj en redigerare",
+		"choose-editor-explanation": "Välj en av följande redigerare för att samarbeta på {type}-dokument",
 		"not-found": "Hittades inte!",
+		"not-found-explanation": "Det verkar som om att vi inte kan hitta ditt dokument. Förlåt.",
 		"load-error": "Fel!",
+		"load-error-explanation": "Ett oväntat fel uppstod när redigeraren skulle läsas in. Var god försök igen.",
 		"loading": "Läser in..."
 	},
 	"settings": {
 		"settings": "Inställningar",
-		"user-settings": "Användare"
+		"user-settings": "Användare",
+		"document-settings": "Detta dokument (för alla)",
+		"personal-document-settings": "Detta dokument (för dig)"
 	},
 	"oauth": {
+		"authorization-required": "Auktorisering krävs",
 		"hello": "Hej {user},",
+		"authorization-explanation": "Applikationen på {app_url} vill få åtkomst till följande funktionalitet för ditt hive.js-konto:",
 		"scope-all": "alla dina konton",
+		"question": "Vill du bevilja åtkomst?",
 		"warning": "Varning!",
+		"warning-explanation": "Applikationen kommunicerar med ett osäkert protokoll!",
+		"deny": "Neka åtkomst",
+		"grant": "Bevilja åtkomst",
 		"redirecting": "Omdirigerar..."
 	}
 }

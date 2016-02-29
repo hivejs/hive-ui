@@ -33,6 +33,14 @@
 	},
 	"oauth": {
 		"authorization-required": "Autorización necesaria",
-		"hello": "Boas {user},"
+		"hello": "Boas {user},",
+		"authorization-explanation": "A aplicación en {app_url} quere ter acceso á seguinte funcionalidade da súa conta hive.js:",
+		"scope-all": "toda a súa conta",
+		"question": "Quere conceder o acceso?",
+		"warning": "Alarma!",
+		"warning-explanation": "A aplicación comunícase a través dun protocolo inseguro.",
+		"deny": "Denegar o acceso",
+		"grant": "Permitir o acceso",
+		"redirecting": "Redirixindo..."
 	}
 }
