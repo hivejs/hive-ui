@@ -80,6 +80,7 @@ function setup(plugin, imports, register) {
       return false
     }
   , onRenderNavbarRight: AtomicEmitter()
+  , onRenderNavbarLeft: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onRenderHeader: AtomicEmitter()
   , onStart: AtomicEmitter()
@@ -228,9 +229,12 @@ function setup(plugin, imports, register) {
         ])),
         h('div.collapse.navbar-collapse'+(displayMainMenu? '.in' : '')
         ,[
-          h('ul.nav.navbar-nav.navbar-right',
-            extensible('onRenderNavbarRight', store, [])
-          )
+            h('ul.nav.navbar-nav.navbar-right',
+              extensible('onRenderNavbarRight', store, [])
+            )
+          , h('ul.nav.navbar-nav.navbar-left',
+              extensible('onRenderNavbarLeft', store, [])
+            )
         ])
       ])
     ])
