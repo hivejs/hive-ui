@@ -128,6 +128,9 @@ function setup(plugin, imports, register) {
           deap.extend(locales[locale], json)
         })
       })
+      for(var locale in locales) {
+        deap.merge(locales[locale], locales['en'])
+      }
       return locales
     }
   , getBootstrapCode: function() {
