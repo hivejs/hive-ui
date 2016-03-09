@@ -35,6 +35,8 @@
 		"authorization-required": "Aotre ret",
 		"hello": "Demat {user},",
 		"scope-all": "holl ho kont",
-		"warning": "Diwallit!"
+		"warning": "Diwallit!",
+		"deny": "Difenn an moned",
+		"grant": "Grataat ar monet"
 	}
 }

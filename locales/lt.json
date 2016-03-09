@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zygimantus"
+		]
+	},
+	"ui": {
+		"locale": "Lokalė",
+		"select-language": "Pasirinkite kalbą"
+	},
+	"session": {
+		"authenticate": "Autentifikuotis",
+		"offline": "Neprisijungęs"
+	},
+	"editor": {
+		"editor": "Redaktorius",
+		"select-editor": "Pasirinkti redaktorių",
+		"choose-editor": "Pasirinkti redaktorių",
+		"not-found": "Nerastas!",
+		"load-error": "Klaida!",
+		"loading": "Įkeliama…"
+	},
+	"settings": {
+		"settings": "Nustatymai",
+		"user-settings": "Naudotojas",
+		"document-settings": "Šis dokumentas (visiems)",
+		"personal-document-settings": "Šis dokumentas (tau)"
+	},
+	"oauth": {
+		"hello": "Labas, {user},",
+		"scope-all": "visa jūsų paskyra",
+		"warning": "Dėmesio!",
+		"redirecting": "Nukreipiama..."
+	}
+}
