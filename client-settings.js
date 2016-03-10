@@ -54,7 +54,10 @@ function setup(plugin, imports, register) {
         ...state.editor
       , document: {
           ...state.editor.document
-        , settings: action.payload
+        , attributes: {
+            ...state.editor.document
+          , settings: action.payload
+          }
         }
       }}
     }
@@ -63,7 +66,10 @@ function setup(plugin, imports, register) {
         ...state.session
       , user: {
           ...state.session.user
-        , settings: action.payload
+        , attributes: {
+          ...state.session.user.attributes
+          , settings: action.payload
+          }
         }
       }}
     }
@@ -89,13 +95,13 @@ function setup(plugin, imports, register) {
       if(!document) throw new Error('No document loaded')
       yield api.action_document_update(
         document.id
-      , {...document, settings: {...document.settings, ...hash}}
+      , {settings: {...document.settings, ...hash}}
       )
       yield {type: SET_FOR_DOCUMENT, payload: {...document.settings, ...hash}}
     }
   , getForDocument: function(key) {
-      return ui.store.getState().editor.document.settings?
-        ui.store.getState().editor.document.settings[key]
+      return ui.store.getState().editor.document.attributes.settings?
+        ui.store.getState().editor.document.attributes.settings[key]
       : null
     }
   , action_setForUser: function*(hash) {
@@ -103,15 +109,15 @@ function setup(plugin, imports, register) {
       if(!user) throw new Error('Not logged in')
       yield api.action_user_update(
         user.id
-      , {...user, settings: {...user.settings, ...hash}}
+      , {settings: {...user.settings, ...hash}}
       )
       yield {type: SET_FOR_USER, payload: {...user.settings, ...hash}}
     }
   , getForUser: function(key) {
       var user = ui.store.getState().session.user
       if(!user) throw new Error('Not logged in')
-      return user.settings?
-        user.settings[key]
+      return user.attributes.settings?
+        user.attributes.settings[key]
       : null
     }
   , action_setForUserDocument: function*(hash) {

@@ -110,7 +110,7 @@ function setup(plugin, imports, register) {
         h('h3',ui._('oauth/authorization-required')())
       ]),
       h('div.panel-body.form-inline', [
-        h('p', ui._('oauth/hello')({user: state.session.user.name}))
+        h('p', ui._('oauth/hello')({user: state.session.user.attributes.name}))
       , h('p', ui._('oauth/authorization-explanation')({app_url: app_url.host}))
       , h('ul', state.oauth.scope? state.oauth.scope.split(' ').map(function(scope) {
             return h('li', scope)

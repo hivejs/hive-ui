@@ -20,7 +20,7 @@
     "redux-gen": "0.2.x",
     "redux": "3.x",
     "reduce-reducers": "0.1.x",
-    "hive-client-rest-api": "2.x",
+    "hive-client-rest-api": "3.x",
     "redux-actions": "0.9.x",
     "mux-dmx": "0.0.x",
     "redux-effects-cookie": "0.2.x",

@@ -30,11 +30,11 @@ function setup(plugin, imports, register) {
       case 'API_AUTHENTICATE':
         return Client.authenticate(ui.baseURL, action.payload.method, action.payload.credentials, action.payload.scope)
       case 'API_USER_CREATE':
-        return createClient().user.create(action.payload)
+        return createClient().user.create({attributes: action.payload})
       case 'API_USER_GET':
         return createClient().user.get(action.payload)
       case 'API_USER_UPDATE':
-        return createClient().user.update(action.payload.id, action.payload.body)
+        return createClient().user.update(action.payload.id, {attributes: action.payload.body})
       case 'API_USER_DELETE':
         return createClient().user.delete(action.payload)
       case 'API_USER_GET_DOCUMENTS':
@@ -42,9 +42,9 @@ function setup(plugin, imports, register) {
       case 'API_USER_GET_SNAPSHOTS':
         return createClient().user.create(action.payload)
       case 'API_DOCUMENT_CREATE':
-        return createClient().document.create(action.payload)
+        return createClient().document.create({attributes: action.payload})
       case 'API_DOCUMENT_UPDATE':
-        return createClient().document.update(action.payload.id, action.payload.body)
+        return createClient().document.update(action.payload.id, {attributes: action.payload.body})
       case 'API_DOCUMENT_GET':
         return createClient().document.get(action.payload)
       case 'API_DOCUMENT_DELETE':

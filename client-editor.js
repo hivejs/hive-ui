@@ -258,7 +258,7 @@ function setup(plugin, imports, register) {
     else if(state.editor.document) {
       var chooseableEditors = Object.keys(editor.editors)
       .map(name => editor.editors[name])
-      .filter(editor => editor.type === state.editor.document.type)
+      .filter(editor => editor.type === state.editor.document.attributes.type)
 
       if(chooseableEditors.length > 1) {
         var chosenEditor
