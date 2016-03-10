@@ -103,7 +103,7 @@ function setup(plugin, imports, register) {
 
     return h('div.panel.panel-default', {style: {
       width:'20%',
-      'min-width': '7.5cm',
+      'min-width': '10cm',
       margin: '3cm auto'
     }}, [
       h('div.panel-heading', [
