@@ -55,7 +55,7 @@ function setup(plugin, imports, register) {
       , document: {
           ...state.editor.document
         , attributes: {
-            ...state.editor.document
+            ...state.editor.document.attributes
           , settings: action.payload
           }
         }
@@ -95,9 +95,9 @@ function setup(plugin, imports, register) {
       if(!document) throw new Error('No document loaded')
       yield api.action_document_update(
         document.id
-      , {settings: {...document.settings, ...hash}}
+      , {settings: {...document.attributes.settings, ...hash}}
       )
-      yield {type: SET_FOR_DOCUMENT, payload: {...document.settings, ...hash}}
+      yield {type: SET_FOR_DOCUMENT, payload: {...document.attributes.settings, ...hash}}
     }
   , getForDocument: function(key) {
       return ui.store.getState().editor.document.attributes.settings?
@@ -109,9 +109,9 @@ function setup(plugin, imports, register) {
       if(!user) throw new Error('Not logged in')
       yield api.action_user_update(
         user.id
-      , {settings: {...user.settings, ...hash}}
+      , {settings: {...user.attributes.settings, ...hash}}
       )
-      yield {type: SET_FOR_USER, payload: {...user.settings, ...hash}}
+      yield {type: SET_FOR_USER, payload: {...user.attributes.settings, ...hash}}
     }
   , getForUser: function(key) {
       var user = ui.store.getState().session.user
