@@ -78,7 +78,7 @@ function setup(plugin, imports, register) {
           ui.store.dispatch(editor.action_loadDocument(params.id))
         })
       }
-      if(ui.exitRoute(store, action, '/document/:id')) {
+      if(ui.exitRoute(store, action, '/documents/:id')) {
         editor.closeEditor()
         ui.store.dispatch(editor.action_deactivate())
       }

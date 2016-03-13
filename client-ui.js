@@ -72,6 +72,7 @@ function setup(plugin, imports, register) {
       }, {})
     }
   , exitRoute: function(store, action, route) {
+      if('ROUTE' !== action.type) return false
       var keys
       var regex = pathToRegexp(route, keys=[])
       var matchesOld = regex.exec(store.getState().router)
