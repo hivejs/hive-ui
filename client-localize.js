@@ -31,16 +31,17 @@ function setup(plugin, imports, register) {
   ui.reduxMiddleware.push(globalizeMiddleware)
   function globalizeMiddleware(store) {
     return next => action => {
-      if('SET_LOCALE' === action.type) {
-        if(globalize.locale() !== action.payload) {
-          fetch(ui.baseURL+'/locales/'+action.payload+'.json')
+      if('SET_LOCALE' === action.type || 'LOAD_STATE' === action.type) {
+        var newLocale = action.payload.locale || action.payload
+        if(globalize.locale() !== newLocale) {
+          fetch(ui.baseURL+'/locales/'+newLocale+'.json')
           .then((res) => res.json())
           .then((json) => {
             globalize.loadMessages(json)
-            globalize.locale(action.payload)
-            document.documentElement.dir = ui.config.locales[action.payload].direction
+            globalize.locale(newLocale)
+            document.documentElement.dir = ui.config.locales[newLocale].direction
             next(action)
-            ui.onLocalize.emit(action.payload)
+            ui.onLocalize.emit(newLocale)
           })
           return
         }

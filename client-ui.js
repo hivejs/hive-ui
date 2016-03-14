@@ -89,8 +89,12 @@ function setup(plugin, imports, register) {
   , reduxMiddleware: [reduxGen(), loggerMiddleware, routerMiddleware]
   , reduxRootReducers: []
   , reduxReducerMap: {}
-  , action_route: function(path) {
-      return {type: 'ROUTE', payload: path}
+  , action_route: function(path, manipulateHistory) {
+      return {
+        type: 'ROUTE'
+      , payload: path
+      , manipulateHistory: 'undefined'===typeof manipulateHistory? true : manipulateHistory
+      }
     }
   , action_loadState: function(state) {
       return {type: 'LOAD_STATE', payload: state}
@@ -130,25 +134,31 @@ function setup(plugin, imports, register) {
 
   function routerMiddleware(store) {
     return next => action => {
-      if(action.type === 'ROUTE' && store.getState().router) {
-        // Only save state if this is not the first route
+      if(action.type === 'ROUTE' && store.getState().router && action.manipulateHistory) {
+        // Only save state if this is not the first route and we're supposed to manipulate history
         saveStateToHistory(store)
+        goToNewPath(store, action.payload)
       }
       if(action.type === 'LOAD_STATE') {
         var res = next(action)
-        store.dispatch(ui.action_route(action.payload.router))
+        store.dispatch(ui.action_route(action.payload.router, false))
         return res
       }
       return next(action)
     }
   }
   function saveStateToHistory(store) {
-    window.history.pushState(store.getState(), '', store.getState().router)
+    window.history.replaceState(store.getState(), '', store.getState().router)
+  }
+  window.addEventListener('close', saveStateToHistory.bind(null, ui.stornull, ui.store))
+
+  function goToNewPath(store, path) { 
+    window.history.pushState(null, '', path)
   }
 
   function onpopstate(evt) {
     if(evt.state) ui.store.dispatch(ui.action_loadState(evt.state))
-    else if(ui.store) ui.store.dispatch(ui.action_route(document.location.pathname))
+    else if(ui.store) ui.store.dispatch(ui.action_route(document.location.pathname, false))
   }
   window.addEventListener('popstate', onpopstate, false)
 

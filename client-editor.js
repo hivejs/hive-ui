@@ -52,6 +52,7 @@ function setup(plugin, imports, register) {
       , notFound: false
       , loadError: false
       , document: null
+      , editor: null
       }
     }
     if('EDITOR_DOCUMENT_LOAD' === action.type && action.error) {
