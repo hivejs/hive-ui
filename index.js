@@ -33,7 +33,7 @@ function setup(plugin, imports, register) {
     , config = imports.config
     , importexport = imports.importexport
 
-  var b = browserify({debug: true, entries: ['node_modules/babel-polyfill']})
+  var b = browserify({debug: true, entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']})
   b.transform('babelify', {
     presets: ['es2015', 'stage-2']
   , global: true
