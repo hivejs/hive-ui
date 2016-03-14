@@ -5,6 +5,7 @@
 		]
 	},
 	"ui": {
+		"locale": "Språk",
 		"select-language": "Velg ditt språk"
 	},
 	"session": {
@@ -17,6 +18,7 @@
 		"editor": "Redigerer",
 		"select-editor": "Velg en redigerer",
 		"choose-editor": "Velg en redigerer",
+		"choose-editor-explanation": "Velg en av de følgene redigererne for å samarbeide på {type}-dokumenter.",
 		"not-found": "Ikke funnet!",
 		"not-found-explanation": "Det ser ut som at vi ikke kan finne dokumentet ditt. Beklager.",
 		"load-error": "Feil!",
