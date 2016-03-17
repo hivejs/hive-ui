@@ -30,7 +30,7 @@ function setup(plugin, imports, register) {
       case 'API_AUTHENTICATE':
         return Client.authenticate(ui.baseURL, action.payload.method, action.payload.credentials, action.payload.scope)
       case 'API_USER_CREATE':
-        return createClient().user.create({attributes: action.payload})
+        return createClient().user.create(action.payload)
       case 'API_USER_GET':
         return createClient().user.get(action.payload)
       case 'API_USER_UPDATE':
@@ -42,7 +42,7 @@ function setup(plugin, imports, register) {
       case 'API_USER_GET_SNAPSHOTS':
         return createClient().user.create(action.payload)
       case 'API_DOCUMENT_CREATE':
-        return createClient().document.create({attributes: action.payload})
+        return createClient().document.create(action.payload)
       case 'API_DOCUMENT_UPDATE':
         return createClient().document.update(action.payload.id, action.payload.body)
       case 'API_DOCUMENT_GET':
