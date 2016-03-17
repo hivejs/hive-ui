@@ -179,27 +179,27 @@ function setup(plugin, imports, register) {
       ]),
       h('div.panel-body', [
         h('ul.nav.nav-tabs.nav-justified',{style:{'margin-bottom': '10px'}},[
-          h('li'+(state.settings.active=='User'? '.active': ''), h('a'
+          h('li.Settings__User_Tab'+(state.settings.active=='User'? '.active': ''), h('a'
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('User'))
             }
           , ui._('settings/user-settings')()))
         , state.editor.document?
-          h('li'+(state.settings.active=='Document'? '.active': ''), h('a'
+          h('li.Settings__Document_Tab'+(state.settings.active=='Document'? '.active': ''), h('a'
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('Document'))
             }
           , ui._('settings/document-settings')()))
           : ''
         , state.editor.document?
-          h('li'+(state.settings.active=='UserDocument'? '.active': ''), h('a'
+          h('li.Settings__UserDocument_Tab'+(state.settings.active=='UserDocument'? '.active': ''), h('a'
           , { href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(settings.action_setView('UserDocument'))
             }
           , ui._('settings/personal-document-settings')()))
           : ''
         ])
-      , h('div', extend([]))
+      , h('div.Settings__'+state.settings.active, extend([]))
       ])
     ])
 
