@@ -252,19 +252,20 @@ function setup(plugin, imports, register) {
   }
 
   function renderBody(store) {
-    return h('div.body', {style: {
+    var props
+    return h('div.body', props={style: {
         position: 'absolute'
       , top: '50px'
       , left: '0px'
       , bottom: '0px'
       , right: '0px'
       }},
-      extensible('onRenderBody', store, [])
+      extensible('onRenderBody', store, [], props)
     )
   }
 
-  function extensible(hookName, store, children) {
-    ui[hookName].emit(store, children)
+  function extensible(hookName, store, children, props) {
+    ui[hookName].emit(store, children, props)
     return children
   }
 
