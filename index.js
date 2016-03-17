@@ -24,7 +24,7 @@ var path = require('path')
   , languages = require('languages')
 
 module.exports = setup
-module.exports.consumes = ['http', 'hooks', 'config', 'importexport']
+module.exports.consumes = ['http', 'hooks', 'config', 'importexport', 'ot']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
@@ -32,8 +32,9 @@ function setup(plugin, imports, register) {
     , hooks = imports.hooks
     , config = imports.config
     , importexport = imports.importexport
+    , ot = imports.ot
 
-  var b = browserify({debug: true, entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']})
+  var b = browserify({debug: config.get('ui:debug') || false, entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']})
   b.transform('babelify', {
     presets: ['es2015', 'stage-2']
   , global: true
@@ -217,6 +218,9 @@ function setup(plugin, imports, register) {
       if(!locales[this.params.locale]) this.throw(404)
       this.body = {[this.params.locale]: locales[this.params.locale]}
     })
+
+    // pass down available ottypes
+    ui.registerConfigEntry('ot:types', Object.keys(ot.ottypes))
 
   })
 
