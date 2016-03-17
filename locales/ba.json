@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sagan"
+		]
+	},
+	"ui": {
+		"locale": "Локаль",
+		"select-language": "Тел һайлау:"
+	},
+	"session": {
+		"authenticate": "Танылыу",
+		"authenticate-explanation": "Төп нөсхә булыуын түбәндәге ысулдарҙың береһе менән тикшерегеҙ.",
+		"logging-in": "Системаға инеү...",
+		"offline": "Селтәрҙә түгел"
+	},
+	"editor": {
+		"editor": "Мөхәррир",
+		"select-editor": "Мөхәррир һайлағыҙ",
+		"choose-editor": "Мөхәррир һайлағыҙ",
+		"choose-editor-explanation": "{type} документы менән эшләү өсөн түбәндәге мөхәррирҙеү береһен һайлағыҙ.",
+		"not-found": "Табылманы!",
+		"not-found-explanation": "Һеҙҙең документты таба алмайбыҙ. Ғәфү итегеҙ.",
+		"load-error": "Хата",
+		"load-error-explanation": "Көтөлмәгән хата килеп сыҡты. Ҡабат эшләп ҡарағыҙ.",
+		"loading": "Тейәү"
+	},
+	"settings": {
+		"settings": "Көйләүҙәр",
+		"user-settings": "Ҡатнашыусы",
+		"document-settings": "Был документ (барыһы өсөн дә)",
+		"personal-document-settings": "Был документ (һеҙҙең өсөн)"
+	}
+}
