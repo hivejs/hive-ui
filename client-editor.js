@@ -350,7 +350,7 @@ function setup(plugin, imports, register) {
       , 'aria-valuemin': 0
       , 'aria-valuema': 100
       , style:"width: "+(percent*100)+"%;"
-      }}, h('span.sr-only', (percent*100)+'% Complete'))
+      }}, h('span.sr-only', ui._('editor/loading')({progress: percent*100})))
     ))
   }
 

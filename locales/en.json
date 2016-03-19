@@ -18,7 +18,7 @@
   , "not-found-explanation": "It seems we can't find your document. Sorry."
   , "load-error": "Error!"
   , "load-error-explanation": "An unexpected error occurred while loading the editor. Please try again."
-  , "loading": "Loading..."
+  , "loading": "Loading... ({progress}%)"
   }
 , "settings": {
     "settings": "Settings"
