@@ -166,11 +166,11 @@ function setup(plugin, imports, register) {
 
         var user = yield { ...(api.action_user_get(grant.user)), grant: grant}
 
-        yield session.action_loadStream(grant.access_token)
-
         yield cookie('token', grant.access_token)
 
-        return yield {type: 'SESSION_LOGIN', payload: {grant, user}}
+        yield {type: 'SESSION_LOGIN', payload: {grant, user}}
+
+        yield session.action_loadStream(grant.access_token) // Speed up log-in: Don't wait for stream
       }catch(e) {
         console.error(e)
         return yield {type: 'SESSION_LOGIN', error: true, payload: e}
