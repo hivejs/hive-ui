@@ -176,11 +176,6 @@ function setup(plugin, imports, register) {
       this.body = yield ui.bundleStylesheets()
     })
 
-    http.router.get('/build.js', function*() {
-      if(yield this.cashed()) return
-      this.body = yield ui.bundle()
-    })
-
     Object.keys(ui.staticDirs).forEach(function(dir) {
       var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
       http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.staticDirs[dir])))
@@ -222,6 +217,10 @@ function setup(plugin, imports, register) {
     // pass down available ottypes
     ui.registerConfigEntry('ot:types', Object.keys(ot.ottypes))
 
+    http.router.get('/build.js', function*() {
+      if(yield this.cashed()) return
+      this.body = yield ui.bundle()
+    })
   })
 
   register(null, {ui: ui})

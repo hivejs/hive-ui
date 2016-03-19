@@ -204,7 +204,7 @@ function setup(plugin, imports, register) {
     }
   , onceStreamLoaded: function(cb) {
       if(session.stream) return setImmediate(cb)
-      var dispose = session.onLogin(function() {
+      var dispose = session.onLoadStream(function() {
         dispose()
         cb()
       })
