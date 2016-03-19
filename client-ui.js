@@ -203,11 +203,17 @@ function setup(plugin, imports, register) {
     vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
     // as the sate changes, the page will be re-rendered
-    ui.store.subscribe(throttlePerFrame(function() {
+    // at most once per animation frame...
+    ui.store.subscribe(throttlePerFrame(triggerRender))
+
+    // ... but at least once a second
+    setInterval(triggerRender, 1000)
+
+    function triggerRender() {
       var newtree = render(ui.store)
       vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
-    }))
+    }
   }
 
   function render(store) {
