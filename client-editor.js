@@ -57,7 +57,7 @@ function setup(plugin, imports, register) {
       return { ...state, editor: action.payload, loading: 0.4}
     }
     if('EDITOR_LOAD' === action.type && action.error) {
-      return {...state, loadError: action.payload}
+      return {...state, loadError: action.payload, loading: false}
     }
     if('EDITOR_LOAD' === action.type && !action.error) {
       return {...state, loading: 0.7}
