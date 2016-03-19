@@ -34,38 +34,36 @@ function setup(plugin, imports, register) {
   ui.reduxReducerMap.editor = reducer
 
   function reducer(state, action) {
-    if(!state) {
+    if(!state || 'EDITOR_DEACTIVATE' === action.type) {
       return {
         active: false
       , document: null
       , editor: null
       , notFound: null
       , loadError: null
+      , loading: false
       }
     }
     if('EDITOR_ACTIVATE' === action.type) {
-      return {...state, active: true}
-    }
-    if('EDITOR_DEACTIVATE' === action.type) {
-      return {...state
-      , active: false
-      , notFound: false
-      , loadError: false
-      , document: null
-      , editor: null
-      }
+      return {...state, active: true, loading: 0.1}
     }
     if('EDITOR_DOCUMENT_LOAD' === action.type && action.error) {
-      return {...state, notFound: true}
+      return {...state, notFound: true, loading: false}
     }
     if('EDITOR_DOCUMENT_LOAD' === action.type) {
-      return {...state, document: action.payload}
+      return {...state, document: action.payload, loading: false}
     }
     if('EDITOR_CHOOSE' === action.type) {
-      return { ...state, editor: action.payload}
+      return { ...state, editor: action.payload, loading: 0.4}
     }
     if('EDITOR_LOAD' === action.type && action.error) {
       return {...state, loadError: action.payload}
+    }
+    if('EDITOR_LOAD' === action.type && !action.error) {
+      return {...state, loading: 0.7}
+    }
+    if('EDITOR_INITIALIZED' === action.type) {
+      return {...state, loading: false}
     }
     return state
   }
@@ -120,6 +118,10 @@ function setup(plugin, imports, register) {
         setupPromise
       , timeoutPromise(10000)// 10 seonds timeout
       ])
+      // Ensure stream is loaded
+      .then((editableDoc) => new Promise((resolve) => {
+        session.onceStreamLoaded(() => resolve(editableDoc))
+      }))
       .then(editableDoc => {
         if(!editableDoc) throw new Error('Loading timeout!')
 
@@ -154,6 +156,11 @@ function setup(plugin, imports, register) {
           uplink.unpipe()
           masterLink.unpipe()
         })
+
+        ui.store.dispatch({type: 'EDITOR_LOAD'})
+
+        editableDoc.once('editableInitialized', () =>
+          ui.store.dispatch({type: 'EDITOR_INITIALIZED'}))
 
         editor.onLoad.emit(editableDoc, broadcast, this.onClose)
       })
@@ -195,7 +202,12 @@ function setup(plugin, imports, register) {
 
   ui.onRenderBody((store, children) => {
     var state = ui.store.getState()
-    if(state.editor.active) children.push(render(ui.store))
+    if(state.editor.active && state.editor.loading) {
+      children.push(renderLoading(state.editor.loading))
+    }
+    if(state.editor.active) {
+      children.push(render(ui.store))
+    }
   })
 
   editor.onLoad(_=> {
@@ -251,11 +263,11 @@ function setup(plugin, imports, register) {
     if(state.editor.loadError)
       return renderLoadError()
 
-    // if editor is chosen, display editor
+    // if editor is chosen and is initialized, display editor
     else if(state.editor.editor)
       return new EditorWidget(editor.el, state.editor.document.id, state.editor.editor)
 
-    // if document is loaded, let them choose editor
+    // if document is loaded, let the user choose editor
     else if(state.editor.document) {
       var chooseableEditors = Object.keys(editor.editors)
       .map(name => editor.editors[name])
@@ -278,7 +290,7 @@ function setup(plugin, imports, register) {
     else if(state.editor.notFound)
       return renderNotFound()
 
-    return renderLoading()
+    return h('div') // return empty and hope 'loading' is displayed :)
   }
 
   function renderChooseEditor(store) {
@@ -326,16 +338,20 @@ function setup(plugin, imports, register) {
     ])
   }
 
-  function renderLoading() {
-    return h('div.panel.panel-default', {style: {
+  function renderLoading(percent) {
+    return h('div', {style: {
       width:'20%',
       'min-width': '7.5cm',
       margin: '3cm auto'
-    }}, [
-      h('div.panel-body', [
-        h('p',ui._('editor/loading')())
-      ])
-    ])
+    }}, h('div.progress',
+      h('div.progress-bar', {attributes: {
+        role:"progressbar"
+      , 'aria-valuenow': percent*100
+      , 'aria-valuemin': 0
+      , 'aria-valuema': 100
+      , style:"width: "+(percent*100)+"%;"
+      }}, h('span.sr-only', (percent*100)+'% Complete'))
+    ))
   }
 
   var EditorWidget = function (node, documentId, editor) {
