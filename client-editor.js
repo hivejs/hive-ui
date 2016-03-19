@@ -118,7 +118,7 @@ function setup(plugin, imports, register) {
 
       return Promise.race([
         setupPromise
-      , timeoutPromise(5000)
+      , timeoutPromise(10000)// 10 seonds timeout
       ])
       .then(editableDoc => {
         if(!editableDoc) throw new Error('Loading timeout!')
