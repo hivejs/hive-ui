@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sagan"
+			"Sagan",
+			"Lizalizaufa"
 		]
 	},
 	"ui": {
@@ -23,7 +24,7 @@
 		"not-found-explanation": "Һеҙҙең документты таба алмайбыҙ. Ғәфү итегеҙ.",
 		"load-error": "Хата",
 		"load-error-explanation": "Көтөлмәгән хата килеп сыҡты. Ҡабат эшләп ҡарағыҙ.",
-		"loading": "Тейәү"
+		"loading": "Тейәлә башланы ({булды}%)"
 	},
 	"settings": {
 		"settings": "Көйләүҙәр",

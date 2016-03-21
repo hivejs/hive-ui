@@ -24,7 +24,7 @@
 		"not-found-explanation": "Es scheint so, als ob wir dein Dokument nicht finden können. Das tut uns leid.",
 		"load-error": "Fehler!",
 		"load-error-explanation": "Beim Laden des Editors ist ein unerwarteter Fehler aufgetreten. Bitte erneut versuchen.",
-		"loading": "Laden…"
+		"loading": "Laden… ({progress}%)"
 	},
 	"settings": {
 		"settings": "Einstellungen",

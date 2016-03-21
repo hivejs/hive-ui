@@ -23,7 +23,7 @@
 		"not-found-explanation": "Parece que no podemos encontrar tu documento. Disculpas.",
 		"load-error": "Error",
 		"load-error-explanation": "Se produjo un error inesperado mientras se cargaba el editor. Inténtalo de nuevo.",
-		"loading": "Cargando..."
+		"loading": "Cargando... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Configuración",

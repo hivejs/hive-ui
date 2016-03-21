@@ -23,7 +23,7 @@
 		"not-found-explanation": "看起来我们不能找到您的文档。对不起。",
 		"load-error": "错误！",
 		"load-error-explanation": "加载编辑器时发生意外错误。请重试。",
-		"loading": "正在载入..."
+		"loading": "正在载入...（{progress}%）"
 	},
 	"settings": {
 		"settings": "设置",

@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Andibing"
+		]
+	},
+	"ui": {
+		"locale": "Locale",
+		"select-language": "Select your language"
+	},
+	"session": {
+		"authenticate": "Authenticate",
+		"authenticate-explanation": "Authenticate using one of the following authentication methods:",
+		"logging-in": "Logging in...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Select an editor",
+		"choose-editor": "Choose an editor",
+		"choose-editor-explanation": "Choose one of the following editors for collaborating on {type} documents",
+		"not-found": "Not found!",
+		"not-found-explanation": "It seems we can't find your document. Sorry.",
+		"load-error": "Error!",
+		"load-error-explanation": "An unexpected error occurred while loading the editor. Please try again.",
+		"loading": "Loading... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Settings",
+		"user-settings": "User",
+		"document-settings": "This document (for everyone)",
+		"personal-document-settings": "This document (for you)"
+	},
+	"oauth": {
+		"authorization-required": "Authorisation required",
+		"hello": "Hey {user},",
+		"authorization-explanation": "The application at {app_url} wants access to the following functionality of your hive.js account:",
+		"scope-all": "all of your account",
+		"question": "Do you want to grant access?",
+		"warning": "Warning!",
+		"warning-explanation": "The application is communicating via an insecure protocol!",
+		"deny": "Deny access",
+		"grant": "Grant access",
+		"redirecting": "Redirecting..."
+	}
+}
