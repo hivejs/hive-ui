@@ -18,7 +18,8 @@
 	"editor": {
 		"not-found": "Non trovato!",
 		"not-found-explanation": "Sembra che non riusciamo a trovare il documento. Spiacenti.",
-		"load-error": "Errore!"
+		"load-error": "Errore!",
+		"loading": "Caricamento in corso... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Impostazioni",

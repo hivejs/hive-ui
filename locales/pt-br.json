@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Luk3"
+		]
+	},
+	"ui": {
+		"select-language": "Selecione seu idioma"
+	},
+	"session": {
+		"authenticate": "Autenticar",
+		"logging-in": "Autenticando...",
+		"offline": "Desconectado"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Selecionar um editor",
+		"choose-editor": "Escolha um editor",
+		"not-found": "Não encontrado!",
+		"not-found-explanation": "Parece que não pudemos encontrar seu documento. Desculpe.",
+		"load-error": "Erro!"
+	},
+	"settings": {
+		"settings": "Configurações",
+		"user-settings": "Usuário",
+		"document-settings": "Este documento (para todos)",
+		"personal-document-settings": "Este documento (para você)"
+	},
+	"oauth": {
+		"authorization-required": "Autorização requerida",
+		"hello": "Olá {user},",
+		"scope-all": "toda a sua conta",
+		"question": "Gostaria de conceder acesso?",
+		"warning": "Aviso!",
+		"deny": "Negar acesso",
+		"grant": "Conceder acesso",
+		"redirecting": "Redirecionando..."
+	}
+}
