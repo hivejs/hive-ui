@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nike"
+			"Nike",
+			"Mikahama"
 		]
 	},
 	"ui": {
@@ -23,7 +24,7 @@
 		"not-found-explanation": "Asiakirjojasi ei löydy.",
 		"load-error": "Virhe!",
 		"load-error-explanation": "Muokkainen lataus epäonnistui. Yritä uudelleen.",
-		"loading": "Ladataan..."
+		"loading": "Ladataan... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Asetukset",

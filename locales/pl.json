@@ -1,0 +1,46 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mateon1"
+		]
+	},
+	"ui": {
+		"locale": "Preferencje językowe",
+		"select-language": "Wybierz język"
+	},
+	"session": {
+		"authenticate": "Autoryzuj",
+		"authenticate-explanation": "Autoryzuj używając jednej z następujących metod:",
+		"logging-in": "Logowanie...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Edytor",
+		"select-editor": "Wybierz edytor",
+		"choose-editor": "Wybierz edytor",
+		"choose-editor-explanation": "Wybierz jeden z następujących edytorów do współpracy na dokumentach {type}",
+		"not-found": "Nie znaleziono!",
+		"not-found-explanation": "Wydaje się, że nie możemy znaleźć twojego dokumentu. Przepraszamy.",
+		"load-error": "Błąd!",
+		"load-error-explanation": "Wystąpił nieoczekiwany błąd podczas uruchamiania edytora. Proszę spróbować ponownie.",
+		"loading": "Ładowanie... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Ustawienia",
+		"user-settings": "Użytkownik",
+		"document-settings": "Ten dokument (dla każdego)",
+		"personal-document-settings": "Ten dokument (dla ciebie)"
+	},
+	"oauth": {
+		"authorization-required": "Wymagana autoryzacja",
+		"hello": "Cześć, {user},",
+		"authorization-explanation": "Aplikacja w {app_url} chce dostępu do następującej funkcjonalności twojego konta hive.js:",
+		"scope-all": "całość twojego konta",
+		"question": "Czy chcesz nadać dostęp?",
+		"warning": "Ostrzeżenie!",
+		"warning-explanation": "Aplikacja komunikuje się przez niebezpieczny protokół!",
+		"deny": "Nie zezwól dostępu",
+		"grant": "Zezwól dostęp",
+		"redirecting": "Przekierowywanie..."
+	}
+}
