@@ -5,10 +5,12 @@
 		]
 	},
 	"ui": {
+		"locale": "Localização",
 		"select-language": "Selecione seu idioma"
 	},
 	"session": {
 		"authenticate": "Autenticar",
+		"authenticate-explanation": "Autenticar usando um dos seguintes métodos de autenticação:",
 		"logging-in": "Autenticando...",
 		"offline": "Desconectado"
 	},
@@ -16,9 +18,12 @@
 		"editor": "Editor",
 		"select-editor": "Selecionar um editor",
 		"choose-editor": "Escolha um editor",
+		"choose-editor-explanation": "Escolha um dos seguintes editores para colaborar em documentos {type}",
 		"not-found": "Não encontrado!",
 		"not-found-explanation": "Parece que não pudemos encontrar seu documento. Desculpe.",
-		"load-error": "Erro!"
+		"load-error": "Erro!",
+		"load-error-explanation": "Um erro inesperado ocorreu enquanto o editor carregava. Por favor tente novamente.",
+		"loading": "Carregando... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Configurações",
@@ -29,9 +34,11 @@
 	"oauth": {
 		"authorization-required": "Autorização requerida",
 		"hello": "Olá {user},",
+		"authorization-explanation": "O aplicativo em {app_url} quer acesso à seguinte funcionalidade da sua conta hive.js:",
 		"scope-all": "toda a sua conta",
 		"question": "Gostaria de conceder acesso?",
 		"warning": "Aviso!",
+		"warning-explanation": "O aplicativo está comunicando via um protocolo inseguro!",
 		"deny": "Negar acesso",
 		"grant": "Conceder acesso",
 		"redirecting": "Redirecionando..."
