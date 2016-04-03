@@ -22,6 +22,7 @@ var path = require('path')
   , fs = require('fs')
   , deap = require('deap')
   , languages = require('languages')
+  , AtomicEmitter = require('atomic-emitter')
 
 module.exports = setup
 module.exports.consumes = ['http', 'hooks', 'config', 'importexport', 'ot']
@@ -148,10 +149,25 @@ function setup(plugin, imports, register) {
         this.body = ui.getBootstrapCode()
       }
     }
+  , bundling: false
+  , onBundle: AtomicEmitter()
+  , bundled: null
   , bundle: function*() {
-      return yield function(cb) {
-        b.bundle(cb)
+      var bundle
+      if(this.bundled) {
+        bundle = this.bundled
+      }else
+      if(this.bundling) {
+        bundle = yield function(cb) { this.onBundle(cb) }.bind(this)
+      }else{
+	this.bundling = true
+	bundle = yield function(cb) {
+	  b.bundle(cb)
+	}
+        this.onBundle.emit(bundle)
       }
+      this.bundling = false
+      return bundle
     }
   }
 
@@ -170,16 +186,6 @@ function setup(plugin, imports, register) {
   ui.registerLocaleDir(path.join(__dirname, 'locales'))
 
   hooks.on('http:listening', function*() {
-    http.router.get('/build.css', function*() {
-      if(yield this.cashed()) return
-      this.type = 'text/css; charset=utf-8'
-      this.body = yield ui.bundleStylesheets()
-    })
-
-    Object.keys(ui.staticDirs).forEach(function(dir) {
-      var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
-      http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.staticDirs[dir])))
-    })
 
     http.router.get('/documents/:id', ui.bootstrapMiddleware())
 
@@ -215,12 +221,28 @@ function setup(plugin, imports, register) {
     })
 
     // pass down available ottypes
+
     ui.registerConfigEntry('ot:types', Object.keys(ot.ottypes))
 
     http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
+      if(buildjs) return this.body = buildjs
       this.body = yield ui.bundle()
     })
+
+    http.router.get('/build.css', function*() {
+      if(yield this.cashed()) return
+      this.type = 'text/css; charset=utf-8'
+      this.body = yield ui.bundleStylesheets()
+    })
+
+    Object.keys(ui.staticDirs).forEach(function(dir) {
+      var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
+      http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.staticDirs[dir])))
+    })
+
+    var buildjs = yield ui.bundle()
+
   })
 
   register(null, {ui: ui})
