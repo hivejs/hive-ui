@@ -158,12 +158,10 @@ function setup(plugin, imports, register) {
         bundle = this.bundled
       }else
       if(this.bundling) {
-        bundle = yield function(cb) { this.onBundle(cb) }.bind(this)
+        bundle = yield (cb) => this.onBundle(cb.bind(null,null))
       }else{
 	this.bundling = true
-	bundle = yield function(cb) {
-	  b.bundle(cb)
-	}
+	bundle = yield (cb) => b.bundle(cb)
         this.onBundle.emit(bundle)
       }
       this.bundling = false
