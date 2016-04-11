@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Manaviko"
+			"Manaviko",
+			"Verdy p"
 		]
 	},
 	"ui": {
@@ -24,7 +25,7 @@
 		"not-found-explanation": "Il semble que nous n’avons pas pu trouver le document. Désolé.",
 		"load-error": "Erreur !",
 		"load-error-explanation": "Une erreur inattendue s’est produite lors du chargement de l’éditeur. Veuillez réessayer.",
-		"loading": "Chargement… ({progress}%)"
+		"loading": "Chargement... ({progress} %)"
 	},
 	"settings": {
 		"settings": "Paramètres",

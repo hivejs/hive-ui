@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sagan",
-			"Lizalizaufa"
+			"Lizalizaufa",
+			"Янмурза Баки"
 		]
 	},
 	"ui": {
@@ -31,5 +32,16 @@
 		"user-settings": "Ҡатнашыусы",
 		"document-settings": "Был документ (барыһы өсөн дә)",
 		"personal-document-settings": "Был документ (һеҙҙең өсөн)"
+	},
+	"oauth": {
+		"authorization-required": "Авторизацияланыу кәрәк",
+		"hello": "Сәләм, {user},",
+		"scope-all": "Барлыҡ иҫәптәр",
+		"question": "Һеҙгә ысынлап инергә мөмкинме?",
+		"warning": "Иғтибар",
+		"warning-explanation": "Ҡушымта хәүефле протокол дәүмәлдәр аша эшләй",
+		"deny": "Ирешеүҙе тыйырға",
+		"grant": "Ирешеүҙе рөхсәт итергә",
+		"redirecting": "Йүнәлтеү"
 	}
 }
