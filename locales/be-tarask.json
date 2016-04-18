@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"ui": {
+		"locale": "Мова",
+		"select-language": "Абярыце вашую мову"
+	},
+	"session": {
+		"authenticate": "Аўтарызацыя",
+		"authenticate-explanation": "Аўтарызацыя з дапамогай аднаго з наступных мэтадаў:",
+		"logging-in": "Уваход у сыстэму…",
+		"offline": "Па-за сецівам"
+	},
+	"editor": {
+		"editor": "Рэдактар",
+		"select-editor": "Абярыце рэдактар",
+		"choose-editor": "Выбар рэдактару",
+		"choose-editor-explanation": "Абярыце адзін з наступных рэдактараў для супольнай працы над {type}-дакумэнтамі",
+		"not-found": "Ня знойдзена!",
+		"not-found-explanation": "Падобна, мы ня можам знайсьці ваш дакумэнт. Выбачайце."
+	}
+}

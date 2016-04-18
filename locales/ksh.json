@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"session": {
+		"logging-in": "Aam Enlogge …",
+		"offline": "Nit verbonge mem Näz"
+	},
+	"editor": {
+		"not-found": "Nit jefonge!",
+		"not-found-explanation": "Sühd uß, wi wam_mer dat Dokkemänt nit fenge künnte. Schahdt!",
+		"load-error": "Fähler1",
+		"loading": "Aam Lahde... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Enschtällonge",
+		"user-settings": "Metmaacher",
+		"document-settings": "Dat Dokkemant (för jehder_ein)",
+		"personal-document-settings": "Dat Dokkemant (för Desch)"
+	},
+	"oauth": {
+		"hello": "Daach {user},",
+		"warning": "Opjepaß!",
+		"redirecting": "Aam Ömleijde ..."
+	}
+}

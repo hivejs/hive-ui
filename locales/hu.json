@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wolf Rex"
+		]
+	},
+	"ui": {
+		"locale": "Nyelv",
+		"select-language": "Nyelvválasztás"
+	},
+	"session": {
+		"authenticate": "Hitelesítés",
+		"authenticate-explanation": "Hitelesítés az alábbi módszerek egyikével:",
+		"logging-in": "Bejelentkezés...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Szerkesztő",
+		"not-found": "Nem található!",
+		"not-found-explanation": "Úgy tűnik, nem találjuk a dokumentumod. Sajnáljuk.",
+		"load-error": "Hiba!",
+		"loading": "Betöltés... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Beállítások",
+		"user-settings": "Felhasználó",
+		"document-settings": "Ez a dokumentum (mindenki számára)",
+		"personal-document-settings": "Ez a dokumentum (csak neked)"
+	},
+	"oauth": {
+		"hello": "Üdv {user},",
+		"warning": "Figyelmeztetés!",
+		"warning-explanation": "Az alkalmazás egy nem biztonságos protokollon keresztül kommunikál!",
+		"deny": "Hozzáférés megtagadása",
+		"grant": "Hozzáférés engedélyezése",
+		"redirecting": "Átirányítás..."
+	}
+}
