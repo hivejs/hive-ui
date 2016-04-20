@@ -59,7 +59,10 @@ function setup(plugin, imports, register) {
   }
 
   ui.onStart(() => {
-    ui.store.dispatch({type: 'SET_LOCALE', payload: 'en'})
+    var locale = navigator.language
+      || navigator.userLanguage // IE
+      || 'en' // default
+    ui.store.dispatch({type: 'SET_LOCALE', payload: locale})
   })
 
   // Locale setting
