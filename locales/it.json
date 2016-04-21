@@ -13,12 +13,18 @@
 	"session": {
 		"authenticate": "Autenticazione",
 		"authenticate-explanation": "Autenticati utilizzando uno dei seguenti metodi di autenticazione:",
+		"logging-in": "Accesso in corso...",
 		"offline": "Non connesso"
 	},
 	"editor": {
+		"editor": "Editore",
+		"select-editor": "Seleziona un editor",
+		"choose-editor": "Scegli un editor",
+		"choose-editor-explanation": "Scegli uno dei seguenti editor per collaborare sui documenti {type}",
 		"not-found": "Non trovato!",
 		"not-found-explanation": "Sembra che non riusciamo a trovare il documento. Spiacenti.",
 		"load-error": "Errore!",
+		"load-error-explanation": "Si è verificato un errore imprevisto durante il caricamento dell'editor. Riprova.",
 		"loading": "Caricamento in corso... ({progress}%)"
 	},
 	"settings": {
@@ -30,11 +36,13 @@
 	"oauth": {
 		"authorization-required": "Autorizzazione richiesta",
 		"hello": "Ehi {user},",
+		"authorization-explanation": "L'applicazione a {app_url} vorrebbe accedere alle seguenti funzionalità della tua utenza hive.js:",
 		"scope-all": "tutte le tue utenze",
 		"question": "Vuoi consentire l'accesso?",
 		"warning": "Attenzione!",
 		"warning-explanation": "L'applicazione sta comunicando con un protocollo insicuro!",
 		"deny": "Nega accesso",
-		"grant": "Concedi accesso"
+		"grant": "Concedi accesso",
+		"redirecting": "Reindirizzamento..."
 	}
 }
