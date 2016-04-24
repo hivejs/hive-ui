@@ -104,8 +104,10 @@ function setup(plugin, imports, register) {
   // Integrate with settings
 
   settings.onChange(() => {
+    var state = ui.store.getState()
+    if (!state.session.user) return
     var locale = settings.getForUser('ui:locale')
-    if(locale && ui.store.getState().locale !== locale) {
+    if(locale && state.locale !== locale) {
       ui.store.dispatch(ui.action_setLcoale(locale))
     }
   })
