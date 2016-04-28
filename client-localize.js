@@ -34,8 +34,11 @@ function setup(plugin, imports, register) {
       if('SET_LOCALE' === action.type || 'LOAD_STATE' === action.type) {
         var newLocale = action.payload.locale || action.payload
         if(globalize.locale() !== newLocale) {
-          fetch(ui.baseURL+'/locales/'+newLocale+'.json')
-          .then((res) => res.json())
+          return fetch(ui.baseURL+'/locales/'+newLocale+'.json')
+	  .then((res) => {
+	    if (res.status != 200) throw new Error('Not ok')
+	    return res.json()
+	  })
           .then((json) => {
             globalize.loadMessages(json)
             globalize.locale(newLocale)
@@ -43,7 +46,6 @@ function setup(plugin, imports, register) {
             next(action)
             ui.onLocalize.emit(newLocale)
           })
-          return
         }
       }
       return next(action)
@@ -58,12 +60,35 @@ function setup(plugin, imports, register) {
     return state
   }
 
+  ui.action_setLocale = function(locale) {
+    return {type: 'SET_LOCALE', payload: locale}
+  }
+
+  ui.action_setLocaleWithFallbacks = function*(locales) {
+    for (var i=0; i<locales.length; i++) {
+      try {
+        yield ui.action_setLocale(locales[i])
+        return
+      }catch(e) {
+        // Do nothing -- next locale will be set.
+      }
+    }
+    throw new Error('No locales found. Network down?')
+  }
+
   ui.onStart(() => {
-    var locale = navigator.language
-      || navigator.userLanguage // IE
-      || 'en' // default
-    ui.store.dispatch({type: 'SET_LOCALE', payload: locale})
+    var locales = [
+      navigator.language || navigator.userLanguage
+    , getLocaleRoot(navigator.language || navigator.userLanguage)
+    , 'en' // default
+    ]
+    store.dispatch(ui.action_setLocaleWithFallbacks(locales))
   })
+
+  function getLocaleRoot(locale) {
+    if (!~locale.indexOf('-')) return
+    return locale.split('-')[0]
+  }
 
   // Locale setting
 
