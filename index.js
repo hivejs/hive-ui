@@ -23,6 +23,7 @@ var path = require('path')
   , deap = require('deap')
   , languages = require('languages')
   , AtomicEmitter = require('atomic-emitter')
+  , PassThrough = require('stream').PassThrough
 
 module.exports = setup
 module.exports.consumes = ['http', 'hooks', 'config', 'importexport', 'ot']
@@ -35,11 +36,21 @@ function setup(plugin, imports, register) {
     , importexport = imports.importexport
     , ot = imports.ot
 
-  var b = browserify({debug: config.get('ui:debug') || false, entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']})
+  var b = browserify({
+    debug: config.get('ui:debug') || false
+  , entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']
+  })
   b.transform('babelify', {
     presets: ['es2015', 'stage-2']
   , global: true
   , ignore: /node_modules\/(?!hive-)(?!redux)(?!reducers)(?!flux)/
+  })
+
+  var primusClientStream = new PassThrough
+  b.require(primusClientStream, {file: __dirname+'/lib/primus.js'})
+  hooks.on('interface-stream:setup', function*(primus){
+    primusClientStream.end(primus.library())
+    yield ui.bundle()
   })
 
   var ui = {
@@ -224,7 +235,6 @@ function setup(plugin, imports, register) {
 
     http.router.get('/build.js', function*() {
       if(yield this.cashed()) return
-      if(buildjs) return this.body = buildjs
       this.body = yield ui.bundle()
     })
 
@@ -234,13 +244,12 @@ function setup(plugin, imports, register) {
       this.body = yield ui.bundleStylesheets()
     })
 
+    // Static dirs
+
     Object.keys(ui.staticDirs).forEach(function(dir) {
       var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
       http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.staticDirs[dir])))
     })
-
-    var buildjs = yield ui.bundle()
-
   })
 
   register(null, {ui: ui})
