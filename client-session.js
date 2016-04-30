@@ -23,7 +23,7 @@ var vdom = require('virtual-dom')
 import cookieEffects  from 'redux-effects-cookie'
 import {cookie} from 'redux-effects-cookie'
 
-var Stream = require('hive-client-shoe')
+var Stream = require('./lib/stream-client.js')
 
 module.exports = setup
 module.exports.consumes = ['ui', 'api']
@@ -37,14 +37,9 @@ function setup(plugin, imports, register) {
   ui.reduxMiddleware.push(store => next => action => {
     if('SESSION_STREAM_LOAD' === action.type) {
       var state = store.getState()
-      return Stream(ui.baseURL, action.payload)
-      .then(stream => {
-        session.stream = stream
-        session.onLoadStream.emit()
-      })
-      .catch(er => {
-        store.dispatch({type: 'SESSION_LOGIN', error: true, payload: er})
-      })
+      if(session.stream) session.stream.close()
+      session.stream = Stream(ui.baseURL, action.payload)
+      session.onStreamLoad.emit()
     }
     return next(action)
   })
@@ -203,8 +198,8 @@ function setup(plugin, imports, register) {
       })
     }
   , onceStreamLoaded: function(cb) {
-      if(session.stream) return setImmediate(cb)
-      var dispose = session.onLoadStream(function() {
+      if(ui.store.getState().session.streamConnected) return setImmediate(cb)
+      var dispose = session.onStreamConnect(() => {
         dispose()
         cb()
       })

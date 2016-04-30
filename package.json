@@ -25,7 +25,7 @@
     "redux-actions": "0.9.x",
     "mux-dmx": "0.0.x",
     "redux-effects-cookie": "0.2.x",
-    "hive-client-shoe": "0.6.x",
+    "dataplex": "3.x",
     "cldr-data": "latest",
     "globalize": "1.1.x",
     "languages": "0.1.x",
