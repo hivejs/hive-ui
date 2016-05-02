@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"ui": {
+		"locale": "سيمه ايز",
+		"select-language": "ژبه مو وټاکئ"
+	},
+	"session": {
+		"logging-in": "په ننوتلو کې دی...",
+		"offline": "پرې ليکه"
+	},
+	"editor": {
+		"editor": "سمونگر",
+		"select-editor": "يو سمونگر ټاکل",
+		"choose-editor": "يو سمونگر ټاکل",
+		"load-error": "تېروتنه!"
+	},
+	"settings": {
+		"settings": "امستنې",
+		"user-settings": "کارن"
+	},
+	"oauth": {
+		"hello": "{user} سلامونه،",
+		"scope-all": "ستاسې ټول گڼون"
+	}
+}

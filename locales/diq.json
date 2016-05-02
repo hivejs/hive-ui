@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marmase",
+			"Mirzali"
+		]
+	},
+	"ui": {
+		"locale": "Locale",
+		"select-language": "Zıwan weçine"
+	},
+	"session": {
+		"authenticate": "Raştkerdışê kamiye",
+		"logging-in": "Ronıştışo abeno...",
+		"offline": "Çerxteber"
+	},
+	"editor": {
+		"editor": "Vurnayoğ",
+		"select-editor": "Vurnayoğ weçine",
+		"choose-editor": "Vurnayoğ bıvin",
+		"not-found": "Nêvineya!",
+		"not-found-explanation": "Kusur mewn,  ma dokumana to nêvina.",
+		"load-error": "Xeta!",
+		"loading": "Beno bar... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Eyari",
+		"user-settings": "Karber",
+		"document-settings": "Ena dokuman (qandê herg çi)",
+		"personal-document-settings": "Ena dokuman (semedê to)"
+	},
+	"oauth": {
+		"authorization-required": "Araşt kerdış lazım o",
+		"hello": "Hey {user},"
+	}
+}
