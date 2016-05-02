@@ -47,9 +47,13 @@ function setup(plugin, imports, register) {
   })
 
   var primusClientStream = new PassThrough
-  b.require(primusClientStream, {file: __dirname+'/lib/primus.js'})
+    , primusFile = __dirname+'/lib/primus.js'
+  b.require('stream')
+  b.require('util')
+  //b.require(primusClientStream, {file: primusFile})
   hooks.on('interface-stream:setup', function*(primus){
-    primusClientStream.end(primus.library())
+    //primusClientStream.end(primus.library())
+    yield (cb) => primus.save(primusFile, cb)
     yield ui.bundle()
   })
 
