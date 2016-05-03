@@ -39,7 +39,7 @@ function setup(plugin, imports, register) {
       var state = store.getState()
       if(session.stream) session.stream.close()
       session.stream = Stream(ui.baseURL, action.payload)
-      session.onStreamLoad.emit()
+      session.onLoadStream.emit()
     }
     return next(action)
   })
