@@ -80,7 +80,7 @@ function setup(plugin, imports, register) {
       , grant: null
       , user: null
       , loggingIn: false
-      , streamConnected: true
+      , streamConnected: false
       }
     }
     if('SESSION_STREAM_CONNECTED' === action.type) {
