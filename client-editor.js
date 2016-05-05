@@ -120,7 +120,7 @@ function setup(plugin, imports, register) {
       ])
       // Ensure stream is loaded
       .then((editableDoc) => new Promise((resolve) => {
-        session.onceStreamLoaded(() => resolve(editableDoc))
+        session.onceStreamConnected(() => resolve(editableDoc))
       }))
       .then(editableDoc => {
         if(!editableDoc) throw new Error('Loading timeout!')

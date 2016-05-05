@@ -197,7 +197,7 @@ function setup(plugin, imports, register) {
         cb()
       })
     }
-  , onceStreamLoaded: function(cb) {
+  , onceStreamConnected: function(cb) {
       if(ui.store.getState().session.streamConnected) return setImmediate(cb)
       var dispose = session.onStreamConnect(() => {
         dispose()
