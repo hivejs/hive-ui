@@ -17,44 +17,22 @@
 var path = require('path')
   , staticCache = require('koa-static-cache')
   , mount = require('koa-mount')
-  , browserify = require('browserify')
   , fs = require('fs')
-  , deap = require('deap')
-  , languages = require('languages')
-  , AtomicEmitter = require('atomic-emitter')
-  , PassThrough = require('stream').PassThrough
+  , build = require('./lib/build')
 
 module.exports = setup
-module.exports.consumes = ['http', 'hooks', 'config', 'importexport', 'ot']
+module.exports.consumes = ['hub', 'cli', 'http', 'hooks', 'config', 'importexport', 'ot', 'interfaceStream']
 module.exports.provides = ['ui']
 
 function setup(plugin, imports, register) {
-  var http = imports.http
+  var hub = imports.hub
+    , http = imports.http
     , hooks = imports.hooks
     , config = imports.config
     , importexport = imports.importexport
     , ot = imports.ot
-
-  var b = browserify({
-    debug: config.get('ui:debug') || false
-  , entries: ['node_modules/babel-polyfill', 'node_modules/whatwg-fetch']
-  })
-  b.transform('babelify', {
-    presets: ['es2015', 'stage-2']
-  , global: true
-  , ignore: /node_modules\/(?!hive-)(?!redux)(?!reducers)(?!flux)/
-  })
-
-  var primusClientStream = new PassThrough
-    , primusFile = __dirname+'/lib/primus.js'
-  b.require('stream')
-  b.require('util')
-  //b.require(primusClientStream, {file: primusFile})
-  hooks.on('interface-stream:setup', function*(primus){
-    //primusClientStream.end(primus.library())
-    yield (cb) => primus.save(primusFile, cb)
-    yield ui.bundle()
-  })
+    , interfaceStream = imports.interfaceStream
+    , cli = imports.cli
 
   var ui = {
     modules: {}
@@ -63,14 +41,14 @@ function setup(plugin, imports, register) {
   , staticDirs: {}
   , config: {}
   , localeDirs: {}
-  , rootPath: path.join(process.cwd(), 'node_modules')
+  , rootPath: process.cwd()
+  , baseURL: config.get('ui:baseURL')
     /**
      * Register a client-side module
      */
   , registerModule: function(file) {
-     file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
+     //file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
      if(this.modules[file]) return true
-     b.require(file)
      this.modules[file] = true
      return true
    }
@@ -81,8 +59,6 @@ function setup(plugin, imports, register) {
   , registerJavascript: function(file) {
       //file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
       if(this.entries[file]) return true
-      b.add(file)
-      b.require(file)
       this.entries[file] = true
       return true
     }
@@ -93,15 +69,6 @@ function setup(plugin, imports, register) {
       if(this.modules[file]) return true
       this.stylesheets[file] = true
       return true
-    }
-  , bundleStylesheets: function*() {
-      return (yield Object.keys(ui.stylesheets)
-      .map(function(file) {
-        return function(cb) {
-          fs.readFile(file, cb)
-        }
-      }))
-      .join('\r\n')
     }
     /**
      * Register a static asset folder
@@ -128,78 +95,37 @@ function setup(plugin, imports, register) {
       if(this.localeDirs[dir]) return true
       this.localeDirs[dir] = true
     }
-  , bundleLocales: function*() {
-      var locales = {}
-      yield Object.keys(this.localeDirs).map(function*(dir) {
-        var files = yield function(cb) {
-          fs.readdir(dir, cb)
-        }
-        yield files.map(function*(file) {
-          var buffer = yield function(cb) {
-            fs.readFile(dir+'/'+file, cb)
-          }
-          var json = JSON.parse(buffer.toString('utf8'))
-            , locale = file.split('.')[0]
-          if(!locales[locale]) locales[locale] = {}
-          deap.extend(locales[locale], json)
-        })
-      })
-      for(var locale in locales) {
-        deap.merge(locales[locale], locales['en'])
-      }
-      return locales
-    }
-  , getBootstrapCode: function() {
-      var baseURL = config.get('ui:baseURL')
-        , buildpath = baseURL+'/build.js'
-        , stylesheet = baseURL+'/build.css'
-      var list = Object.keys(ui.modules).length? Object.keys(ui.modules).map(JSON.stringify).join(',') : ''
-        , configString = JSON.stringify(this.config)
-      return'<!DOCTYPE html><html><head><title>Hive.js</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><link rel="stylesheet" href="'+stylesheet+'" /></head><body><script src="'+buildpath+'" id="buildjs"></script><script>require("architect").createApp(['+list+'].map(function(file) {var module = require(file); if(typeof(module) != "function") throw new Error("Component "+file+" doesn\'t expose a setup function for registering."); return {packagePath: file, setup: module, provides: module.provides || [], consumes: module.consumes || []}}), function(er, app) {if(er) throw er; app.getService("ui").start('+configString+')})</script></body></html>'
-    }
   , bootstrapMiddleware: function() {
       return function*(next) {
         if(yield this.cashed()) return
-        this.body = ui.getBootstrapCode()
+        this.type = 'text/html; charset=utf-8';
+        this.body = fs.createReadStream('build/index.html')
       }
-    }
-  , bundling: false
-  , onBundle: AtomicEmitter()
-  , bundled: null
-  , bundle: function*() {
-      var bundle
-      if(this.bundled) {
-        bundle = this.bundled
-      }else
-      if(this.bundling) {
-        bundle = yield (cb) => this.onBundle(cb.bind(null,null))
-      }else{
-	this.bundling = true
-	bundle = yield (cb) => b.bundle(cb)
-        this.onBundle.emit(bundle)
-      }
-      this.bundling = false
-      return bundle
     }
   }
 
-  b.require('architect')
-
   ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
+  
   ui.registerStylesheet(path.join(__dirname, 'css', 'index.css'))
-  ui.registerModule(path.join(__dirname, 'client-ui.js'))
-  ui.registerModule(path.join(__dirname, 'client-api.js'))
-  ui.registerModule(path.join(__dirname, 'client-editor.js'))
-  ui.registerModule(path.join(__dirname, 'client-session.js'))
-  ui.registerModule(path.join(__dirname, 'client-settings.js'))
-  ui.registerModule(path.join(__dirname, 'client-localize.js'))
-  ui.registerModule(path.join(__dirname, 'client-oauth.js'))
-  ui.registerModule(path.join(__dirname, 'client-authToken.js'))
+  
+  ui.registerJavascript('node_modules/babel-polyfill')
+  ui.registerJavascript('node_modules/whatwg-fetch')
+  ui.registerJavascript(__dirname+'/client/init.js')
+
+  ui.registerModule(path.join(__dirname, 'client/ui.js'))
+  ui.registerModule(path.join(__dirname, 'client/api.js'))
+  ui.registerModule(path.join(__dirname, 'client/editor.js'))
+  ui.registerModule(path.join(__dirname, 'client/session.js'))
+  ui.registerModule(path.join(__dirname, 'client/settings.js'))
+  ui.registerModule(path.join(__dirname, 'client/localize.js'))
+  ui.registerModule(path.join(__dirname, 'client/oauth.js'))
+  ui.registerModule(path.join(__dirname, 'client/authToken.js'))
+  
   ui.registerLocaleDir(path.join(__dirname, 'locales'))
+ 
+  fs.writeFileSync(__dirname+'/client/lib/primus.js', interfaceStream.primus.library())
 
-  hooks.on('http:listening', function*() {
-
-    http.router.get('/documents/:id', ui.bootstrapMiddleware())
+  hub.on('ready', function() {
 
     // pass down Import export config
 
@@ -215,44 +141,51 @@ function setup(plugin, imports, register) {
     }
     ui.registerConfigEntry('importexport:importTypes', importTypes)
 
-
-    // bundle + pass down locales & register locale routes
-
-    var locales = yield ui.bundleLocales()
-
-    ui.registerConfigEntry('locales', Object.keys(locales)
-      .reduce((o, locale) => {
-        o[locale] = languages.getLanguageInfo(locale)
-        return o
-      }, {})
-    )
-
-    http.router.get('/locales/:locale.json', function*(next) {
-      if(!locales[this.params.locale]) this.throw(404)
-      this.body = {[this.params.locale]: locales[this.params.locale]}
+    // Add Content-Security-Policy
+    http.use(function*(next) {
+      this.response.header['Content-Security-Policy'] = "default-src 'self' 'unsafe-inline' ; script-src 'self' 'unsafe-inline' ; style-src 'self' 'unsafe-inline' ; img-src * ; font-src 'self' ; connect-src 'self' ; media-src * ; frame-ancestors 'self' ; form-action 'self' ; referrer origin-when-cross-origin;"
+      yield next
     })
+
+    // main ui
+    http.router.get('/documents/:id', ui.bootstrapMiddleware())
+
+    // register locale routes
+    http.router.get('/locales/*', mount('/locales', staticCache('build/locales')))
 
     // pass down available ottypes
-
     ui.registerConfigEntry('ot:types', Object.keys(ot.ottypes))
 
-    http.router.get('/build.js', function*() {
+    // Register bundle routes
+
+    http.router.get('/bundle.js', function*() {
       if(yield this.cashed()) return
-      this.body = yield ui.bundle()
+      this.type = 'application/javascript; charset=utf-8';
+      this.body = fs.createReadStream('build/bundle.js')
     })
 
-    http.router.get('/build.css', function*() {
+    http.router.get('/bundle.js.map', function*() {
+      if(yield this.cashed()) return
+      this.type = 'application/json; charset=utf-8';
+      this.body = fs.createReadStream('build/bundle.js.map')
+    })
+
+    http.router.get('/bundle.css', function*() {
       if(yield this.cashed()) return
       this.type = 'text/css; charset=utf-8'
-      this.body = yield ui.bundleStylesheets()
+      this.body = fs.createReadStream('build/bundle.css')
     })
 
     // Static dirs
-
+    var staticRoot = ui.rootPath+'/node_modules'
     Object.keys(ui.staticDirs).forEach(function(dir) {
-      var dirName = path.posix.join('/static/', dir.substr(ui.rootPath.length).split(path.sep).join(path.posix.sep))
+      var dirName = path.posix.join('/static/', dir.substr(staticRoot.length).split(path.sep).join(path.posix.sep))
       http.router.get(dirName+'/*', mount(dirName, staticCache(dir, ui.staticDirs[dir])))
     })
+  })
+
+  cli.registerCommand('ui-build',(argv) => {
+    build(ui)
   })
 
   register(null, {ui: ui})

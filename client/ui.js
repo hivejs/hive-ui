@@ -26,8 +26,8 @@ var AtomicEmitter = require('atomic-emitter')
 import reduxGen from 'redux-gen'
 
 // Determine baseURL
-var src = document.getElementById('buildjs').getAttribute('src')
-, baseURL = src.substr(0, src.lastIndexOf('/build.js'))
+var src = document.getElementById('bundlejs').getAttribute('src')
+, baseURL = src.substr(0, src.lastIndexOf('/bundle.js'))
 
 // Include bootstrap
 var link = document.createElement('link')
