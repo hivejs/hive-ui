@@ -27,7 +27,7 @@ import reduxGen from 'redux-gen'
 
 // Determine baseURL
 var src = document.getElementById('bundlejs').getAttribute('src')
-, baseURL = src.substr(0, src.lastIndexOf('/bundle.js'))
+, baseURL = src.substr(0, src.lastIndexOf('/static/build/bundle.js'))
 
 // Include bootstrap
 var link = document.createElement('link')
@@ -78,6 +78,19 @@ function setup(plugin, imports, register) {
       var matchesNew = regex.exec(action.payload)
       if(matchesOld && !matchesNew) return true
       return false
+    }
+  , scripts: {}
+  , requireScript: function(url) {
+      if (this.scripts[url]) return Promise.resolve()
+      return new Promise((resolve) => {
+        var script = document.createElement('script')
+        script.src = url
+        script.onload = () => {
+          this.scripts[url] = script
+          resolve()
+        }
+        document.body.appendChild(script)
+      })
     }
   , onRenderNavbarRight: AtomicEmitter()
   , onRenderNavbarLeft: AtomicEmitter()

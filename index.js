@@ -36,6 +36,8 @@ function setup(plugin, imports, register) {
 
   var ui = {
     modules: {}
+  , externals: {}
+  , externalized: {}
   , entries: {}
   , stylesheets: {}
   , staticDirs: {}
@@ -47,11 +49,30 @@ function setup(plugin, imports, register) {
      * Register a client-side module
      */
   , registerModule: function(file) {
-     //file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
-     if(this.modules[file]) return true
-     this.modules[file] = true
-     return true
-   }
+      //file = file.indexOf(this.rootPath) === 0? file.substr(this.rootPath.length+1) : file
+      if(this.modules[file]) return true
+      this.modules[file] = true
+      return true
+    }
+    /**
+     * Put this module in a separate
+     * bundle that you have to load yourself
+     */
+  , externalizeModule: function(file) {
+      if (this.externalized[file]) return true
+      this.externalized[file] = true
+      this.registerExternalModule(file)
+      return true
+    }
+    /**
+     * Exclude a module from being put
+     * in the main bundle
+     */
+  , registerExternalModule: function(file) {
+      if (this.externals[file]) return true
+      this.externals[file] = true
+      return true
+    }
     /**
      * Register a javascript module that is added to
      * the browserify build as an entry file
@@ -150,33 +171,13 @@ function setup(plugin, imports, register) {
     // main ui
     http.router.get('/documents/:id', ui.bootstrapMiddleware())
 
-    // register locale routes
-    http.router.get('/locales/*', mount('/locales', staticCache('build/locales')))
-
     // pass down available ottypes
     ui.registerConfigEntry('ot:types', Object.keys(ot.ottypes))
 
-    // Register bundle routes
-
-    http.router.get('/bundle.js', function*() {
-      if(yield this.cashed()) return
-      this.type = 'application/javascript; charset=utf-8';
-      this.body = fs.createReadStream('build/bundle.js')
-    })
-
-    http.router.get('/bundle.js.map', function*() {
-      if(yield this.cashed()) return
-      this.type = 'application/json; charset=utf-8';
-      this.body = fs.createReadStream('build/bundle.js.map')
-    })
-
-    http.router.get('/bundle.css', function*() {
-      if(yield this.cashed()) return
-      this.type = 'text/css; charset=utf-8'
-      this.body = fs.createReadStream('build/bundle.css')
-    })
-
     // Static dirs
+    
+    http.router.get('/static/build/*', mount('/static/build', staticCache('build/')))
+    
     var staticRoot = ui.rootPath+'/node_modules'
     Object.keys(ui.staticDirs).forEach(function(dir) {
       var dirName = path.posix.join('/static/', dir.substr(staticRoot.length).split(path.sep).join(path.posix.sep))
