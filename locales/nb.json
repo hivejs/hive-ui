@@ -23,7 +23,7 @@
 		"not-found-explanation": "Det ser ut som at vi ikke kan finne dokumentet ditt. Beklager.",
 		"load-error": "Feil!",
 		"load-error-explanation": "En uventet feil inntraff i innlastingen av redigerern. Vennligst prøv igjen.",
-		"loading": "Laster..."
+		"loading": "Laster... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Innstillinger",

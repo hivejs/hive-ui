@@ -6,31 +6,31 @@
 		]
 	},
 	"ui": {
-		"locale": "Locale",
-		"select-language": "Zıwan weçine"
+		"locale": "Wareyê zıwani",
+		"select-language": "Zıwanê xo weçine"
 	},
 	"session": {
 		"authenticate": "Raştkerdışê kamiye",
-		"logging-in": "Ronıştışo abeno...",
-		"offline": "Çerxteber"
+		"logging-in": "Cıkewtış beno a...",
+		"offline": "Tebera"
 	},
 	"editor": {
 		"editor": "Vurnayoğ",
-		"select-editor": "Vurnayoğ weçine",
-		"choose-editor": "Vurnayoğ bıvin",
-		"not-found": "Nêvineya!",
-		"not-found-explanation": "Kusur mewn,  ma dokumana to nêvina.",
+		"select-editor": "Yew vurnayoği weçine",
+		"choose-editor": "Yew vurnayoği weçine",
+		"not-found": "Nêvêniya!",
+		"not-found-explanation": "Qusır de mevênên, ma dokumanê şıma nêvênıt.",
 		"load-error": "Xeta!",
-		"loading": "Beno bar... ({progress}%)"
+		"loading": "Bar beno... ({progress}%)"
 	},
 	"settings": {
 		"settings": "Eyari",
 		"user-settings": "Karber",
-		"document-settings": "Ena dokuman (qandê herg çi)",
-		"personal-document-settings": "Ena dokuman (semedê to)"
+		"document-settings": "Eno dokuman (her kesi rê)",
+		"personal-document-settings": "Eno dokuman (to rê)"
 	},
 	"oauth": {
-		"authorization-required": "Araşt kerdış lazım o",
-		"hello": "Hey {user},"
+		"authorization-required": "Raştkerdış lazımo",
+		"hello": "Merheba {user},"
 	}
 }

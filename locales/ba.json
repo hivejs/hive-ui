@@ -27,7 +27,7 @@
 		"not-found-explanation": "Һеҙҙең документты таба алмайбыҙ. Ғәфү итегеҙ.",
 		"load-error": "Хата",
 		"load-error-explanation": "Көтөлмәгән хата килеп сыҡты. Ҡабат эшләп ҡарағыҙ.",
-		"loading": "Тейәлә башланы ({булды}%)"
+		"loading": "Тейәлә башланы… ({progress}%)"
 	},
 	"settings": {
 		"settings": "Көйләүҙәр",
@@ -36,13 +36,13 @@
 		"personal-document-settings": "Был документ (һеҙҙең өсөн)"
 	},
 	"oauth": {
-		"authorization-required": "Авторизацияланыу кәрәк",
+		"authorization-required": "Танылыу кәрәк",
 		"hello": "Сәләм, {user},",
 		"scope-all": "барлыҡ иҫәптәр",
 		"question": "Һеҙ ысынлап та инеүҙе рөхсәт итергә теләйһегеҙме?",
 		"warning": "Иғтибар!",
-		"warning-explanation": "Ҡушымта хәүефле протокол аша эшләй",
-		"deny": "Ирешеүҙе тыйырға",
+		"warning-explanation": "Ҡушымта хәүефле протокол аша эшләй!",
+		"deny": "Инеүҙе тыйырға",
 		"grant": "Инеүгә рөхсәт",
 		"redirecting": "Йүнәлтеү..."
 	}
