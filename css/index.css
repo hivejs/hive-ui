@@ -1,3 +1,9 @@
+.navbar-brand > img {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
 .Settings {
   position: absolute;
   top: .5cm;

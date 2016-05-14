@@ -126,6 +126,7 @@ function setup(plugin, imports, register) {
   }
 
   ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
+  ui.registerStaticDir(path.join(__dirname, 'img'))
   
   ui.registerStylesheet(path.join(__dirname, 'css', 'index.css'))
   

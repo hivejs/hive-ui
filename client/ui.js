@@ -254,7 +254,8 @@ function setup(plugin, imports, register) {
             h('span.icon-bar'),
             h('span.icon-bar'),
           ]),
-          h('a.navbar-brand', {href:"#"}, 'Hive')
+          h('a.navbar-brand', {href:"#", title: 'Hive.js'}
+          , h('img', {src: ui.baseURL+'/static/hive-ui/img/logo_grey.svg'}))
         ])),
         h('div.collapse.navbar-collapse'+(displayMainMenu? '.in' : '')
         ,[
