@@ -50,11 +50,12 @@ function setup(plugin, imports, register) {
       if('SET_LOCALE' === action.type || 'LOAD_STATE' === action.type) {
         var newLocale = action.payload.locale || action.payload
         if(globalize.locale() !== newLocale) {
+          if (!ui.config.locales[newLocale]) return Promise.reject()
           return fetch(ui.baseURL+'/static/build/locales/'+newLocale+'.json')
-	  .then((res) => {
-	    if (res.status != 200) throw new Error('Not ok')
-	    return res.json()
-	  })
+          .then((res) => {
+            if (res.status != 200) throw new Error('Not ok')
+            return res.json()
+          })
           .then((json) => {
             globalize.loadMessages(json)
             globalize.locale(newLocale)
