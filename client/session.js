@@ -52,7 +52,7 @@ function setup(plugin, imports, register) {
 
   ui.onRenderHeader((store, children) => {
     var state = store.getState()
-    if(!state.session.streamConnected) {
+    if(false === state.session.streamConnected) {
       children.push(renderDisconnected(store))
     }
   })
@@ -79,7 +79,7 @@ function setup(plugin, imports, register) {
       , grant: null
       , user: null
       , loggingIn: false
-      , streamConnected: false
+      , streamConnected: null
       }
     }
     if('SESSION_STREAM_CONNECTED' === action.type) {
@@ -285,9 +285,10 @@ function setup(plugin, imports, register) {
   }
 
   function renderDisconnected(store) {
-    return h('span.Session__offlineTag', [
+    return h('span.Session__offlineTag', {
+      title: ui._('session/offline')()
+    },[
       h('i.glyphicon.glyphicon-plane')
-    , ' '+ui._('session/offline')()
     ])
   }
 

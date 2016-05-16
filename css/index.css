@@ -32,6 +32,7 @@ html[dir="rtl"] .Settings__close {
 
 
 .Session__offlineTag {
-  display: inline-block;
-  padding: 15px 15px;
+  position:absolute;
+  bottom: 0.05cm;
+  left: 0.8cm;
 }
