@@ -1,0 +1,47 @@
+{
+	"@metadata": {
+		"authors": [
+			"Revi",
+			"Ykhwong"
+		]
+	},
+	"ui": {
+		"locale": "로캘",
+		"select-language": "언어 선택"
+	},
+	"session": {
+		"authenticate": "인증",
+		"authenticate-explanation": "다음의 인증 방식 중 하나를 사용하여 인증하십시오:",
+		"logging-in": "로그인 중...",
+		"offline": "오프라인"
+	},
+	"editor": {
+		"editor": "편집기",
+		"select-editor": "편집기 선택",
+		"choose-editor": "편집기 선택",
+		"choose-editor-explanation": "{type} 문서의 공동 작업을 위해 다음의 편집기 중 하나를 선택하십시오",
+		"not-found": "찾을 수 없음!",
+		"not-found-explanation": "죄송합니다. 문서를 찾지 못했습니다.",
+		"load-error": "오류!",
+		"load-error-explanation": "편집기를 불러오는 동안 예기치 않은 오류가 발생했습니다. 다시 시도해 주십시오.",
+		"loading": "불러오는 중... ({progress}%)"
+	},
+	"settings": {
+		"settings": "설정",
+		"user-settings": "사용자",
+		"document-settings": "이 문서 (모든 사용자)",
+		"personal-document-settings": "이 문서 (사용자 본인)"
+	},
+	"oauth": {
+		"authorization-required": "인증이 필요합니다",
+		"hello": "{user}님,",
+		"authorization-explanation": "{app_url}의 응용 프로그램은 hive.js 계정에서 다음 기능에 대한 권한이 필요합니다:",
+		"scope-all": "사용자 계정 전체",
+		"question": "접근 권한을 부여하시겠습니까?",
+		"warning": "경고!",
+		"warning-explanation": "이 응용 프로그램은 안전하지 않은 프로토콜을 통해 통신하고 있습니다!",
+		"deny": "접근 거부",
+		"grant": "접근 권한 부여",
+		"redirecting": "넘어가는 중..."
+	}
+}
