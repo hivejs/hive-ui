@@ -286,9 +286,27 @@ function setup(plugin, imports, register) {
 
   function renderDisconnected(store) {
     return h('span.Session__offlineTag', {
-      title: ui._('session/offline')()
+      attributes: {'aria-describedby': 'popover-sessionoffline'}
+    , href: "javascript:void(0)"
+    , 'ev-click':(e)=> {
+        var popover = e.currentTarget.querySelector('.popover')
+        if (popover.classList.contains('in')) popover.classList.remove('in')
+        else popover.classList.add('in')
+      }
     },[
       h('i.glyphicon.glyphicon-plane')
+    , h('div.popover.fade.bottom.in',{role:"tooltip", id: 'popover-sessionoffline'}, [
+        h('div.arrow')
+      , h('h3.popover-title', ui._('session/offline')())
+      , h('div.popover-content', [
+          h('p', [
+            h('big', ui._('session/offline-subheading')())
+          , h('br')
+          , h('span.text-muted', ui._('session/offline-reasons')())
+          ])
+        , h('p.text-primary', ui._('session/offline-explanation')())
+        ])
+      ])
     ])
   }
 

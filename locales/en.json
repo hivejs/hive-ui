@@ -8,6 +8,9 @@
   , "authenticate-explanation": "Authenticate using one of the following authentication methods:"
   , "logging-in": "Logging in..."
   , "offline": "Offline"
+  , "offline-subheading": "You are no longer connected to the collaboration server."
+  , "offline-reasons": "This can happen when the server is restarting or when you have lost internet connection entirely."
+  , "offline-explanation": "Don't worry, though! You can still edit the document. Once you are online again, your changes will be submitted automatically."
   }
 , "editor": {
     "editor": "Editor"

@@ -35,4 +35,21 @@ html[dir="rtl"] .Settings__close {
   position:absolute;
   bottom: 0.05cm;
   left: 0.8cm;
+  cursor: pointer;
+}
+
+.Session__offlineTag .popover {
+  top: 100%;
+  left: -100%;
+  width: 10cm;
+  max-width: 10cm;/*override*/
+  opacity: 0;/*override, for good measure...*/
+  transition: opacity 0.3s linear;/*override*/
+}
+.Session__offlineTag .popover.in {
+  display: block;
+  opacity: 1;
+}
+.Session__offlineTag .popover .arrow {
+  left: .55cm;
 }
