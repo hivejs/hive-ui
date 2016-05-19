@@ -12,7 +12,10 @@
 		"authenticate": "Autentícate",
 		"authenticate-explanation": "Autentícate usando uno de los siguientes métodos de autenticación:",
 		"logging-in": "Iniciando sesión…",
-		"offline": "Sin conexión"
+		"offline": "Sin conexión",
+		"offline-subheading": "Ya no estás conectado al servidor de colaboración.",
+		"offline-reasons": "Esto puede suceder cuando el servidor está reiniciando o cuando se ha perdido la conexión a Internet completamente.",
+		"offline-explanation": "¡No te preocupes! Todavía puedes editar el documento. Una vez que estés en línea de nuevo, los cambios se enviarán automáticamente."
 	},
 	"editor": {
 		"editor": "Editor",

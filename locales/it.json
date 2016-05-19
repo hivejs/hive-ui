@@ -14,7 +14,10 @@
 		"authenticate": "Autenticazione",
 		"authenticate-explanation": "Autenticati utilizzando uno dei seguenti metodi di autenticazione:",
 		"logging-in": "Accesso in corso...",
-		"offline": "Non connesso"
+		"offline": "Non connesso",
+		"offline-subheading": "Non sei più connesso al server di collaborazione.",
+		"offline-reasons": "Questo può accadere quando il server viene riavviato o quando hai perso completamente la connessione a internet.",
+		"offline-explanation": "Non preoccuparti però! Puoi ancora modificare il documento. Una volta che tornerai di nuovo online, le modifiche saranno inviate automaticamente."
 	},
 	"editor": {
 		"editor": "Editore",

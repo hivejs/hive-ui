@@ -14,7 +14,10 @@
 		"authenticate": "Authentification",
 		"authenticate-explanation": "S’authentifier en utilisant une des méthodes suivantes :",
 		"logging-in": "Connexion…",
-		"offline": "Hors connexion"
+		"offline": "Hors connexion",
+		"offline-subheading": "Vous n’êtes plus connecté au serveur collaboratif.",
+		"offline-reasons": "Cela peut se produire quand le serveur redémarre ou quand vous avez perdu complètement la connexion à internet.",
+		"offline-explanation": "Ne vous inquiétez pas ! Vous pouvez toujours modifier le document. Une fois en ligne de nouveau, vos modifications seront automatiquement soumises."
 	},
 	"editor": {
 		"editor": "Éditeur",

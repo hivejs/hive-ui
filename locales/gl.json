@@ -12,7 +12,10 @@
 		"authenticate": "Autenticación",
 		"authenticate-explanation": "Autenticar usando un dos seguintes métodos de autenticación:",
 		"logging-in": "Accedendo ao sistema...",
-		"offline": "Desconectado"
+		"offline": "Desconectado",
+		"offline-subheading": "Xa non está conectado ó servidor de colaboración.",
+		"offline-reasons": "Isto pode suceder cando o servidor está reiniciando ou cando se perde a conexión a Internet completamente.",
+		"offline-explanation": "Non se preocupe! Todavía pode editar o documento. Unha vez que estea en liña de novo, os cambios enviaranse automaticamente."
 	},
 	"editor": {
 		"editor": "Editor",

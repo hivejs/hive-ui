@@ -13,7 +13,10 @@
 		"authenticate": "Authentifizieren",
 		"authenticate-explanation": "Mit einer der folgenden Authentifizierungsmethoden authentifizieren:",
 		"logging-in": "Anmelden…",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-subheading": "Du bist nicht mehr mit dem Kollaborationsserver verbunden.",
+		"offline-reasons": "Das kann passieren, wenn der Server gerade neu gestartet wird oder die Internetverbindung komplett verloren gegangen ist.",
+		"offline-explanation": "Mach dir keine Sorgen! Du kannst noch das Dokument bearbeiten. Wenn du wieder online bist, werden deine Änderungen automatisch gespeichert."
 	},
 	"editor": {
 		"editor": "Editor",

@@ -16,14 +16,19 @@
 		"editor": "سمونگر",
 		"select-editor": "يو سمونگر ټاکل",
 		"choose-editor": "يو سمونگر ټاکل",
-		"load-error": "تېروتنه!"
+		"not-found": "و نه موندل شو!",
+		"load-error": "تېروتنه!",
+		"loading": "رابرسېرېږي... ({progress}%)"
 	},
 	"settings": {
 		"settings": "امستنې",
-		"user-settings": "کارن"
+		"user-settings": "کارن",
+		"document-settings": "همدا لاسوند (د هر چا لپاره)",
+		"personal-document-settings": "همدا لاسوند (ستا لپاره)"
 	},
 	"oauth": {
 		"hello": "{user} سلامونه،",
-		"scope-all": "ستاسې ټول گڼون"
+		"scope-all": "ستاسې ټول گڼون",
+		"warning": "گواښنه!"
 	}
 }

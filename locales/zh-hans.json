@@ -12,7 +12,10 @@
 		"authenticate": "认证",
 		"authenticate-explanation": "使用以下身份验证方式之一进行认证：",
 		"logging-in": "正在登录...",
-		"offline": "离线"
+		"offline": "离线",
+		"offline-subheading": "您不再连接至协作服务器。",
+		"offline-reasons": "这在服务器重启时，或当您完全丢失互联网连接时会发生。",
+		"offline-explanation": "不过，请不要担心！您仍可以编辑文档。一旦您再次在线，您的更改将自动提交。"
 	},
 	"editor": {
 		"editor": "编辑器",
