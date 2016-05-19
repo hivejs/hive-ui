@@ -6,6 +6,7 @@
   "dependencies": {
     "koa-static-cache": "3.x",
     "koa-mount": "1.x",
+    "architect": "0.1.x",
     "virtual-dom": "2.x",
     "dom-delegator": "13.x",
     "tiny-cookie": "0.5.x",
