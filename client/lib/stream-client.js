@@ -11,23 +11,26 @@ module.exports = function(baseURL, access_token) {
     , retries: Infinity // Number: How many times we shoult try to reconnect.
     }
   })
-  stream.on('open', function() {
-      
-      authenticate(er => {
-        if(er) return
-        plex.emit('connect')
-      })
+  stream.on('open', () => {
+    stream.pipe(plex).pipe(stream)
+    authenticate(er => {
+      if(er) return
+      plex.emit('connect')
     })
-  stream.on('reconnect scheduled', function (err) {
-      plex.emit('disconnect')
-    })
-  stream.on('end', function() {
-      plex.emit('disconnect')
-    })
-  stream.on('error', function (err) {
-      setTimeout(() => {throw err}, 0)
-    })
-  stream.pipe(plex).pipe(stream)
+  })
+  plex.on('disconnect', () => {
+    stream.removeAllListeners('data')
+    plex.unpipe(stream)
+  })
+  stream.on('reconnect scheduled', (err) => {
+    plex.emit('disconnect')
+  })
+  stream.on('end', () => {
+    plex.emit('disconnect')
+  })
+  stream.on('error', (err) => {
+    setTimeout(() => {throw err}, 0)
+  }) 
 
   return plex
 
