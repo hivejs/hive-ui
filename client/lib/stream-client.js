@@ -4,7 +4,13 @@ var dataplex = require('dataplex')
 module.exports = function(baseURL, access_token) {
   var plex = dataplex()
 
-  var stream = new Primus(baseURL)
+  var stream = new Primus(baseURL,{
+    reconnect: {
+      max: 60000 // Number: The max delay before we try to reconnect.
+    , min: 500 // Number: The minimum delay before we try reconnect.
+    , retries: Infinity // Number: How many times we shoult try to reconnect.
+    }
+  })
   stream.on('open', function() {
       
       authenticate(er => {
