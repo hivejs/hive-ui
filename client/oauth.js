@@ -48,7 +48,7 @@ function setup(plugin, imports, register) {
     return state
   }
 
-  ui.onRenderBody((store, children) => {
+  ui.onRenderContent((store, children) => {
     var state = store.getState()
     if(state.oauth.active) children.push(render(store))
   })

@@ -199,7 +199,9 @@ function setup(plugin, imports, register) {
   editor.el.style['display'] = 'flex'
   editor.el.style['flex-direction'] = 'column'
 
-  ui.onRenderBody((store, children) => {
+  // Injections into the page
+
+  ui.onRenderContent((store, children) => {
     var state = ui.store.getState()
     if(state.editor.active && state.editor.loading) {
       children.push(renderLoading(state.editor.loading))

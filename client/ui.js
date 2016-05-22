@@ -92,10 +92,11 @@ function setup(plugin, imports, register) {
         document.body.appendChild(script)
       })
     }
-  , onRenderNavbarRight: AtomicEmitter()
-  , onRenderNavbarLeft: AtomicEmitter()
   , onRenderBody: AtomicEmitter()
   , onRenderHeader: AtomicEmitter()
+  , onRenderNavbarRight: AtomicEmitter()
+  , onRenderNavbarLeft: AtomicEmitter()
+  , onRenderContent: AtomicEmitter()
   , onStart: AtomicEmitter()
   , baseURL: baseURL
   , reduxMiddleware: [reduxGen(), loggerMiddleware, routerMiddleware]
@@ -113,7 +114,7 @@ function setup(plugin, imports, register) {
     }
   , render: render
   , renderNavbar: renderNavbar
-  , renderBody: renderBody
+  , renderContent: renderContent
   }
 
   function loggerMiddleware(store) {
@@ -209,30 +210,48 @@ function setup(plugin, imports, register) {
   })
 
   function main() {
-    var tree = render(ui.store)
+    var tree
       , rootNode = document.body
+    try {
+      tree = render(ui.store)
+    }catch(e) {
+      console.log(e.stack)
+      console.log(e)
+    }
     rootNode.innerHTML = ''
     vdom.patch(rootNode, vdom.diff(h('body'), tree))
 
     // as the sate changes, the page will be re-rendered
     // at most once per animation frame...
-    ui.store.subscribe(throttlePerFrame(triggerRender))
+    var dispose = ui.store.subscribe(throttlePerFrame(triggerRender))
 
     // ... but at least once a second
-    setInterval(triggerRender, 1000)
+    var interv = setInterval(triggerRender, 1000)
 
     function triggerRender() {
+      try {
       var newtree = render(ui.store)
+      }catch(e) {
+        console.log(e.stack)
+        console.log(e)
+        return
+      }
       vdom.patch(rootNode, vdom.diff(tree, newtree))
       tree = newtree
+    }
+
+    function stopRendering() {
+      dispose()
+      clearInterval(interv)
     }
   }
 
   function render(store) {
-    return h('body', [
+    var props
+    return h('body', props={}, extensible('onRenderBody', store, [
       renderNavbar(store)
-    , renderBody(store)
-    ])
+    , renderContent(store)
+    ], props))
   }
 
   function renderNavbar(store) {
@@ -270,7 +289,7 @@ function setup(plugin, imports, register) {
     ])
   }
 
-  function renderBody(store) {
+  function renderContent(store) {
     var props
     return h('div.body', props={style: {
         position: 'absolute'
@@ -279,7 +298,7 @@ function setup(plugin, imports, register) {
       , bottom: '0px'
       , right: '0px'
       }},
-      extensible('onRenderBody', store, [], props)
+      extensible('onRenderContent', store, [], props)
     )
   }
 

@@ -147,6 +147,7 @@ function setup(plugin, imports, register) {
   , onChange: AtomicEmitter()
   }
 
+  // Injections into the page
 
   ui.onRenderNavbarRight((store, children) => {
     if(!store.getState().session.user) return
@@ -162,7 +163,7 @@ function setup(plugin, imports, register) {
     )
   })
 
-  ui.onRenderBody((store, children) => {
+  ui.onRenderContent((store, children) => {
     if(store.getState().settings.active) children.push(render(store))
   })
 

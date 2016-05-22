@@ -43,17 +43,27 @@ function setup(plugin, imports, register) {
     return next(action)
   })
 
-  ui.onRenderBody((store, children) => {
-    var state = store.getState()
-    if(!state.session.user) {
-      children.push(render(store))
-    }
-  })
+  // Injections into the page
 
+  ui.onRenderBody((store, children, properties) => {
+    var state = store.getState()
+    if (!properties.className) properties.cassName = ''
+    // Add some css classes for easy styling
+    properties.className += ' '+ (state.session.user?'':'un')+'authenticated'
+    properties.className += ' '+(state.session.streamConnected === false? 'dis': '')+'connected'
+  })
+  
   ui.onRenderHeader((store, children) => {
     var state = store.getState()
     if(false === state.session.streamConnected) {
       children.push(renderDisconnected(store))
+    }
+  })
+ 
+  ui.onRenderContent((store, children, properties) => {
+    var state = store.getState()
+    if (!state.session.user) {
+      children.push(render(store))  
     }
   })
 
@@ -244,7 +254,7 @@ function setup(plugin, imports, register) {
   function renderChooseAuthMethod(store) {
     var state = store.getState()
     var authfail = !!state.session.authFailed
-    return h('div.panel.panel-default', {style: {
+    return h('div.panel.panel-default.Session_authModal', {style: {
       width:'20%',
       'min-width': '7.5cm',
       margin: '3cm auto'
@@ -259,15 +269,16 @@ function setup(plugin, imports, register) {
         : h('p', {style: {display: 'none'}}),
         h('p',ui._('session/authenticate-explanation')())
       ]),
-      h('ul.list-group', Object.keys(session.providers)
+      h('div.list-group', Object.keys(session.providers)
         .filter(provider => !!session.providers[provider].ask)
         .map(function(provider) {
-          return h('li.list-group-item', [
-            h('a', {
+          return h('a.list-group-item',{
               href: 'javascript:void(0)'
             , 'ev-click': evt => store.dispatch(session.action_chooseAuthMethod(provider))
-            }, provider)
-          , ' '+session.providers[provider].description])
+            }, [
+            h('h4', provider)
+          , session.providers[provider].description
+          ])
         })
       )
     ])
