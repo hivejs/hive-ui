@@ -4,7 +4,11 @@
 			"Purodha"
 		]
 	},
+	"ui": {
+		"select-language": "Söhg Ding Schprohch uß"
+	},
 	"session": {
+		"authenticate": "Enlogge",
 		"logging-in": "Aam Enlogge …",
 		"offline": "Nit verbonge mem Näz"
 	},
@@ -23,6 +27,8 @@
 	"oauth": {
 		"hello": "Daach {user},",
 		"warning": "Opjepaß!",
+		"deny": "Zohjang verbehde",
+		"grant": "Zohjang zolohße",
 		"redirecting": "Aam Ömleijde ..."
 	}
 }

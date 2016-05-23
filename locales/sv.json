@@ -12,7 +12,9 @@
 		"authenticate": "Autentisera",
 		"authenticate-explanation": "Autentisera med en av följande autentiseringsmetoder:",
 		"logging-in": "Loggar in...",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-reasons": "Detta kan inträffa när servrarna startar om eller när du har förlorat din Internetanslutning.",
+		"offline-explanation": "Ingen fara! Du kan fortfarande redigera dokumentet. När du loggar in igen kommer dina ändringar att skickas in automatiskt."
 	},
 	"editor": {
 		"editor": "Redigerare",
