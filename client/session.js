@@ -58,6 +58,9 @@ function setup(plugin, imports, register) {
     if(false === state.session.streamConnected) {
       children.push(renderDisconnected(store))
     }
+    if (state.session.user) {
+      children.push(renderUsername(store))
+    }
   })
  
   ui.onRenderContent((store, children, properties) => {
@@ -195,6 +198,7 @@ function setup(plugin, imports, register) {
   , renderLoggingIn
   , renderChooseAuthMethod
   , renderAsk
+  , renderUsername
   , renderDisconnected
   , onLogin: AtomicEmitter()
   , onLoadStream: AtomicEmitter()
@@ -293,6 +297,12 @@ function setup(plugin, imports, register) {
       'min-width': '7.5cm',
       margin: '3cm auto'
     }}, children)
+  }
+
+  function renderUsername(store) {
+    return h('span.navbar-text.Session__username'
+    , store.getState().session.user.attributes.name
+    )
   }
 
   function renderDisconnected(store) {
