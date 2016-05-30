@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Marmase",
-			"Mirzali"
+			"Mirzali",
+			"Kumkumuk"
 		]
 	},
 	"ui": {
@@ -11,15 +12,15 @@
 	},
 	"session": {
 		"authenticate": "Raştkerdışê kamiye",
-		"logging-in": "Cıkewtış beno a...",
-		"offline": "Tebera"
+		"logging-in": "Cıkewtışo abeno. ..",
+		"offline": "Çerxteber"
 	},
 	"editor": {
 		"editor": "Vurnayoğ",
 		"select-editor": "Yew vurnayoği weçine",
 		"choose-editor": "Yew vurnayoği weçine",
 		"not-found": "Nêvêniya!",
-		"not-found-explanation": "Qusır de mevênên, ma dokumanê şıma nêvênıt.",
+		"not-found-explanation": "Qusır de mevênên, ma dokumanê şıma nêvina",
 		"load-error": "Xeta!",
 		"loading": "Bar beno... ({progress}%)"
 	},
