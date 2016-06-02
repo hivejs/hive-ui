@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Luk3"
+			"Luk3",
+			"HenriqueCrang"
 		]
 	},
 	"ui": {
@@ -12,7 +13,10 @@
 		"authenticate": "Autenticar",
 		"authenticate-explanation": "Autenticar usando um dos seguintes métodos de autenticação:",
 		"logging-in": "Autenticando...",
-		"offline": "Desconectado"
+		"offline": "Desconectado",
+		"offline-subheading": "Você não está mais conectado ao servidor de colaboração.",
+		"offline-reasons": "Isso pode acontecer quando o servidor está reiniciando ou quando você perde totalmente sua conexão com a internet.",
+		"offline-explanation": "Não se preocupe! Você ainda pode editar o documento. Uma vez online novamente, suas mudanças serão enviadas automaticamente."
 	},
 	"editor": {
 		"editor": "Editor",
