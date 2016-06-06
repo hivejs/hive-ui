@@ -13,7 +13,10 @@
 		"authenticate": "인증",
 		"authenticate-explanation": "다음의 인증 방식 중 하나를 사용하여 인증하십시오:",
 		"logging-in": "로그인 중...",
-		"offline": "오프라인"
+		"offline": "오프라인",
+		"offline-subheading": "협업 서버에 더 이상 연결되어 있지 않습니다.",
+		"offline-reasons": "이는 서버가 재시작 중이거나 인터넷 접속이 완전히 단절되었을 때 발생할 수 있습니다.",
+		"offline-explanation": "하지만 걱정하지 마십시오! 문서 편집은 계속할 수 있습니다. 다시 온라인 상태가 되면 사용자의 변경 사항은 자동으로 반영될 것입니다."
 	},
 	"editor": {
 		"editor": "편집기",
