@@ -12,10 +12,13 @@
 		"authenticate": "Hitelesítés",
 		"authenticate-explanation": "Hitelesítés az alábbi módszerek egyikével:",
 		"logging-in": "Bejelentkezés...",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-explanation": "Ne aggódj! Továbbra is szerkesztheted a dokumentumot. Amint újra online leszel, a változtatásaid automatikusan elmentődnek."
 	},
 	"editor": {
 		"editor": "Szerkesztő",
+		"select-editor": "Válassz egy szerkesztőt",
+		"choose-editor": "Válassz egy szerkesztőt",
 		"not-found": "Nem található!",
 		"not-found-explanation": "Úgy tűnik, nem találjuk a dokumentumod. Sajnáljuk.",
 		"load-error": "Hiba!",
@@ -28,7 +31,9 @@
 		"personal-document-settings": "Ez a dokumentum (csak neked)"
 	},
 	"oauth": {
+		"authorization-required": "Azonosítás szükséges",
 		"hello": "Üdv {user},",
+		"question": "Biztosítod a hozzáférést?",
 		"warning": "Figyelmeztetés!",
 		"warning-explanation": "Az alkalmazás egy nem biztonságos protokollon keresztül kommunikál!",
 		"deny": "Hozzáférés megtagadása",

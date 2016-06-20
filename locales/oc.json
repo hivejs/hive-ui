@@ -19,7 +19,7 @@
 		"choose-editor": "Causir un editor",
 		"not-found": "Pas trobat !",
 		"load-error": "Error !",
-		"loading": "Cargament…"
+		"loading": "Cargament... ({progress} %)"
 	},
 	"settings": {
 		"settings": "Paramètres",
