@@ -13,7 +13,10 @@
 		"authenticate": "Aanmelden",
 		"authenticate-explanation": "Meld u aan met een van de volgende authenticatiemethoden:",
 		"logging-in": "Bezig met aanmelden...",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-subheading": "U bent niet langer verbonden met de samenwerkingsserver.",
+		"offline-reasons": "Dit kan gebeuren as de server opnieuw wordt gestart of als uw verbinding met Internet is verbroken.",
+		"offline-explanation": "Maak u echter geen zorgen! U kunt het document nog steeds bewerken. Als u weer online komt, worden uw wijzigingen automatisch doorgevoerd."
 	},
 	"editor": {
 		"editor": "Tekstverwerker",
