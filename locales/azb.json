@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alp Er Tunqa"
+		]
+	},
+	"ui": {
+		"locale": "یئرلی",
+		"select-language": "دیلینیزی سئچین"
+	},
+	"session": {
+		"logging-in": "گیریش ائدیلیر...",
+		"offline": "آفلاین"
+	},
+	"editor": {
+		"editor": "دَییشدیرن",
+		"select-editor": "بیر دَییشدیرن سئچین",
+		"choose-editor": "بیر دَییشدیرن سئچین",
+		"not-found": "تاپیلمادی!",
+		"load-error": "خطا!"
+	},
+	"settings": {
+		"settings": "تنظیملر",
+		"user-settings": "ایشلدن",
+		"document-settings": "بو سند (هامی اوچون)",
+		"personal-document-settings": "بو سند (سیزین اوچون)"
+	},
+	"oauth": {
+		"scope-all": "بوتون حسابلارینیز",
+		"warning": "ایخطار!"
+	}
+}

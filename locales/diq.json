@@ -32,6 +32,7 @@
 	},
 	"oauth": {
 		"authorization-required": "Raştkerdış lazımo",
-		"hello": "Merheba {user},"
+		"hello": "Merheba {user},",
+		"warning": "İqaz!"
 	}
 }
