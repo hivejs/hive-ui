@@ -12,7 +12,10 @@
 		"authenticate": "Dilesa",
 		"authenticate-explanation": "Dilesa en ur implijout an doareoù-mañ :",
 		"logging-in": "Kevreañ...",
-		"offline": "Ezlinenn"
+		"offline": "Ezlinenn",
+		"offline-subheading": "N'oc'h ket mui kevreet ouzh ar servijer-kenlabour.",
+		"offline-reasons": "Gallout a ra c'hoarvezout pa vez ar servijer o loc'hañ en-dro pe p'ho peus kollet ar c'hevreadur ouzh Internet da vat.",
+		"offline-explanation": "Arabat deoc'h en em chalañ ! Gallout a reot bepred kemmañ an teul. Ur wech ma viot enlinenn en-dro e vo kinniget ho kemmoù ent emgefre."
 	},
 	"editor": {
 		"editor": "Embannner",
@@ -23,7 +26,7 @@
 		"not-found-explanation": "N'hon eus ket kavet an teul, war a seblant. Hon digarezit.",
 		"load-error": "Fazi !",
 		"load-error-explanation": "Ur fazi dic'hortoz zo c'hoarvezet pa'z eus bet cheñchet embanner. Klaskit en-dro, mar plij.",
-		"loading": "O kargañ..."
+		"loading": "O kargañ...({progress}%)"
 	},
 	"settings": {
 		"settings": "Arventennoù",
