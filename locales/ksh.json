@@ -5,17 +5,27 @@
 		]
 	},
 	"ui": {
+		"locale": "Enschtällonge för de Schprohch un de Rejjohn",
 		"select-language": "Söhg Ding Schprohch uß"
 	},
 	"session": {
 		"authenticate": "Enlogge",
+		"authenticate-explanation": "Donn Desch ennlogge met eijne von heh dä Metohde:",
 		"logging-in": "Aam Enlogge …",
-		"offline": "Nit verbonge mem Näz"
+		"offline": "Nit verbonge mem Näz",
+		"offline-subheading": "Do bes jäz nit mih mem ẞööver för et zesamme Werke verbonge.",
+		"offline-reasons": "Dat kann paßehre, wann der ẞööver neu huhjefahre weed udder wann Ding Verbendong mem Internet janz fodd_es.",
+		"offline-explanation": "Bes nit bang. Do kanns aan däm Dokemänt trzdämm jät donn. Wann De widder mem Näz verbonge bes, wähde Ding Änderonge automattesch övvermwddelt."
 	},
 	"editor": {
+		"editor": "Et Projramm zom Beärrbeijde",
+		"select-editor": "Söhg e Projramm zom Beärrbeijde uß",
+		"choose-editor": "Don e Projramm zom Beärrbeide ußwähle",
+		"choose-editor-explanation": "Donn ein vun heh dä Projramme zom jemeijnsamme Beärrbeide vun de Dokkemänte vun dä Zoot {type} ußwähle",
 		"not-found": "Nit jefonge!",
 		"not-found-explanation": "Sühd uß, wi wam_mer dat Dokkemänt nit fenge künnte. Schahdt!",
 		"load-error": "Fähler1",
+		"load-error-explanation": "Ene onbikannte Fähler es opjetrodde beim Projramm zom Beärrbeide Lahde",
 		"loading": "Aam Lahde... ({progress}%)"
 	},
 	"settings": {
@@ -25,8 +35,13 @@
 		"personal-document-settings": "Dat Dokkemant (för Desch)"
 	},
 	"oauth": {
+		"authorization-required": "En Berääschtejong es nühdesch.",
 		"hello": "Daach {user},",
+		"authorization-explanation": "De Aanwändong op {app_url} well ene Zohjang op heh di Müjjeleschkeijte vun Dingen Zohjang zom <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"„Zesammewerke en Ääschzigg“\">hive.js</i>",
+		"scope-all": "Alles, wat Dinge Zohjang her jitt",
+		"question": "Wells De der Zohjang jewähre?",
 		"warning": "Opjepaß!",
+		"warning-explanation": "Dat Projramm övverdräht sing Dahte övvere e onsescher Verfahre.",
 		"deny": "Zohjang verbehde",
 		"grant": "Zohjang zolohße",
 		"redirecting": "Aam Ömleijde ..."
