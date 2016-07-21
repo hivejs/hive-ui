@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"ui": {
+		"select-language": "Sicht Är Sprooch eraus"
+	},
+	"session": {
+		"authenticate": "Authentifizéieren",
+		"offline-subheading": "Dir sidd net méi mam Kollaboratiounsserver verbonnen.",
+		"offline-explanation": "Maacht Iech keng Suergen! Dir kënnt d'Dokument trotzdem änneren. Esoubal wéi Dir nees online sidd ginn Är Ännerungen automatesch gespäichert."
+	},
+	"editor": {
+		"not-found": "Net fonnt!",
+		"load-error": "Feeler!",
+		"loading": "Lueden... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Astellungen",
+		"user-settings": "Benotzer"
+	},
+	"oauth": {
+		"hello": "Bonjour {user},",
+		"warning": "Warnung!",
+		"redirecting": "Viruleeden..."
+	}
+}
