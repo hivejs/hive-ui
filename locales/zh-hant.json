@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"ui": {
+		"locale": "在地",
+		"select-language": "選擇您的語言"
+	},
+	"session": {
+		"authenticate": "認證",
+		"logging-in": "登入中...",
+		"offline": "離線"
+	},
+	"editor": {
+		"editor": "編輯器",
+		"select-editor": "選擇一個編輯器",
+		"choose-editor": "選擇一個編輯器",
+		"not-found": "沒有找到！",
+		"load-error": "錯誤！",
+		"loading": "載入中...（{progress}%）"
+	},
+	"settings": {
+		"settings": "設定",
+		"user-settings": "使用者"
+	},
+	"oauth": {
+		"authorization-required": "授權需要",
+		"hello": "嘿{user}，",
+		"scope-all": "您所有的帳號",
+		"warning": "注意！"
+	}
+}

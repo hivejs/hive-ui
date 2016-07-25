@@ -33,6 +33,11 @@
 	"oauth": {
 		"authorization-required": "Raştkerdış lazımo",
 		"hello": "Merheba {user},",
-		"warning": "İqaz!"
+		"scope-all": "Hesabê to heme",
+		"question": "Tı qayılê dekewê hesabi tede?",
+		"warning": "İqaz!",
+		"deny": "Dekewten qebul nêbı",
+		"grant": "Dekewtan qebul bı",
+		"redirecting": "Heteneyêno..."
 	}
 }
