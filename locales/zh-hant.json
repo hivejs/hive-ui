@@ -10,25 +10,40 @@
 	},
 	"session": {
 		"authenticate": "認證",
+		"authenticate-explanation": "使用下列認證方法之一來進行身分驗證：",
 		"logging-in": "登入中...",
-		"offline": "離線"
+		"offline": "離線",
+		"offline-subheading": "您不再連接此協作伺服器。",
+		"offline-reasons": "此發生在伺服器重新啟動或當您失去與網際網路的連接時。",
+		"offline-explanation": "不過別擔心！您仍可以編輯此文件檔案。只要您再次上線後，您更改的內容將會自動提交。"
 	},
 	"editor": {
 		"editor": "編輯器",
 		"select-editor": "選擇一個編輯器",
 		"choose-editor": "選擇一個編輯器",
+		"choose-editor-explanation": "使用下列之一的編輯器來在{type}文件檔案上協作",
 		"not-found": "沒有找到！",
+		"not-found-explanation": "很抱歉，看起來未能找到您的文件檔案。",
 		"load-error": "錯誤！",
+		"load-error-explanation": "在載入編輯器時發生意外錯誤，請再重試一次看看。",
 		"loading": "載入中...（{progress}%）"
 	},
 	"settings": {
 		"settings": "設定",
-		"user-settings": "使用者"
+		"user-settings": "使用者",
+		"document-settings": "此文件檔案（適用於任何人）",
+		"personal-document-settings": "此文件檔案（僅用於個人）"
 	},
 	"oauth": {
 		"authorization-required": "授權需要",
 		"hello": "嘿{user}，",
+		"authorization-explanation": "在{app_url}之應用程序想存取您的hive.js帳戶裡以下功能：",
 		"scope-all": "您所有的帳號",
-		"warning": "注意！"
+		"question": "您是否要授予存取權限？",
+		"warning": "注意！",
+		"warning-explanation": "應用程序正以不安全的協議來進行通信！",
+		"deny": "拒絕存取",
+		"grant": "允許存取",
+		"redirecting": "重定向中..."
 	}
 }
