@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tow"
+		]
+	},
+	"ui": {
+		"locale": "ਲੋਕੇਲ",
+		"select-language": "ਕੋਈ ਬੋਲੀ ਚੁਣੋ"
+	},
+	"session": {
+		"authenticate": "ਪਰਮਾਣਿਤ"
+	},
+	"editor": {
+		"editor": "ਸੰਪਾਦਕ",
+		"not-found": "ਲੱਭਾ ਨਹੀਂ!",
+		"load-error": "ਗ਼ਲਤੀ!",
+		"loading": "ਲੱਦਿਆ ਜਾ ਰਿਹਾ ਹੈ... ({progress}%)"
+	},
+	"settings": {
+		"settings": "ਪਸੰਦਾੰ",
+		"user-settings": "ਉਪਭੋਗੀ"
+	},
+	"oauth": {
+		"scope-all": "ਤੁਹਾਡਾ ਸਾਰਾ ਖਾਤਾ",
+		"warning": "ਖ਼ਬਰਦਾਰ!",
+		"redirecting": "ਮੋੜਿਆ ਜਾ ਰਿਹਾ ਹੈ..."
+	}
+}

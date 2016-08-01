@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Muhammad Shuaib"
+			"Muhammad Shuaib",
+			"امین اکبر"
 		]
 	},
 	"ui": {
@@ -37,12 +38,12 @@
 	"oauth": {
 		"authorization-required": "تصدیق کاری درکار ہے",
 		"hello": "جناب {user}، خوش آمدید!",
-		"scope-all": "آپ کے کھاتے کا سب کچھ",
+		"scope-all": "آپ کے سب کھاتے",
 		"question": "کیا آپ رسائی دینا چاہتے ہیں؟",
 		"warning": "انتباہ!",
-		"warning-explanation": "یہ اطلاقیہ کسی غیر محفوظ پروٹوکول کے ذریعہ ابلاغ و ترسیل کر رہا ہے!",
+		"warning-explanation": "یہ اطلاقیہ ایک غیر محفوظ پروٹوکول کے ذریعہ ابلاغ و ترسیل کر رہا ہے!",
 		"deny": "رسائی مسترد کریں",
 		"grant": "رسائی دیں",
-		"redirecting": "منتقلی۔۔۔"
+		"redirecting": "منتقلی ہو رہی ہے۔۔۔"
 	}
 }

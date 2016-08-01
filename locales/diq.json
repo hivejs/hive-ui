@@ -12,16 +12,22 @@
 	},
 	"session": {
 		"authenticate": "Raştkerdışê kamiye",
+		"authenticate-explanation": "Kamiye araşt kerdışi rê methodanê cêrênan ra yewi bıcerebne",
 		"logging-in": "Cıkewtışo abeno. ..",
-		"offline": "Çerxteber"
+		"offline": "Çerxteber",
+		"offline-subheading": "Rewnayo ke şıam rovıteri ra duri mendê,  irtibat bıriya",
+		"offline-reasons": "Şıma çı mahal ke rovıteri fınna akerê se ya na çı mahal ke irtibata interneti reyêna",
+		"offline-explanation": "Meraq mek fına zi! Şıma şenê enê dokumani bıvurnê. Şıma çı mahal ke irtibata interneti kewê sd vurnayışê to dê otomatikmen  bırışi yê"
 	},
 	"editor": {
 		"editor": "Vurnayoğ",
 		"select-editor": "Yew vurnayoği weçine",
 		"choose-editor": "Yew vurnayoği weçine",
+		"choose-editor-explanation": "Editorana piya dokumana {type} seroxebtiyayışi rê weçeneganê cêrênan ra yewi weçinê",
 		"not-found": "Nêvêniya!",
 		"not-found-explanation": "Qusır de mevênên, ma dokumanê şıma nêvina",
 		"load-error": "Xeta!",
+		"load-error-explanation": "Editor barkerdış de yew xeta amê meydan,  fına bıcerebne",
 		"loading": "Bar beno... ({progress}%)"
 	},
 	"settings": {
@@ -33,9 +39,11 @@
 	"oauth": {
 		"authorization-required": "Raştkerdış lazımo",
 		"hello": "Merheba {user},",
+		"authorization-explanation": "Aplikasyona {app_url} qayila ke qandé hesabdê hive.js toya irtibat kewo:",
 		"scope-all": "Hesabê to heme",
 		"question": "Tı qayılê dekewê hesabi tede?",
 		"warning": "İqaz!",
+		"warning-explanation": "Ena aplikasyona bêemel protokola toya kewna irtibat",
 		"deny": "Dekewten qebul nêbı",
 		"grant": "Dekewtan qebul bı",
 		"redirecting": "Heteneyêno..."
