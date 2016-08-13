@@ -135,6 +135,9 @@ function setup(plugin, imports, register) {
           broadcast.pipe(upstreamBroadcast).pipe(broadcast)
         })
 
+        editableDoc.once('editableInitialized', () =>
+          ui.store.dispatch({type: 'EDITOR_INITIALIZED'}))
+
         //link to the server
         var uplink = session.stream.open('/document/'+id+'/sync')
           , access_token = ui.store.getState().session.grant.access_token
@@ -157,9 +160,6 @@ function setup(plugin, imports, register) {
         })
 
         ui.store.dispatch({type: 'EDITOR_LOAD'})
-
-        editableDoc.once('editableInitialized', () =>
-          ui.store.dispatch({type: 'EDITOR_INITIALIZED'}))
 
         editor.onLoad.emit(editableDoc, broadcast, this.onClose)
       })
