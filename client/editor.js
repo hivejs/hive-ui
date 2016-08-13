@@ -86,6 +86,7 @@ function setup(plugin, imports, register) {
 
   var editor = {
     editors: {}
+  , editableDocument: null
   , registerEditor: function(name, type, desc, editor) {
       this.editors[name] = {name: name, type: type, description: desc, setup: editor}
     }
@@ -152,7 +153,10 @@ function setup(plugin, imports, register) {
           uplink.pipe(masterLink).pipe(uplink)
         })
 
+        this.editableDocument = editableDoc
+
         this.onClose(_=> {
+          this.editableDocument = null
           broadcast.unpipe()
           upstreamBroadcast.unpipe()
           uplink.unpipe()
