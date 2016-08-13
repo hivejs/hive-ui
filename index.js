@@ -127,9 +127,9 @@ function setup(plugin, imports, register) {
 
   ui.registerStaticDir(path.join(__dirname, 'bootstrap'))
   ui.registerStaticDir(path.join(__dirname, 'img'))
-  
+
   ui.registerStylesheet(path.join(__dirname, 'css', 'index.css'))
-  
+
   ui.registerJavascript('node_modules/babel-polyfill')
   ui.registerJavascript('node_modules/whatwg-fetch')
   ui.registerJavascript(__dirname+'/client/init.js')
@@ -142,9 +142,10 @@ function setup(plugin, imports, register) {
   ui.registerModule(path.join(__dirname, 'client/localize.js'))
   ui.registerModule(path.join(__dirname, 'client/oauth.js'))
   ui.registerModule(path.join(__dirname, 'client/authToken.js'))
-  
+  ui.registerModule(path.join(__dirname, 'client/undo.js'))
+
   ui.registerLocaleDir(path.join(__dirname, 'locales'))
- 
+
   fs.writeFileSync(__dirname+'/client/lib/primus.js', interfaceStream.primus.library())
 
   hub.on('ready', function() {

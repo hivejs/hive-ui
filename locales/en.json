@@ -22,6 +22,8 @@
   , "load-error": "Error!"
   , "load-error-explanation": "An unexpected error occurred while loading the editor. Please try again."
   , "loading": "Loading... ({progress}%)"
+  , "undo": "Undo"
+  , "redo": "Redo"
   }
 , "settings": {
     "settings": "Settings"
