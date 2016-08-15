@@ -24,7 +24,9 @@
 		"not-found-explanation": "an error message",
 		"load-error": "Bold, heading-like text in an error message\n{{Identical|Error}}",
 		"load-error-explanation": "An error message",
-		"loading": "Displayed while loading the editor\n* {progress} is a number from 0 to 100 e.g. 70\n{{Identical|Loading}}"
+		"loading": "Displayed while loading the editor\n* {progress} is a number from 0 to 100 e.g. 70\n{{Identical|Loading}}",
+		"undo": "{{Identical|Undo}}",
+		"redo": "{{Identical|Redo}}"
 	},
 	"settings": {
 		"settings": "Used as a menu item and panel heading\n{{Identical|Settings}}",

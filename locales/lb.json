@@ -15,7 +15,9 @@
 	"editor": {
 		"not-found": "Net fonnt!",
 		"load-error": "Feeler!",
-		"loading": "Lueden... ({progress}%)"
+		"loading": "Lueden... ({progress}%)",
+		"undo": "Réckgängeg maachen",
+		"redo": "Widderhuelen"
 	},
 	"settings": {
 		"settings": "Astellungen",

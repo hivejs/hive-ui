@@ -27,7 +27,9 @@
 		"not-found-explanation": "죄송합니다. 문서를 찾지 못했습니다.",
 		"load-error": "오류!",
 		"load-error-explanation": "편집기를 불러오는 동안 예기치 않은 오류가 발생했습니다. 다시 시도해 주십시오.",
-		"loading": "불러오는 중... ({progress}%)"
+		"loading": "불러오는 중... ({progress}%)",
+		"undo": "실행 취소",
+		"redo": "다시 실행"
 	},
 	"settings": {
 		"settings": "설정",

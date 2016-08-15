@@ -26,7 +26,9 @@
 		"not-found-explanation": "很抱歉，看起來未能找到您的文件檔案。",
 		"load-error": "錯誤！",
 		"load-error-explanation": "在載入編輯器時發生意外錯誤，請再重試一次看看。",
-		"loading": "載入中...（{progress}%）"
+		"loading": "載入中...（{progress}%）",
+		"undo": "還原",
+		"redo": "重做"
 	},
 	"settings": {
 		"settings": "設定",

@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Lxlalexlxl",
-			"Base"
+			"Base",
+			"Piramidion"
 		]
 	},
 	"ui": {
@@ -27,7 +28,9 @@
 		"not-found-explanation": "Здається ми не можемо знайти ваш документ. На жаль.",
 		"load-error": "Помилка!",
 		"load-error-explanation": "Неочікувана помилка при завантаженні редактора. Будь ласка, спробуйте ще раз.",
-		"loading": "Завантаження... ({progress}%)"
+		"loading": "Завантаження... ({progress}%)",
+		"undo": "Скасувати",
+		"redo": "Повторити"
 	},
 	"settings": {
 		"settings": "Налаштування",
