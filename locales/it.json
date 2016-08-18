@@ -28,7 +28,9 @@
 		"not-found-explanation": "Sembra che non riusciamo a trovare il documento. Spiacenti.",
 		"load-error": "Errore!",
 		"load-error-explanation": "Si è verificato un errore imprevisto durante il caricamento dell'editor. Riprova.",
-		"loading": "Caricamento in corso... ({progress}%)"
+		"loading": "Caricamento in corso... ({progress}%)",
+		"undo": "Annulla",
+		"redo": "Ripeti"
 	},
 	"settings": {
 		"settings": "Impostazioni",

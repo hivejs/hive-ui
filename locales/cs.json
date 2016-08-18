@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aktron",
+			"Marek Pavlica",
+			"Martin Urbanec",
+			"Zbyso23"
+		]
+	},
+	"ui": {
+		"locale": "Národní prostředí",
+		"select-language": "Zvolte jazyk"
+	},
+	"session": {
+		"authenticate": "Ověření",
+		"logging-in": "Přihlašování…",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Editor",
+		"choose-editor": "Vyberte si editor",
+		"not-found": "Nenalezeno",
+		"load-error": "Chyba!",
+		"loading": "Načítá se… ({progress} %)",
+		"undo": "Zpět",
+		"redo": "Znovu"
+	},
+	"settings": {
+		"settings": "Nastavení",
+		"user-settings": "Uživatel",
+		"document-settings": "Tento dokument (pro všechny)",
+		"personal-document-settings": "Tento dokument (pro vás)"
+	},
+	"oauth": {
+		"authorization-required": "Vyžadována autorizace",
+		"hello": "Ahoj {user},",
+		"question": "Chcete udělit přístup?",
+		"warning": "Pozorǃ",
+		"deny": "Odepřít přístup",
+		"grant": "Udělit přístup",
+		"redirecting": "Přesměrování..."
+	}
+}
