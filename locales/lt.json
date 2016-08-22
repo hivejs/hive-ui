@@ -20,7 +20,9 @@
 		"choose-editor": "Pasirinkti redaktorių",
 		"not-found": "Nerastas!",
 		"load-error": "Klaida!",
-		"loading": "Įkeliama... ({progress}%)"
+		"loading": "Įkeliama... ({progress}%)",
+		"undo": "Anuliuoti",
+		"redo": "Atkurti"
 	},
 	"settings": {
 		"settings": "Nustatymai",
