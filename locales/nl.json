@@ -27,7 +27,9 @@
 		"not-found-explanation": "Uw document is helaas niet te vinden.",
 		"load-error": "Fout",
 		"load-error-explanation": "Er is een onverwachte fout opgetreden tijdens het laden van de tekstverwerker. Probeer het opnieuw.",
-		"loading": "Bezig met laden… ({progress}%)"
+		"loading": "Bezig met laden… ({progress}%)",
+		"undo": "Ongedaan maken",
+		"redo": "Opnieuw uitvoeren"
 	},
 	"settings": {
 		"settings": "Instellingen",

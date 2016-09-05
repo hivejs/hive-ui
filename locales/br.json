@@ -26,7 +26,9 @@
 		"not-found-explanation": "N'hon eus ket kavet an teul, war a seblant. Hon digarezit.",
 		"load-error": "Fazi !",
 		"load-error-explanation": "Ur fazi dic'hortoz zo c'hoarvezet pa'z eus bet cheñchet embanner. Klaskit en-dro, mar plij.",
-		"loading": "O kargañ...({progress}%)"
+		"loading": "O kargañ...({progress}%)",
+		"undo": "Dizober",
+		"redo": "Adober"
 	},
 	"settings": {
 		"settings": "Arventennoù",
