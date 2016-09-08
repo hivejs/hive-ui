@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maroen1990",
+			"Meno25",
+			"Shbib Al-Subaie"
+		]
+	},
+	"session": {
+		"logging-in": "جارٍ تسجيل دخولك...",
+		"offline": "غير متصل"
+	},
+	"editor": {
+		"editor": "محرر",
+		"select-editor": "اختر محررا",
+		"not-found": "لم يتم العثور عليه!",
+		"load-error": "خطأ!",
+		"loading": "جاري التحميل...",
+		"undo": "تراجع",
+		"redo": "أعد"
+	},
+	"settings": {
+		"settings": "الإعدادات",
+		"user-settings": "مستخدم"
+	},
+	"oauth": {
+		"warning": "تحذير!",
+		"redirecting": "تحويل..."
+	}
+}
