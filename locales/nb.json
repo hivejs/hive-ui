@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"SuperPotato"
+			"SuperPotato",
+			"Jon Harald Søby"
 		]
 	},
 	"ui": {
@@ -12,7 +13,10 @@
 		"authenticate": "Autentisere",
 		"authenticate-explanation": "Autentiser ved bruk av en av disse autentiserings metodene:",
 		"logging-in": "Logger inn…",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-subheading": "Du er ikke lenger koblet til samarbeidstjeneren.",
+		"offline-reasons": "Dette kan skje når tjeneren restartes eller når du ikke har noen internettilgang.",
+		"offline-explanation": "Ingen fare! Du kan fortsatt redigere dokumentet. Når du er online igjen vil endringene leveres automatisk."
 	},
 	"editor": {
 		"editor": "Redigerer",
@@ -23,7 +27,9 @@
 		"not-found-explanation": "Det ser ut som at vi ikke kan finne dokumentet ditt. Beklager.",
 		"load-error": "Feil!",
 		"load-error-explanation": "En uventet feil inntraff i innlastingen av redigerern. Vennligst prøv igjen.",
-		"loading": "Laster... ({progress}%)"
+		"loading": "Laster... ({progress}%)",
+		"undo": "Angre",
+		"redo": "Gjør om"
 	},
 	"settings": {
 		"settings": "Innstillinger",
@@ -34,9 +40,11 @@
 	"oauth": {
 		"authorization-required": "Autentisering er nødvendig",
 		"hello": "Hei {user},",
+		"authorization-explanation": "Applikasjonen på {app_url} ønsker tilgang til følgende funksjonalitet i din hive.js-konto:",
 		"scope-all": "alle kontoene dine",
 		"question": "Vil du gi tilgang?",
 		"warning": "Advarsel!",
+		"warning-explanation": "Applikasjonen kommuniserer via en usikker protokoll!",
 		"deny": "Forby tilgang",
 		"grant": "Gi tilgang",
 		"redirecting": "Omdirigerer..."

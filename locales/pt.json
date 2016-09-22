@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mansil",
+			"Tark"
+		]
+	},
+	"ui": {
+		"select-language": "Selecione o seu idioma"
+	},
+	"session": {
+		"authenticate": "Autenticar",
+		"logging-in": "A iniciar a sessão...",
+		"offline": "Off-line"
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Selecione um editor",
+		"choose-editor": "Escolha um editor",
+		"not-found": "Não encontrado!",
+		"load-error": "Erro!",
+		"loading": "A carregar... ({progress}%)",
+		"undo": "Desfazer",
+		"redo": "Refazer"
+	},
+	"settings": {
+		"settings": "Configurações",
+		"user-settings": "Utilizador"
+	},
+	"oauth": {
+		"hello": "Olá {user},",
+		"warning": "Aviso!"
+	}
+}

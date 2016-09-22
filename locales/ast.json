@@ -1,0 +1,51 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"ui": {
+		"locale": "Llocalización",
+		"select-language": "Escoyer llingua"
+	},
+	"session": {
+		"authenticate": "Autenticar",
+		"authenticate-explanation": "Identificate usando unu de los siguientes métodos de autenticación:",
+		"logging-in": "Aniciando sesión...",
+		"offline": "Desconectáu",
+		"offline-subheading": "Ya nun tas conectáu al servidor de collaboración.",
+		"offline-reasons": "Esto puede asoceder cuando'l servidor ta reaniciando o cuando se perdió la conexón a Internet dafechu.",
+		"offline-explanation": "Sicasí, ¡nun t'esmolezas! Inda puedes editar el documentu. En tando nuevamente en llinia, los cambeos van unviase automáticamente."
+	},
+	"editor": {
+		"editor": "Editor",
+		"select-editor": "Escueye un editor",
+		"choose-editor": "Escueye un editor",
+		"choose-editor-explanation": "Escueye unu de los siguientes editores pa collaborar en documentos {type}",
+		"not-found": "Nun s'atopó",
+		"not-found-explanation": "Paez que nun podemos atopar el documentu. Sentímoslo.",
+		"load-error": "Error",
+		"load-error-explanation": "Asocedió un error inesperáu mientres se cargaba l'editor. Téntalo otra vuelta.",
+		"loading": "Cargando... ({progress}%)",
+		"undo": "Desfacer",
+		"redo": "Refaer"
+	},
+	"settings": {
+		"settings": "Configuración",
+		"user-settings": "Usuariu",
+		"document-settings": "Esti documentu (pa toos)",
+		"personal-document-settings": "Esti documentu (pa ti)"
+	},
+	"oauth": {
+		"authorization-required": "Ríquese autorización",
+		"hello": "Hola {user},",
+		"authorization-explanation": "L'aplicación qu'hai en {app_url} quier accesu a la siguiente función de la to cuenta de hive.js:",
+		"scope-all": "tola to cuenta",
+		"question": "¿Quies conceder l'accesu?",
+		"warning": "Atención",
+		"warning-explanation": "L'aplicación ta comunicándose per un protocolu inseguru.",
+		"deny": "Torgar l'accesu",
+		"grant": "Permitir l'accesu",
+		"redirecting": "Redirixendo..."
+	}
+}
