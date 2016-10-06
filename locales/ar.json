@@ -3,28 +3,51 @@
 		"authors": [
 			"Maroen1990",
 			"Meno25",
-			"Shbib Al-Subaie"
+			"Shbib Al-Subaie",
+			"ديفيد"
 		]
 	},
+	"ui": {
+		"select-language": "اختر لغتك"
+	},
 	"session": {
+		"authenticate": "مصادقة",
+		"authenticate-explanation": "المصادقة باستخدام أحد أساليب المصادقة التالية:",
 		"logging-in": "جارٍ تسجيل دخولك...",
-		"offline": "غير متصل"
+		"offline": "غير متصل",
+		"offline-subheading": "انت لم تعد متصلا بخادم التعاون.",
+		"offline-reasons": "يمكن أن يحدث هذا عندما يكون الخادم يُعاد تشغيله أو عند فقد الاتصال بشبكة الإنترنت تماما.",
+		"offline-explanation": "على الرغم من ذلك، لا تقلق! لا يزال بإمكانك تعديل المستند. ما إن كنت متصلا بالإنترنت مرة أخرى، وستُعرض التغييرات تلقائيا."
 	},
 	"editor": {
 		"editor": "محرر",
 		"select-editor": "اختر محررا",
+		"choose-editor": "اختيار المحرر",
+		"choose-editor-explanation": "اختيار واحد من المحررين التالين للتعاون بشأن {type} الوثائق",
 		"not-found": "لم يتم العثور عليه!",
+		"not-found-explanation": "يبدو أنه لا يمكن العثور على المستند، معذرةً.",
 		"load-error": "خطأ!",
-		"loading": "جاري التحميل...",
+		"load-error-explanation": "حدث خطأ غير متوقع أثناء تحميل المحرر; حاول مرة اخرى.",
+		"loading": "جار التحميل... ({progress}%)",
 		"undo": "تراجع",
 		"redo": "أعد"
 	},
 	"settings": {
 		"settings": "الإعدادات",
-		"user-settings": "مستخدم"
+		"user-settings": "مستخدم",
+		"document-settings": "هذه الوثيقة (للجميع)",
+		"personal-document-settings": "هذه الوثيقة (لك)"
 	},
 	"oauth": {
+		"authorization-required": "الإذن مطلوب",
+		"hello": "يا {user},",
+		"authorization-explanation": "التطبيق في {app_url} يريد الوصول إلى الوظائف التالية  لحسابك في hive.js:",
+		"scope-all": "كل شيء عن حسابك",
+		"question": "هل تريد حق الوصول إلى المنحة؟",
 		"warning": "تحذير!",
+		"warning-explanation": "التطبيق يتصل عبر بروتوكول غير آمن!",
+		"deny": "تم رفض الوصول",
+		"grant": "منح حق الوصول",
 		"redirecting": "تحويل..."
 	}
 }
