@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ilja.mos"
+		]
+	},
+	"ui": {
+		"locale": "Kieli",
+		"select-language": "Valliče kieli"
+	},
+	"session": {
+		"authenticate": "Kirjuttai",
+		"logging-in": "Kirjuttamine...",
+		"offline": "Offline"
+	},
+	"editor": {
+		"editor": "Redaktoru",
+		"load-error": "Haireh!",
+		"undo": "Hylgiä",
+		"redo": "Luaji uvvessah"
+	},
+	"settings": {
+		"settings": "Azetukset",
+		"user-settings": "Käyttäi",
+		"document-settings": "Tämä tiijosto (kaikile)",
+		"personal-document-settings": "Tämä tiijosto (sinule)"
+	},
+	"oauth": {
+		"authorization-required": "Pidäy kirjuttuakseh",
+		"hello": "Terveh {user},",
+		"scope-all": "Kai sinun toimindot",
+		"warning": "Varoitus!",
+		"deny": "Estä käyttö"
+	}
+}
