@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mateon1"
+			"Mateon1",
+			"Woytecr"
 		]
 	},
 	"ui": {
@@ -23,7 +24,9 @@
 		"not-found-explanation": "Wydaje się, że nie możemy znaleźć twojego dokumentu. Przepraszamy.",
 		"load-error": "Błąd!",
 		"load-error-explanation": "Wystąpił nieoczekiwany błąd podczas uruchamiania edytora. Proszę spróbować ponownie.",
-		"loading": "Ładowanie... ({progress}%)"
+		"loading": "Ładowanie... ({progress}%)",
+		"undo": "Cofnij",
+		"redo": "Ponów"
 	},
 	"settings": {
 		"settings": "Ustawienia",
