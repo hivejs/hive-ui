@@ -13,7 +13,10 @@
 		"authenticate": "Autoryzuj",
 		"authenticate-explanation": "Autoryzuj używając jednej z następujących metod:",
 		"logging-in": "Logowanie...",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-subheading": "Nie jesteś już połączony z serwerem współpracy.",
+		"offline-reasons": "Może się to zdarzyć, gdy serwer zostanie zrestartowany lub gdy całkowicie utraciłeś połączenie z internetem.",
+		"offline-explanation": "Nie przejmuj się jednak! Możesz nadal edytować ten dokument. Po tym jak będziesz znów online, Twoje zmiany zostaną automatycznie wysłane."
 	},
 	"editor": {
 		"editor": "Edytor",
@@ -42,8 +45,8 @@
 		"question": "Czy chcesz nadać dostęp?",
 		"warning": "Ostrzeżenie!",
 		"warning-explanation": "Aplikacja komunikuje się przez niebezpieczny protokół!",
-		"deny": "Nie zezwól dostępu",
-		"grant": "Zezwól dostęp",
+		"deny": "Zabroń dostępu",
+		"grant": "Przyznaj dostęp",
 		"redirecting": "Przekierowywanie..."
 	}
 }
