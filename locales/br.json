@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Gwenn-Ael"
+			"Gwenn-Ael",
+			"Fulup"
 		]
 	},
 	"ui": {
@@ -39,9 +40,13 @@
 	"oauth": {
 		"authorization-required": "Aotre ret",
 		"hello": "Demat {user},",
+		"authorization-explanation": "Fellout a ra d'an arload e {app_url} gellout ober gant arc'hwelioù ho kont hive.js :",
 		"scope-all": "holl ho kont",
+		"question": "Mat eo deoc'h reiñ an aotre ?",
 		"warning": "Diwallit!",
+		"warning-explanation": "O kehentiñ dre ur protokol diasur emañ an arload !",
 		"deny": "Difenn an moned",
-		"grant": "Grataat ar monet"
+		"grant": "Grataat ar monet",
+		"redirecting": "Oc'h adkas..."
 	}
 }
