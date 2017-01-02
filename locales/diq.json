@@ -3,7 +3,8 @@
 		"authors": [
 			"Marmase",
 			"Mirzali",
-			"Kumkumuk"
+			"Kumkumuk",
+			"Gırd"
 		]
 	},
 	"ui": {
@@ -13,7 +14,7 @@
 	"session": {
 		"authenticate": "Raştkerdışê kamiye",
 		"authenticate-explanation": "Kamiye araşt kerdışi rê methodanê cêrênan ra yewi bıcerebne",
-		"logging-in": "Cıkewtışo abeno. ..",
+		"logging-in": "Cıkewtış a beno...",
 		"offline": "Çerxteber",
 		"offline-subheading": "Rewnayo ke şıam rovıteri ra duri mendê,  irtibat bıriya",
 		"offline-reasons": "Şıma çı mahal ke rovıteri fınna akerê se ya na çı mahal ke irtibata interneti reyêna",
