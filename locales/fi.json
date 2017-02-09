@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Mikahama"
+			"Mikahama",
+			"Pyscowicz"
 		]
 	},
 	"ui": {
@@ -13,7 +14,10 @@
 		"authenticate": "Sisäänkirjautuminen",
 		"authenticate-explanation": "Kirjaudu sisään jollakin seuraavista tavoista:",
 		"logging-in": "Kirjaudutaan...",
-		"offline": "Offline"
+		"offline": "Offline",
+		"offline-subheading": "Et ole enää yhteydessä yhteistyöserveriin.",
+		"offline-reasons": "Tämä voi tapahtua, kun palvelin on uudelleenkäynnistymässä tai kun menetät internet-yhteyden kokonaan.",
+		"offline-explanation": "Älä huoli, vaikka! Voit edelleen muokata asiakirjaa. Kun olet verkossa uudelleen, muutokset lähetetään automaattisesti."
 	},
 	"editor": {
 		"editor": "Muokkain",
@@ -24,7 +28,9 @@
 		"not-found-explanation": "Asiakirjojasi ei löydy.",
 		"load-error": "Virhe!",
 		"load-error-explanation": "Muokkainen lataus epäonnistui. Yritä uudelleen.",
-		"loading": "Ladataan... ({progress}%)"
+		"loading": "Ladataan... ({progress}%)",
+		"undo": "Kumoa",
+		"redo": "Tee uudelleen"
 	},
 	"settings": {
 		"settings": "Asetukset",
