@@ -1,0 +1,51 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jagwar"
+		]
+	},
+	"ui": {
+		"locale": "Faritra",
+		"select-language": "Safidio ny teninao"
+	},
+	"session": {
+		"authenticate": "Hiditra",
+		"authenticate-explanation": "Hiditra amin'ny alalan'ny iray amin'ireo fomba fidirana ireo:",
+		"logging-in": "Am-pidirana...",
+		"offline": "Tsy mifandray amin'ny lohamilina",
+		"offline-subheading": "Tsy mifandray amin'ny lohamilim-piaraha-miasa intsony ianao.",
+		"offline-reasons": "Mety mitranga izany rehefa naverina nalefa ny lohamilina na rehefa tapaka ny fifandraisanao amin'ny Aterineto.",
+		"offline-explanation": "Aza matahotra anefa! Mbola afaka manohy ny asanao ianao. Rehefa tafaverina indray ny fifandraisana amin'ny lohamilina dia ho alefa ho azy ny fiovana nataonao."
+	},
+	"editor": {
+		"editor": "Mpanova",
+		"select-editor": "Misafidiana mpanova",
+		"choose-editor": "Hisafidy mpanova",
+		"choose-editor-explanation": "Misafidiana mpanova iray amin'ireo mpanova ireo ho an'ny fandraisan'anjara amin'ny karazan-tahirinkevitra {type}",
+		"not-found": "Tsy hita!",
+		"not-found-explanation": "Hoatra ny hoe tsy hitanay ny tahirin-kevitrao. Azafady indrindra.",
+		"load-error": "Hadisoana!",
+		"load-error-explanation": "Nisy hadisoana tsy nampoizina nitranga teo am-pandefasana ilay mpanova. Andrano indray azafady.",
+		"loading": "Eo am-panomanana... ({progress}%)S",
+		"undo": "Esorina",
+		"redo": "Averina"
+	},
+	"settings": {
+		"settings": "Fanafahana",
+		"user-settings": "Mpikambana",
+		"document-settings": "Ity tahirinkevitra ity (ho an'ny rehetra)",
+		"personal-document-settings": "Ity tahirin-kevitra ity (ho anao)"
+	},
+	"oauth": {
+		"authorization-required": "Mila fahazoan-dalana",
+		"hello": "Miarahaba anao {user},",
+		"authorization-explanation": "Ny fampiharana amin'i {app_url} dia mila mampiaas ireo fahfahana ireo amin'ny kaontinao hive.js:",
+		"scope-all": "ny kaontinao rehetra",
+		"question": "Tianao omena alalana ve?",
+		"warning": "Tandremo!",
+		"warning-explanation": "Mifandray amin'ny alalana prôtôkôly tsy voaaro ity fampiharana ity!",
+		"deny": "Handà ny alalana",
+		"grant": "Omena alalana",
+		"redirecting": "Manaraka fanodinana..."
+	}
+}
