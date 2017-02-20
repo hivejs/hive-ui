@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rancher"
+			"Rancher",
+			"Srdjan m"
 		]
 	},
 	"ui": {
@@ -26,7 +27,9 @@
 		"not-found-explanation": "Нажалост, ваш документ није пронађен.",
 		"load-error": "Грешка!",
 		"load-error-explanation": "Дошло је до неочекиване грешке при учитавању уређивача. Покушајте поново.",
-		"loading": "Учитавам… ({progress}%)"
+		"loading": "Учитавам… ({progress}%)",
+		"undo": "Опозови",
+		"redo": "Понови"
 	},
 	"settings": {
 		"settings": "Подешавања",
