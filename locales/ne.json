@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"सरोज कुमार ढकाल"
+		]
+	},
+	"ui": {
+		"locale": "लोक्याल",
+		"select-language": "भाषा चयन गर्नुहोस्"
+	},
+	"session": {
+		"authenticate": "प्रमाणीकरण गर्नुहोस्",
+		"logging-in": "प्रवेश गर्दै...",
+		"offline": "अफलाइन",
+		"offline-explanation": "यसबारे चिन्ता नलिनुहोस्।! You can still edit the document. Once you are online again, your changes will be submitted automatically."
+	},
+	"editor": {
+		"editor": "सम्पादक",
+		"not-found": "फेला परेन!",
+		"not-found-explanation": "It seems we can't find your document. माफ गर्नुहोस्।",
+		"load-error": "त्रुटि!",
+		"load-error-explanation": "An unexpected error occurred while loading the editor. कृपया पुनः प्रयास गर्नुहोस् ।",
+		"loading": "लोड हुदैछ...... ({progress}%)",
+		"undo": "पूर्वस्थितिमा फर्काउनुहोस्",
+		"redo": "फेरि गर्नुहोस्"
+	},
+	"settings": {
+		"settings": "सेटिङ्हरू",
+		"user-settings": "प्रयोगकर्ता"
+	},
+	"oauth": {
+		"hello": "नमस्ते {user},",
+		"warning": "चेतावनी!"
+	}
+}
