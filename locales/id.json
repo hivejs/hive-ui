@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hidayatsrf"
+		]
+	},
+	"ui": {
+		"locale": "Lokal",
+		"select-language": "Pilih bahasa Anda"
+	},
+	"session": {
+		"authenticate": "Autentikasi",
+		"authenticate-explanation": "Autentikasi menggunakan salah satu metode autentikasi berikut:",
+		"logging-in": "Masuk log...",
+		"offline": "Luring",
+		"offline-subheading": "Anda tidak lagi terhubung ke peladen kolaborasi"
+	},
+	"editor": {
+		"load-error": "Galat!",
+		"loading": "Memuat... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Pengaturan",
+		"user-settings": "Pengguna",
+		"personal-document-settings": "Dokumen ini (untuk Anda)"
+	},
+	"oauth": {
+		"hello": "Hey {pengguna},",
+		"scope-all": "semua akun Anda",
+		"warning": "Peringatan!",
+		"redirecting": "Mengalihkan..."
+	}
+}
