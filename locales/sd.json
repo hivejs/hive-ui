@@ -1,0 +1,48 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aursani"
+		]
+	},
+	"ui": {
+		"locale": "ماڳ",
+		"select-language": "پنهنجي ٻولي چونڊيو"
+	},
+	"session": {
+		"authenticate": "توثيقيو",
+		"logging-in": "داخل ٿيندي...",
+		"offline": "آف لائين",
+		"offline-subheading": "ساٿاري سَروَر سان توهان جو ربط نہ رهيو آهي.",
+		"offline-reasons": "اهو تڏهن ٿيندو آهي، جڏهن سَروَر نئين سِر کلندو هجي يا وري باهمڄار سان توهان جو ربط ڪاٽا ٿي ويو هجي.",
+		"offline-explanation": "پريشانيءَ جي ڪا بہ ڳالهہ ڪانهي! توهان وري بہ تبديليون ڪندا رهو. جيئن ئي باهمڄار سان توهان جو ربط بحال ٿيندو، توهان جو ڪيل ترميمون سانڍجي وينديون."
+	},
+	"editor": {
+		"editor": "ايڊيٽر",
+		"select-editor": "ايڊيٽر جي چونڊ ڪريو",
+		"choose-editor": "ايڊيٽر پسند ڪريو",
+		"choose-editor-explanation": "{type} دستاويز تي ساٿ ڏيڻ لاءِ هيٺين مان ڪو هڪڙو ايڊيٽر پسند ڪريو.",
+		"not-found": "نہ لڌو!",
+		"not-found-explanation": "لڳي ٿو تہ اسان کان توهان جو دستاويز نہ لڌو. معذرت.",
+		"load-error": "چُڪَ",
+		"load-error-explanation": "ايڊيٽر چالو ڪندي ڪا خرابي پيش آئي. مهرباني ڪري وري ڪوشش ڪندا.",
+		"loading": "اتاريندي ... ({progress}%)",
+		"undo": "اڻ‌ڪريو",
+		"redo": "ورڪريو"
+	},
+	"settings": {
+		"settings": "سيٽڱس",
+		"user-settings": "يُوزر",
+		"document-settings": "هيءُ دستاويز (هر هڪ لاءِ)",
+		"personal-document-settings": "هيءُ دستاويز (توهان لاءِ)"
+	},
+	"oauth": {
+		"authorization-required": "مختيارنامو درڪار",
+		"hello": "سلام {user}",
+		"scope-all": "توهان جو سڄو کاتو",
+		"question": "ڇا توهان دسترس ڏيڻ چاهيو ٿا؟",
+		"warning": "چتاءُ",
+		"warning-explanation": "هيءَ منطقگري ڪنهن غير محفوظ رستي رطبہ هيٺ آهي!",
+		"deny": "دسترس کان جواب ڏيو",
+		"grant": "دسترس ڏيو"
+	}
+}
