@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Marat-avgust"
+		]
+	},
+	"ui": {
+		"locale": "Тел",
+		"select-language": "Телне сайлагыз"
+	},
+	"session": {
+		"authenticate": "Танылу",
+		"logging-in": "Системга керү...",
+		"offline": "Челтәрдә түгел"
+	},
+	"editor": {
+		"editor": "Мөхәррир",
+		"select-editor": "Мөхәррир сайлагыз",
+		"not-found": "Табылмады!",
+		"load-error": "Хата!",
+		"undo": "Кире кагу",
+		"redo": "Кабатлау"
+	},
+	"settings": {
+		"settings": "Көйләнмәләр",
+		"user-settings": "Кулланучы",
+		"document-settings": "Бу документ (барысы өчен дә)",
+		"personal-document-settings": "Бу документ (сезнең өчен)"
+	},
+	"oauth": {
+		"authorization-required": "Танылу кирәк",
+		"hello": "Сәлам, {user},",
+		"warning": "Игътибар!",
+		"redirecting": "Юнәлтү..."
+	}
+}

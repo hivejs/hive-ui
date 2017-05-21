@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wolf Rex"
+			"Wolf Rex",
+			"Urbalazs"
 		]
 	},
 	"ui": {
@@ -13,16 +14,22 @@
 		"authenticate-explanation": "Hitelesítés az alábbi módszerek egyikével:",
 		"logging-in": "Bejelentkezés...",
 		"offline": "Offline",
+		"offline-subheading": "Többé nincs kapcsolódva a csoportmunka kiszolgálóhoz.",
+		"offline-reasons": "Ez akkor történhet, ha a kiszolgáló újraindul, vagy amikor teljesen megszakad az internet-kapcsolata.",
 		"offline-explanation": "Ne aggódj! Továbbra is szerkesztheted a dokumentumot. Amint újra online leszel, a változtatásaid automatikusan elmentődnek."
 	},
 	"editor": {
 		"editor": "Szerkesztő",
 		"select-editor": "Válassz egy szerkesztőt",
 		"choose-editor": "Válassz egy szerkesztőt",
+		"choose-editor-explanation": "Válasszon egyet a következő szerkesztők közül a(z) {type} dokumentumokkal történő csoportmunkához",
 		"not-found": "Nem található!",
 		"not-found-explanation": "Úgy tűnik, nem találjuk a dokumentumod. Sajnáljuk.",
 		"load-error": "Hiba!",
-		"loading": "Betöltés... ({progress}%)"
+		"load-error-explanation": "Váratlan hiba történt a szerkesztő betöltésekor. Próbálja újra!",
+		"loading": "Betöltés... ({progress}%)",
+		"undo": "Visszavonás",
+		"redo": "Újra"
 	},
 	"settings": {
 		"settings": "Beállítások",
@@ -33,6 +40,8 @@
 	"oauth": {
 		"authorization-required": "Azonosítás szükséges",
 		"hello": "Üdv {user},",
+		"authorization-explanation": "A {app_url} címen lévő alkalmazás hozzáférést szeretne a hive.js fiókja következő funkcionalitásaihoz:",
+		"scope-all": "a teljes fiók",
 		"question": "Biztosítod a hozzáférést?",
 		"warning": "Figyelmeztetés!",
 		"warning-explanation": "Az alkalmazás egy nem biztonságos protokollon keresztül kommunikál!",
