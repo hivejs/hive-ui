@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wolf Rex",
-			"Urbalazs"
+			"Urbalazs",
+			"Bináris"
 		]
 	},
 	"ui": {
@@ -14,8 +15,8 @@
 		"authenticate-explanation": "Hitelesítés az alábbi módszerek egyikével:",
 		"logging-in": "Bejelentkezés...",
 		"offline": "Offline",
-		"offline-subheading": "Többé nincs kapcsolódva a csoportmunka kiszolgálóhoz.",
-		"offline-reasons": "Ez akkor történhet, ha a kiszolgáló újraindul, vagy amikor teljesen megszakad az internet-kapcsolata.",
+		"offline-subheading": "Többé nincs kapcsolódva a csoportmunka-kiszolgálóhoz.",
+		"offline-reasons": "Ez akkor történhet, ha a kiszolgáló újraindul, vagy amikor teljesen megszakad az internetkapcsolata.",
 		"offline-explanation": "Ne aggódj! Továbbra is szerkesztheted a dokumentumot. Amint újra online leszel, a változtatásaid automatikusan elmentődnek."
 	},
 	"editor": {

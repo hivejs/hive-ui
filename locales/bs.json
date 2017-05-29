@@ -1,0 +1,45 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srdjan m"
+		]
+	},
+	"ui": {
+		"locale": "Jezik",
+		"select-language": "Izaberite jezik"
+	},
+	"session": {
+		"authenticate": "Potvrda identiteta",
+		"authenticate-explanation": "Potvrdite identitet pomoću jednog od sljedećih metoda:",
+		"logging-in": "Prijavljujem Vas...",
+		"offline": "Van mreže",
+		"offline-subheading": "Više niste povezani sa serverom za zajednički rad."
+	},
+	"editor": {
+		"editor": "Uređivač",
+		"select-editor": "Izaberite uređivač",
+		"choose-editor": "Izaberite uređivač",
+		"not-found": "Nije pronađeno!",
+		"not-found-explanation": "Izgleda da ne možemo pronaći Vaš dokument. Žao nam je.",
+		"load-error": "Greška!",
+		"loading": "Učitavam... ({progress}%)",
+		"undo": "Poništi",
+		"redo": "Ponovi"
+	},
+	"settings": {
+		"settings": "Postavke",
+		"user-settings": "Korisnik",
+		"document-settings": "Ovaj dokument (za sve)",
+		"personal-document-settings": "Ovaj dokument (za Vas)"
+	},
+	"oauth": {
+		"authorization-required": "Potrebna potvrda identiteta",
+		"hello": "Zdravo, {user},",
+		"question": "Želite li dozvoliti pristup?",
+		"warning": "Upozorenje!",
+		"warning-explanation": "Aplikacija razmjenjuje podatke preko nesigurnog protokola!",
+		"deny": "Odbij pristup",
+		"grant": "Daj pristup",
+		"redirecting": "Preusmjeravam..."
+	}
+}

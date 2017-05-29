@@ -17,7 +17,8 @@
 		"select-editor": "بیر دَییشدیرن سئچین",
 		"choose-editor": "بیر دَییشدیرن سئچین",
 		"not-found": "تاپیلمادی!",
-		"load-error": "خطا!"
+		"load-error": "خطا!",
+		"undo": "قایتار"
 	},
 	"settings": {
 		"settings": "تنظیملر",

@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg"
+		]
+	},
+	"ui": {
+		"locale": "Език",
+		"select-language": "Изберете език"
+	},
+	"session": {
+		"logging-in": "Влизане в системата...",
+		"offline": "Извън линия"
+	},
+	"editor": {
+		"editor": "Редактор",
+		"select-editor": "Изберете редактор",
+		"choose-editor": "Изберете редактор",
+		"load-error": "Грешка!",
+		"undo": "Отмяна",
+		"redo": "Повторение"
+	},
+	"settings": {
+		"settings": "Настройки",
+		"user-settings": "Потребител",
+		"document-settings": "Този документ (за всички)",
+		"personal-document-settings": "Този документ (за Вас)"
+	},
+	"oauth": {
+		"hello": "Здрасти {user},",
+		"warning": "Внимание!",
+		"redirecting": "Пренасочване..."
+	}
+}
