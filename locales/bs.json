@@ -13,15 +13,19 @@
 		"authenticate-explanation": "Potvrdite identitet pomoću jednog od sljedećih metoda:",
 		"logging-in": "Prijavljujem Vas...",
 		"offline": "Van mreže",
-		"offline-subheading": "Više niste povezani sa serverom za zajednički rad."
+		"offline-subheading": "Više niste povezani sa serverom za zajednički rad.",
+		"offline-reasons": "Ovo se može desiti kad se server ponovo pokreće ili kad ste u potpunosti izgubili vezu s internetom.",
+		"offline-explanation": "Ne brinite se! I dalje možete uređivati dokument. Čim ponovo budete na mreži, izmjene će se automatski poslati."
 	},
 	"editor": {
 		"editor": "Uređivač",
 		"select-editor": "Izaberite uređivač",
 		"choose-editor": "Izaberite uređivač",
+		"choose-editor-explanation": "Izaberite jedan od sljedećih uređivača za zajednički rad na dokumentima vrste {type}",
 		"not-found": "Nije pronađeno!",
 		"not-found-explanation": "Izgleda da ne možemo pronaći Vaš dokument. Žao nam je.",
 		"load-error": "Greška!",
+		"load-error-explanation": "Došlo je do neočekivane greške pri učitavanju uređivača. Pokušajte ponovo.",
 		"loading": "Učitavam... ({progress}%)",
 		"undo": "Poništi",
 		"redo": "Ponovi"
@@ -35,6 +39,8 @@
 	"oauth": {
 		"authorization-required": "Potrebna potvrda identiteta",
 		"hello": "Zdravo, {user},",
+		"authorization-explanation": "Aplikacija na {app_url} želi pristup sljedećim funkcijama Vašeg naloga na hive.js-u:",
+		"scope-all": "sve",
 		"question": "Želite li dozvoliti pristup?",
 		"warning": "Upozorenje!",
 		"warning-explanation": "Aplikacija razmjenjuje podatke preko nesigurnog protokola!",
