@@ -29,5 +29,14 @@
 		"loading": "Загрузка… ({progress}%)",
 		"undo": "Скасаваць",
 		"redo": "Паўтарыць"
+	},
+	"settings": {
+		"settings": "Налады",
+		"user-settings": "Удзельнік",
+		"document-settings": "Гэты дакумэнт (для ўсіх)",
+		"personal-document-settings": "Гэты дакумэнт (для вас)"
+	},
+	"oauth": {
+		"authorization-required": "Неабходна аўтарызацыя"
 	}
 }
