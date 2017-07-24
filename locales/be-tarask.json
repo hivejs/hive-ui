@@ -37,6 +37,8 @@
 		"personal-document-settings": "Гэты дакумэнт (для вас)"
 	},
 	"oauth": {
-		"authorization-required": "Неабходна аўтарызацыя"
+		"authorization-required": "Неабходна аўтарызацыя",
+		"hello": "Вітаем, {user},",
+		"authorization-explanation": "Праграма {app_url} хоча мець доступ да наступных функцыяў вашага рахунку hive.js:"
 	}
 }
