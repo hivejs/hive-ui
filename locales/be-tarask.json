@@ -39,6 +39,7 @@
 	"oauth": {
 		"authorization-required": "Неабходна аўтарызацыя",
 		"hello": "Вітаем, {user},",
-		"authorization-explanation": "Праграма {app_url} хоча мець доступ да наступных функцыяў вашага рахунку hive.js:"
+		"authorization-explanation": "Праграма {app_url} хоча мець доступ да наступных функцыяў вашага рахунку hive.js:",
+		"scope-all": "увесь ваш рахунак"
 	}
 }
