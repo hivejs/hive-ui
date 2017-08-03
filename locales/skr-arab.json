@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saraiki"
+		]
+	},
+	"ui": {
+		"locale": "مقامی",
+		"select-language": "آپݨی زبان چݨو"
+	},
+	"session": {
+		"authenticate": "تصدیق کرو",
+		"logging-in": "لاگ ان تھیندا پئے۔۔۔",
+		"offline": "آف لائن"
+	},
+	"editor": {
+		"editor": "ایڈیٹ کرݨ آلا",
+		"select-editor": "ایڈیٹر چݨو",
+		"not-found": "کائنی لبھا!",
+		"load-error": "نقص!",
+		"undo": "واپس",
+		"redo": "ولدا کرو"
+	},
+	"settings": {
+		"settings": "ترتیباں",
+		"user-settings": "ورتݨ آلا"
+	},
+	"oauth": {
+		"scope-all": "تہاݙے کھاتے بارے سبھ کجھ",
+		"warning": "خبردار!"
+	}
+}

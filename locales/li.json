@@ -1,0 +1,51 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ooswesthoesbes"
+		]
+	},
+	"ui": {
+		"locale": "Spraokinstèlling",
+		"select-language": "Kees dien spraok"
+	},
+	"session": {
+		"authenticate": "Melj dich aan",
+		"authenticate-explanation": "Melj dich aan mit ein van de volgende authenticatiemethode:",
+		"logging-in": "Aan 'nt melje...",
+		"offline": "Offline",
+		"offline-subheading": "Doe bös neet mieë verbónje mit de samewirkingsserver.",
+		"offline-reasons": "Dit kan gebeure wen de server oppernuuj weurt gestart of wen dien verbinjing mit internet is verbraoke.",
+		"offline-explanation": "Maak dich aevel gein zörg! Doe kans 't document nag ummer bewirke. Wen se weer online kums waere dien verangeringe automatisch doorgeveurd."
+	},
+	"editor": {
+		"editor": "Bewirker",
+		"select-editor": "Kees 'ne teksverwirking",
+		"choose-editor": "Kees 'ne teksverwirker",
+		"choose-editor-explanation": "Kees eine van de volgende teksverwirkers veur same te wirke aan documente van 't typ {type}",
+		"not-found": "Neet gevónje!",
+		"not-found-explanation": "Dien document kan neet waere gevónje.",
+		"load-error": "Fout!",
+		"load-error-explanation": "'n Ónverwachse fout is opgetraoje tiejes 't laje van de teksverwirker. Perbeer 't oppernuuj.",
+		"loading": "Laje... ({progress}%)",
+		"undo": "Maak óngedaon",
+		"redo": "Veur oppernuuj oet"
+	},
+	"settings": {
+		"settings": "Instèllinge",
+		"user-settings": "Gebroeker",
+		"document-settings": "Dit document (veur ederein)",
+		"personal-document-settings": "Dit document (veur dich)"
+	},
+	"oauth": {
+		"authorization-required": "Aanmelje verplich",
+		"hello": "Haj {user},",
+		"authorization-explanation": "'t Programma op {app_url} wilt tougank toet de volgende functionaliteit van diene hive.js-gebroeker:",
+		"scope-all": "diene ganse gebroeker",
+		"question": "Wils se tougank verlieëne?",
+		"warning": "Waorsjoewing!",
+		"warning-explanation": "'t Programma communiceert via 'n ónbeveilig protocol!",
+		"deny": "Óntzègk tougank",
+		"grant": "Verlieën tougank",
+		"redirecting": "Door 'nt sture..."
+	}
+}

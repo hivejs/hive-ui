@@ -1,0 +1,44 @@
+{
+	"@metadata": {
+		"authors": [
+			"Belkacem77"
+		]
+	},
+	"ui": {
+		"locale": "Adigan",
+		"select-language": "Fren tutlayt-ik"
+	},
+	"session": {
+		"authenticate": "Sesteb",
+		"authenticate-explanation": "Sesteb s useqdec n yiwen seg tarrayin-agi n usesteb:",
+		"logging-in": "Tuqqna...",
+		"offline": "War tuqqna",
+		"offline-subheading": "Ur teqqined ara ar uqeddac."
+	},
+	"editor": {
+		"editor": "Amaẓrag",
+		"select-editor": "Fren amaẓrag",
+		"choose-editor": "Fren amaẓrag",
+		"not-found": "Ulac-it!",
+		"load-error": "Tuccḍa!",
+		"loading": "Asali... ({progress}%)",
+		"undo": "Err-d",
+		"redo": "Uɣal"
+	},
+	"settings": {
+		"settings": "Iɣewwaṛen",
+		"user-settings": "Aseqdac",
+		"document-settings": "Isemli-agi (i yal yiwen)",
+		"personal-document-settings": "Isemli-agi (i kečč kan)"
+	},
+	"oauth": {
+		"authorization-required": "Tlaq tsiregt",
+		"hello": "Azul {user},",
+		"scope-all": "akk amiḍan-ik",
+		"question": "Tebɣiḍ ad tmuddeḍ izerfan?",
+		"warning": "Ɣur-k!",
+		"deny": "Gdel anekcum",
+		"grant": "Mudd izerfan n unekcum",
+		"redirecting": "Awelleh..."
+	}
+}
