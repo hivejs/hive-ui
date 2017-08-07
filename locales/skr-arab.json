@@ -16,17 +16,21 @@
 	"editor": {
 		"editor": "ایڈیٹ کرݨ آلا",
 		"select-editor": "ایڈیٹر چݨو",
+		"choose-editor": "ایڈیٹر چݨو",
 		"not-found": "کائنی لبھا!",
 		"load-error": "نقص!",
+		"loading": "لوڈ تھیند پئے۔۔۔({progress})",
 		"undo": "واپس",
 		"redo": "ولدا کرو"
 	},
 	"settings": {
 		"settings": "ترتیباں",
-		"user-settings": "ورتݨ آلا"
+		"user-settings": "ورتݨ آلا",
+		"document-settings": "ایہ دستاویز (سب کیتے)"
 	},
 	"oauth": {
 		"scope-all": "تہاݙے کھاتے بارے سبھ کجھ",
-		"warning": "خبردار!"
+		"warning": "خبردار!",
+		"grant": "رسائی ݙیوو"
 	}
 }
