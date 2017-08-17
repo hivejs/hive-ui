@@ -13,14 +13,19 @@
 		"authenticate-explanation": "Sesteb s useqdec n yiwen seg tarrayin-agi n usesteb:",
 		"logging-in": "Tuqqna...",
 		"offline": "War tuqqna",
-		"offline-subheading": "Ur teqqined ara ar uqeddac."
+		"offline-subheading": "Ur teqqined ara ar uqeddac.",
+		"offline-reasons": "Ayagi yezmer ad d-yeḍru ticki aqeddac yules tanekra neɣ ticki tṛuh-ak tuqqna Internet.",
+		"offline-explanation": "Ur shissif ara! Ad tizmireḍ yal tikelt ad tesnifleḍ isemli. Ticki teqqneḍ tikelt-nniḍen, asnifel-ik ad yettwazen s wudem awurman."
 	},
 	"editor": {
 		"editor": "Amaẓrag",
 		"select-editor": "Fren amaẓrag",
 		"choose-editor": "Fren amaẓrag",
+		"choose-editor-explanation": "Fren imaẓragen-agi akken ad tettekkiḍ deg isemliyen: {type}",
 		"not-found": "Ulac-it!",
+		"not-found-explanation": "A yettban d akken ur nufi ara isemli. Suref-aɣ.",
 		"load-error": "Tuccḍa!",
+		"load-error-explanation": "Teḍra-d  tuccḍa deg usali n umaẓrag. Ɛreḍ tikelt-nniḍen.",
 		"loading": "Asali... ({progress}%)",
 		"undo": "Err-d",
 		"redo": "Uɣal"
@@ -34,9 +39,11 @@
 	"oauth": {
 		"authorization-required": "Tlaq tsiregt",
 		"hello": "Azul {user},",
+		"authorization-explanation": "Asnas di {app_url} yebɣa ad yekcem ar tmahilin-agi n umiḍan-ik hive.js:",
 		"scope-all": "akk amiḍan-ik",
 		"question": "Tebɣiḍ ad tmuddeḍ izerfan?",
 		"warning": "Ɣur-k!",
+		"warning-explanation": "Asnas-agi yettmeslay s uneggaf araɣelsan!",
 		"deny": "Gdel anekcum",
 		"grant": "Mudd izerfan n unekcum",
 		"redirecting": "Awelleh..."
