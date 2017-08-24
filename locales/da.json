@@ -1,0 +1,51 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton"
+		]
+	},
+	"ui": {
+		"locale": "Sprogindstilling",
+		"select-language": "Vælg dit sprog"
+	},
+	"session": {
+		"authenticate": "Godkend",
+		"authenticate-explanation": "Godkend via en af de følgende godkendelsesmetoder:",
+		"logging-in": "Logger ind ...",
+		"offline": "Frakoblet",
+		"offline-subheading": "Du er ikke længere koblet på samarbejdsserveren.",
+		"offline-reasons": "Dette kan ske når serveren bliver genstartet eller når du helt har mistet internetforbindelsen.",
+		"offline-explanation": "Ingen fare! Du kan stadig redigere dokumentet. Når du har forbindelse igen, så vil dine ændringer automatisk blive indsendt."
+	},
+	"editor": {
+		"editor": "Redigeringsprogram",
+		"select-editor": "Vælg et redigeringsprogram",
+		"choose-editor": "Vælg et redigeringsprogram",
+		"choose-editor-explanation": "Vælg en af de følgende redigeringsprogrammer for at samarbejde om  {type}-dokumenter",
+		"not-found": "Ikke fundet!",
+		"not-found-explanation": "Det ser ud som om, at vi ikke kan finde dit dokument. Beklager.",
+		"load-error": "Fejl!",
+		"load-error-explanation": "Der opstod en uventet fejl under indlæsning af redigeringsprogrammet. Prøv igen.",
+		"loading": "Indlæser ... ({progress}%)",
+		"undo": "Fortryd",
+		"redo": "Omgør"
+	},
+	"settings": {
+		"settings": "Indstillinger",
+		"user-settings": "Bruger",
+		"document-settings": "Dette dokument (for alle)",
+		"personal-document-settings": "Dette dokument (for dig)"
+	},
+	"oauth": {
+		"authorization-required": "Godkendelse er nødvendig",
+		"hello": "Hej {user},",
+		"authorization-explanation": "Programmet på {app_url} ønsker tilgang til følgende funktionalitet i din hive.js-konto:",
+		"scope-all": "alt i din konto",
+		"question": "Vil du give adgang?",
+		"warning": "Advarsel!",
+		"warning-explanation": "Dette program kommunikerer via en usikker protokol!",
+		"deny": "Nægt adgang",
+		"grant": "Tillad adgang",
+		"redirecting": "Omdirigerer ..."
+	}
+}
