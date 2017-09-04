@@ -1,0 +1,53 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mikel Ibaiba",
+			"Sator",
+			"Subi"
+		]
+	},
+	"ui": {
+		"locale": "Lokala",
+		"select-language": "Hautatu zure hizkuntza"
+	},
+	"session": {
+		"authenticate": "Autentifikatu",
+		"authenticate-explanation": "Autentifikatu hurrengo autentifikazio metodo bat erabiliz:",
+		"logging-in": "Saioa hasten...",
+		"offline": "Konexiorik gabe",
+		"offline-subheading": "Elkarlan zerbitzarira ez zaude konektatuta honezkero.",
+		"offline-reasons": "Hau zerbitzaria berrabiarazten ari denean edo internet konexioa guztiz galdu baduzu gerta daiteke.",
+		"offline-explanation": "Ez kezkatu, ordea! Dokumentua ere edita dezakezu. Berriro konektatuta zaudenean, aldaketak automatikoki bidaliko dira."
+	},
+	"editor": {
+		"editor": "Editorea",
+		"select-editor": "Editore bat hautatu",
+		"choose-editor": "Editore bat aukeratu",
+		"choose-editor-explanation": "Aukeratu ondorengo editoreen artean {type} dokumentuen inguruan elkarlanean ibiltzeko",
+		"not-found": "Ez da aurkitu!",
+		"not-found-explanation": "Badirudi zure dokumentua ezin dezakegula aurkitu. Barkatu.",
+		"load-error": "Errorea!",
+		"load-error-explanation": "Ustekabeko errore bat gertatu da editorea kargatzean. Saiatu berriro mesedez.",
+		"loading": "Kargatzen... (% {progress})",
+		"undo": "Desegin",
+		"redo": "Berregin"
+	},
+	"settings": {
+		"settings": "Ezarpenak",
+		"user-settings": "Erabiltzailea",
+		"document-settings": "Dokumentu hau (edonorentzako)",
+		"personal-document-settings": "Dokumentu hau (Zuretzako)"
+	},
+	"oauth": {
+		"authorization-required": "Baimena beharrezkoa",
+		"hello": "Kaixo {user},",
+		"authorization-explanation": "{app_url}n dagoen aplikazioa zure hive.js kontuko funtzioetarako sarrera nahi du:",
+		"scope-all": "Zure kontuko guztia",
+		"question": "Sarbidea eman nahi d(io)uzu?",
+		"warning": "Oharra!",
+		"warning-explanation": "Aplikazioa protokolo ez seguru baten bidez komunikatzen ari da!",
+		"deny": "Sarbidea ukatu",
+		"grant": "Sarbidea baimendu",
+		"redirecting": "Berbideratzen..."
+	}
+}
