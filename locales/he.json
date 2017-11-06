@@ -1,0 +1,53 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2",
+			"LaG roiL",
+			"YaronSh"
+		]
+	},
+	"ui": {
+		"locale": "אזור",
+		"select-language": "בחירת שפה"
+	},
+	"session": {
+		"authenticate": "הזדהות",
+		"authenticate-explanation": "ניתן להזדהות באמצעות אחת משיטות הזיהוי הבאות:",
+		"logging-in": "מתבצעת כניסה…",
+		"offline": "מנותק",
+		"offline-subheading": "החיבור שלך לשרת השיתוף נותק.",
+		"offline-reasons": "זה יכול לקרות אם השרת הפעיל את עצמו מחדש או אם איבדת חיבור לאינטרנט",
+		"offline-explanation": "בכל זאת, אין סיבה לדאגה! אתם עדיין יכולים לערוך את המסמך. כאשר תהיו מחוברים לרשת, השינויים שלכם יפורסמו באופן אוטומטי."
+	},
+	"editor": {
+		"editor": "עורך",
+		"select-editor": "נא לבחור עורך",
+		"choose-editor": "נא לבחור עורך",
+		"choose-editor-explanation": "נא לבחור באחד מהעורכים הבאים כדי לערוך מסמכי {type} באופן שיתופי",
+		"not-found": "לא נמצא!",
+		"not-found-explanation": "נראה כי איננו מצליחים למצוא את המסמך שלך, עמך הסליחה.",
+		"load-error": "שגיאה!",
+		"load-error-explanation": "אירעה שגיאה בלתי ידועה בעת טעינת העורך. נא לנסות שוב.",
+		"loading": "טוען... ({progress}%)",
+		"undo": "ביטול",
+		"redo": "ביצוע חוזר"
+	},
+	"settings": {
+		"settings": "הגדרות",
+		"user-settings": "משתמש",
+		"document-settings": "המסמך הזה (לכולם)",
+		"personal-document-settings": "המסמך הזה (לעיניך בלבד)"
+	},
+	"oauth": {
+		"authorization-required": "נדרש אימות",
+		"hello": "שלום {user},",
+		"authorization-explanation": "היישום בכתובת {app_url} מעוניין לגשת לתכונות הבאות בחשבון ה־hive.js שלך:",
+		"scope-all": "כל החשבון שלך",
+		"question": "להעניק גישה?",
+		"warning": "אזהרה!",
+		"warning-explanation": "היישום מתקשר דרך פרוטוקול בלתי מאובטח!",
+		"deny": "שלילת הגישה",
+		"grant": "הרשאת הגישה",
+		"redirecting": "מתבצעת הפנייה…"
+	}
+}
