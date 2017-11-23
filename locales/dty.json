@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirajan pant"
+		]
+	},
+	"ui": {
+		"locale": "लोकेल",
+		"select-language": "तमरि भाषा छानः"
+	},
+	"session": {
+		"authenticate": "प्रमाणित अरः",
+		"authenticate-explanation": "तल्तिर दियियाः प्रमाणीकरण तरिका प्रयोग अरिबर प्रमाणीकरण अरः:",
+		"logging-in": "प्रवेश अद्दाछ़...",
+		"offline": "अफलाइन"
+	},
+	"editor": {
+		"editor": "सम्पादक",
+		"select-editor": "यक सम्पादक छानः",
+		"choose-editor": "यक सम्पादक रोजः",
+		"not-found": "नाइ पायियो!",
+		"load-error": "गल्ती!",
+		"loading": "भरण... ({progress}%)"
+	},
+	"settings": {
+		"settings": "मिलानअन",
+		"user-settings": "प्रयोगकर्ता",
+		"document-settings": "यो कागजात (सप्पै खिलाइ)",
+		"personal-document-settings": "यो कागजात (तम खिलाइ)"
+	},
+	"oauth": {
+		"authorization-required": "प्रमाणीकरण चायिन्छ",
+		"hello": "नमस्ते {user},",
+		"scope-all": "तमरा खाताः सप्पै",
+		"question": "क्या तम पहुच प्रदान अद्द चाहन्छः?",
+		"warning": "चेतावनी!",
+		"deny": "पहुँच अस्वीकार अरः",
+		"grant": "पहुँच प्रदान अरः",
+		"redirecting": "पुनःनिर्देशन अद्दाछ़..."
+	}
+}
