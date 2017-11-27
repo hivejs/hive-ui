@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe"
+			"Macofe",
+			"Fitoschido"
 		]
 	},
 	"ui": {
-		"locale": "Localización",
+		"locale": "Configuración regional",
 		"select-language": "Selecciona tu idioma"
 	},
 	"session": {
