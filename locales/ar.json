@@ -4,10 +4,12 @@
 			"Maroen1990",
 			"Meno25",
 			"Shbib Al-Subaie",
-			"ديفيد"
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"ui": {
+		"locale": "اللغة",
 		"select-language": "اختر لغتك"
 	},
 	"session": {
