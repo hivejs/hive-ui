@@ -2,33 +2,52 @@
 	"@metadata": {
 		"authors": [
 			"Mansil",
-			"Tark"
+			"Tark",
+			"Athena in Wonderland"
 		]
 	},
 	"ui": {
+		"locale": "Local",
 		"select-language": "Selecione o seu idioma"
 	},
 	"session": {
 		"authenticate": "Autenticar",
+		"authenticate-explanation": "Autenticar utilizando um dos seguintes métodos de autenticação:",
 		"logging-in": "A iniciar a sessão...",
-		"offline": "Off-line"
+		"offline": "Off-line",
+		"offline-subheading": "Não está mais ligado ao servidor de colaboração.",
+		"offline-reasons": "Isso pode ocorrer quando o servidor está reiniciando ou quando perde totalmente a sua ligação com a Internet.",
+		"offline-explanation": "Não se preocupe! Ainda pode editar o documento. Uma vez ligado novamente, as suas mudanças serão enviadas automaticamente."
 	},
 	"editor": {
 		"editor": "Editor",
 		"select-editor": "Selecione um editor",
 		"choose-editor": "Escolha um editor",
+		"choose-editor-explanation": "Escolha um dos seguintes editores para colaborar nos documentos {type}",
 		"not-found": "Não encontrado!",
+		"not-found-explanation": "Parece que não pudemos encontrar o seu documento. Desculpe.",
 		"load-error": "Erro!",
+		"load-error-explanation": "Um erro inesperado ocorreu enquanto o editor carregava. Por favor tente novamente.",
 		"loading": "A carregar... ({progress}%)",
 		"undo": "Desfazer",
 		"redo": "Refazer"
 	},
 	"settings": {
 		"settings": "Configurações",
-		"user-settings": "Utilizador"
+		"user-settings": "Utilizador",
+		"document-settings": "Este documento (para todos)",
+		"personal-document-settings": "Este documento (para si)"
 	},
 	"oauth": {
+		"authorization-required": "Autorização necessária",
 		"hello": "Olá {user},",
-		"warning": "Aviso!"
+		"authorization-explanation": "A aplicação em {app_url} quer aceder a seguinte funcionalidade da sua conta hive.js:",
+		"scope-all": "toda a sua conta",
+		"question": "Gostaria de conceder acesso?",
+		"warning": "Aviso!",
+		"warning-explanation": "A aplicação está a ser comunicar via um protocolo inseguro!",
+		"deny": "Negar acesso",
+		"grant": "Conceder acesso",
+		"redirecting": "A redirecionar..."
 	}
 }

@@ -3,23 +3,32 @@
 		"authors": [
 			"Otokoume",
 			"Shirayuki",
-			"Sujiniku"
+			"Sujiniku",
+			"Yusuke1109"
 		]
 	},
 	"ui": {
+		"locale": "ロケール",
 		"select-language": "言語を選択"
 	},
 	"session": {
 		"authenticate": "認証",
 		"authenticate-explanation": "次のいずれかの認証方法を使用して認証できます:",
 		"logging-in": "ログイン中...",
-		"offline": "オフライン"
+		"offline": "オフライン",
+		"offline-subheading": "あなたはコラボレーションサーバーに接続していません。",
+		"offline-reasons": "これは、サーバーが再起動しているときや、インターネット接続が完全に失われたときに発生します。",
+		"offline-explanation": "でも心配しないでください。それでも文書を編集できます。もう一度オンラインになると、変更内容は自動的に送信されます。"
 	},
 	"editor": {
 		"editor": "編集者",
+		"select-editor": "エディターを選択",
 		"choose-editor": "エディターの選択",
+		"choose-editor-explanation": "{type}文書の共同編集には以下のエディターの1つを選択してください",
 		"not-found": "見つかりません",
+		"not-found-explanation": "私たちはあなたの文書を見つけることができないようです。 ごめんなさい。",
 		"load-error": "エラー!",
+		"load-error-explanation": "エディターのロード中に予期しないエラーが発生しました。 もう一度お試しください。",
 		"loading": "ロード中... ({progress}%)",
 		"undo": "取り消す",
 		"redo": "やり直す"
@@ -29,6 +38,13 @@
 		"user-settings": "利用者"
 	},
 	"oauth": {
-		"warning": "警告"
+		"authorization-required": "認証が必要です",
+		"scope-all": "あなたのすべてのアカウント",
+		"question": "アクセスを許可しますか？",
+		"warning": "警告",
+		"warning-explanation": "アプリケーションは安全でないプロトコルを介して通信しています！",
+		"deny": "アクセスを拒否する",
+		"grant": "アクセスを許可する",
+		"redirecting": "リダイレクト中..."
 	}
 }
