@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Андрей"
+		]
+	},
+	"ui": {
+		"locale": "Абызшәа",
+		"select-language": "Иалышәх абызшәа"
+	},
+	"session": {
+		"authenticate": "Авторизациа",
+		"logging-in": "Асистемахь аҭаларҭа..."
+	},
+	"editor": {
+		"editor": "Аредактор",
+		"select-editor": "Иалышәх аредактор",
+		"choose-editor": "Иалышәх аредактор",
+		"not-found": "Иҧшаам!",
+		"not-found-explanation": "Шәара шәдокумент ҳзымҧшааит. Ҳаҭамыз.",
+		"load-error": "Агха!",
+		"loading": "Аҭагалара… ({progress}%)",
+		"undo": "Иаҟәыхтәуп",
+		"redo": "Ирхынҳәтәуп"
+	},
+	"settings": {
+		"settings": "Архиарақәа",
+		"user-settings": "Алахәыла",
+		"document-settings": "Ари адокумент (зегьы рзы)",
+		"personal-document-settings": "Ари адокумент (шәара шәзы)"
+	},
+	"oauth": {
+		"scope-all": "зегьы",
+		"warning": "Агәаҽанҵара!"
+	}
+}
