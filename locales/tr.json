@@ -1,0 +1,47 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chansey",
+			"Trockya"
+		]
+	},
+	"ui": {
+		"locale": "Yerel",
+		"select-language": "Dilinizi seçiniz"
+	},
+	"session": {
+		"authenticate": "Kimlik doğrulaması",
+		"authenticate-explanation": "Kimlik doğrulaması için aşağıdaki doğrulama yöntemlerinden birisi kullanılabilir:",
+		"logging-in": "Oturum açılıyor...",
+		"offline": "Çevrimdışı"
+	},
+	"editor": {
+		"editor": "Editör",
+		"select-editor": "Bir editör seçiniz",
+		"choose-editor": "Bir editör seçin",
+		"not-found": "Bulunamadı!",
+		"not-found-explanation": "Görünüşe göre belgenizi bulamadık. Üzgünüz.",
+		"load-error": "Hata!",
+		"load-error-explanation": "Editör yüklenirken beklenmedik bir hata oluştu. Lütfen tekrar deneyiniz.",
+		"loading": "Yükleniyor... ({progress}%)",
+		"undo": "Geri al",
+		"redo": "Tekrarla"
+	},
+	"settings": {
+		"settings": "Ayarlar",
+		"user-settings": "Kullanıcı",
+		"document-settings": "Bu belge (herkes için)",
+		"personal-document-settings": "Bu belge (sizin için)"
+	},
+	"oauth": {
+		"authorization-required": "Kimlik doğrulaması gerekli",
+		"hello": "Hey {user},",
+		"scope-all": "hesaplarınızın tamamı",
+		"question": "Girişi onaylamak ister misiniz?",
+		"warning": "İkaz!",
+		"warning-explanation": "Uygulama güvenli olmayan bir protokol üzerinden haberleşmektedir!",
+		"deny": "Giriş reddedildi",
+		"grant": "Giriş onaylandı",
+		"redirecting": "Yönlendiriliyor..."
+	}
+}
