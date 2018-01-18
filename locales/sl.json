@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"HairyFotr"
+		]
+	},
+	"editor": {
+		"load-error": "Napaka!",
+		"loading": "Nalaganje ... ({progress}%)",
+		"undo": "Razveljavi",
+		"redo": "Uveljavi"
+	},
+	"settings": {
+		"settings": "Nastavitve",
+		"user-settings": "Uporabnik"
+	},
+	"oauth": {
+		"hello": "Pozdravljen {user},",
+		"warning": "Opozorilo!",
+		"deny": "Zavrni dostop",
+		"grant": "Odobri dostop"
+	}
+}

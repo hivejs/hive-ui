@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Thakurji"
+		]
+	},
+	"ui": {
+		"locale": "Locale",
+		"select-language": "Aapan bhasa ke chuno"
+	},
+	"session": {
+		"authenticate": "Authenticate karo",
+		"logging-in": "Log in hoe hai...",
+		"offline": "Offline hai",
+		"offline-subheading": "Aap collaboration server se connected nai hai."
+	},
+	"editor": {
+		"select-editor": "Sampaadak ke chuno",
+		"choose-editor": "Sampaadak ke chuno",
+		"not-found": "Nai milaa!",
+		"load-error": "Galti!",
+		"undo": "Pahile jaise kar do"
+	}
+}

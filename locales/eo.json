@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet"
+		]
+	},
+	"ui": {
+		"select-language": "Elekti vian lingvon"
+	},
+	"editor": {
+		"editor": "Redaktilo",
+		"choose-editor": "Elekti redaktilon",
+		"load-error": "Eraro!",
+		"loading": "Ŝargado... ({progress}%)"
+	},
+	"settings": {
+		"settings": "Agordoj",
+		"user-settings": "Uzanto"
+	},
+	"oauth": {
+		"hello": "Saluton {user},",
+		"warning": "Averto!"
+	}
+}

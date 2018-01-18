@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ibrahim khashrowdi"
+		]
+	},
+	"ui": {
+		"locale": "جاگه",
+		"select-language": "وتي زبانا انتخاب بکنیت"
+	},
+	"session": {
+		"logging-in": "بِه سیستم‌ئا داخله بیت...",
+		"offline": "افلاین"
+	},
+	"editor": {
+		"editor": "ایڈیٹور",
+		"load-error": "خطا!",
+		"undo": "بیئرگردینتین"
+	},
+	"settings": {
+		"settings": "تنظیمات",
+		"user-settings": "کار زوروک"
+	},
+	"oauth": {
+		"hello": "{user} سلام علیکم،"
+	}
+}
