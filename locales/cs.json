@@ -4,7 +4,8 @@
 			"Aktron",
 			"Marek Pavlica",
 			"Martin Urbanec",
-			"Zbyso23"
+			"Zbyso23",
+			"Ilimanaq29"
 		]
 	},
 	"ui": {
@@ -33,7 +34,7 @@
 	},
 	"oauth": {
 		"authorization-required": "Vyžadována autorizace",
-		"hello": "Ahoj {user},",
+		"hello": "Dobrý den, {user},",
 		"question": "Chcete udělit přístup?",
 		"warning": "Pozorǃ",
 		"deny": "Odepřít přístup",
