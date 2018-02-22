@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sureshkhole",
+			"V.narsikar"
+		]
+	},
+	"ui": {
+		"locale": "स्थानिक",
+		"select-language": "भाषा निवडा"
+	},
+	"session": {
+		"logging-in": "सनोंद प्रवेश करीत आहे...",
+		"offline": "संपर्क होऊ शकत नाही"
+	},
+	"editor": {
+		"editor": "संपादक",
+		"load-error": "त्रुटी",
+		"undo": "उलटवा",
+		"redo": "पूर्ववत करा (रिडू)"
+	},
+	"settings": {
+		"user-settings": "सदस्य"
+	},
+	"oauth": {
+		"warning": "ताकीद"
+	}
+}
