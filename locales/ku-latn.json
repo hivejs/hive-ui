@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"George Animal",
+			"Ghybu"
+		]
+	},
+	"ui": {
+		"select-language": "Zimanê xwe hilbijêre"
+	},
+	"editor": {
+		"not-found": "Nehat dîtin!",
+		"load-error": "Çewtî!",
+		"undo": "Betal bike"
+	},
+	"settings": {
+		"user-settings": "Bikarhêner",
+		"personal-document-settings": "Ev belge (ji bo te)"
+	},
+	"oauth": {
+		"hello": "Silav {user}",
+		"warning": "Hişyarî!",
+		"redirecting": "Tê beralîkirin..."
+	}
+}

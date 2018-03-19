@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amara-Amaziɣ",
+			"Brahim-essaidi"
+		]
+	},
+	"ui": {
+		"locale": "ⴰⴷⵖⴰⵔ",
+		"select-language": "ⵙⵜⵉ ⵜⵓⵜⵍⴰⵢⵜ ⵏⵏⴽ"
+	},
+	"editor": {
+		"editor": "ⴰⵎⵙⵙⵏⴼⵍ",
+		"not-found": "ⵓⵔ ⵉⵜⵜⵢⵓⴼⴰ",
+		"load-error": "ⵜⴰⵣⴳⵍⵜ!"
+	},
+	"settings": {
+		"settings": "ⵜⵉⵙⵖⴰⵍ",
+		"user-settings": "ⴰⵎⵙⵙⵎⵔⵙ",
+		"document-settings": "ⵜⴰⵏⵜⴰⵎⵜ ⴰⴷ (ⵉ ⴽⵓ ⵢⴰⵏ)",
+		"personal-document-settings": "ⵜⴰⵏⵜⴰⵎⵜ ⴰⴷ (ⵉ ⴽⵢⵢ)"
+	},
+	"oauth": {
+		"hello": "ⴰⵣⵓⵍ {user},"
+	}
+}
