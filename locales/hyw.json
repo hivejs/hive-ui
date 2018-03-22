@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Armeniki"
+		]
+	},
+	"ui": {
+		"select-language": "Ձեր լեզուն ընտրէ՛"
+	},
+	"session": {
+		"offline": "Անառցանց"
+	},
+	"editor": {
+		"editor": "Խմբագրող",
+		"select-editor": "Խմբագրող մը ընտրէ՛",
+		"choose-editor": "Խմբագրող մը ընտրէ՛",
+		"not-found": "Չը գտնուեցաւ:",
+		"load-error": "Սխալ:"
+	},
+	"settings": {
+		"settings": "Կարգաւորումներ",
+		"user-settings": "Գործածող"
+	},
+	"oauth": {
+		"hello": "Բարեւ {user},",
+		"warning": "Նախազգուշութիւն:"
+	}
+}
