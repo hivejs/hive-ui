@@ -13,6 +13,7 @@
 		"offline-explanation": "Maacht Iech keng Suergen! Dir kënnt d'Dokument trotzdem änneren. Esoubal wéi Dir nees online sidd ginn Är Ännerungen automatesch gespäichert."
 	},
 	"editor": {
+		"editor": "Editeur",
 		"not-found": "Net fonnt!",
 		"load-error": "Feeler!",
 		"loading": "Lueden... ({progress}%)",
