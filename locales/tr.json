@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Chansey",
-			"Trockya"
+			"Trockya",
+			"Hedda"
 		]
 	},
 	"ui": {
@@ -13,12 +14,16 @@
 		"authenticate": "Kimlik doğrulaması",
 		"authenticate-explanation": "Kimlik doğrulaması için aşağıdaki doğrulama yöntemlerinden birisi kullanılabilir:",
 		"logging-in": "Oturum açılıyor...",
-		"offline": "Çevrimdışı"
+		"offline": "Çevrimdışı",
+		"offline-subheading": "Artık işbirliği sunucusuna bağlı değilsiniz.",
+		"offline-reasons": "Bu durum, sunucu yeniden başlatıldığında veya internet bağlantısını tamamen kaybettiğinizde ortaya çıkabilir.",
+		"offline-explanation": "Endişelenmeyin yine de! Belgeyi yine de düzenleyebilirsiniz. Tekrar çevrimiçi olduğunuzda değişiklikleriniz otomatik olarak gönderilecektir"
 	},
 	"editor": {
 		"editor": "Editör",
 		"select-editor": "Bir editör seçiniz",
 		"choose-editor": "Bir editör seçin",
+		"choose-editor-explanation": "{type} belgelerinde işbirliği yapmak için aşağıdaki düzenleyicilerden birini seçin",
 		"not-found": "Bulunamadı!",
 		"not-found-explanation": "Görünüşe göre belgenizi bulamadık. Üzgünüz.",
 		"load-error": "Hata!",
@@ -36,6 +41,7 @@
 	"oauth": {
 		"authorization-required": "Kimlik doğrulaması gerekli",
 		"hello": "Hey {user},",
+		"authorization-explanation": "{app_url} adresindeki uygulama, hive.js hesabınızın aşağıdaki işlevlerine erişmek istiyor:",
 		"scope-all": "hesaplarınızın tamamı",
 		"question": "Girişi onaylamak ister misiniz?",
 		"warning": "İkaz!",
