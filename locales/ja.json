@@ -4,7 +4,8 @@
 			"Otokoume",
 			"Shirayuki",
 			"Sujiniku",
-			"Yusuke1109"
+			"Yusuke1109",
+			"Omotecho"
 		]
 	},
 	"ui": {
@@ -16,7 +17,7 @@
 		"authenticate-explanation": "次のいずれかの認証方法を使用して認証できます:",
 		"logging-in": "ログイン中...",
 		"offline": "オフライン",
-		"offline-subheading": "あなたはコラボレーションサーバーに接続していません。",
+		"offline-subheading": "提携先サーバーとの接続が切れました。",
 		"offline-reasons": "これは、サーバーが再起動しているときや、インターネット接続が完全に失われたときに発生します。",
 		"offline-explanation": "でも心配しないでください。それでも文書を編集できます。もう一度オンラインになると、変更内容は自動的に送信されます。"
 	},
@@ -24,10 +25,10 @@
 		"editor": "編集者",
 		"select-editor": "エディターを選択",
 		"choose-editor": "エディターの選択",
-		"choose-editor-explanation": "{type}文書の共同編集には以下のエディターの1つを選択してください",
+		"choose-editor-explanation": "{type}文書の共同編集には以下のエディターからどれかを選択してください",
 		"not-found": "見つかりません",
 		"not-found-explanation": "私たちはあなたの文書を見つけることができないようです。 ごめんなさい。",
-		"load-error": "エラー!",
+		"load-error": "エラーです!",
 		"load-error-explanation": "エディターのロード中に予期しないエラーが発生しました。 もう一度お試しください。",
 		"loading": "ロード中... ({progress}%)",
 		"undo": "取り消す",
@@ -35,10 +36,14 @@
 	},
 	"settings": {
 		"settings": "設定",
-		"user-settings": "利用者"
+		"user-settings": "利用者",
+		"document-settings": "この解説文書（全ての人が対象）",
+		"personal-document-settings": "この解説文書（自分が対象）"
 	},
 	"oauth": {
 		"authorization-required": "認証が必要です",
+		"hello": "こんにちは、{user}さん、",
+		"authorization-explanation": "{app_url}のソフトウェアが右記のあなたのhive.jsアカウントにアクセスを要求しています。",
 		"scope-all": "あなたのすべてのアカウント",
 		"question": "アクセスを許可しますか？",
 		"warning": "警告",
