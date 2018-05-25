@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"ArslanX"
+		]
+	},
+	"ui": {
+		"select-language": "Тилни сайла"
+	},
+	"editor": {
+		"not-found": "Табылмагъан!",
+		"load-error": "Янгылыш!",
+		"undo": "Гери алмакъ",
+		"redo": "Къайтармакъ"
+	},
+	"settings": {
+		"settings": "Кюйлевлер",
+		"user-settings": "Къоллавчу"
+	},
+	"oauth": {
+		"hello": "Салам, {user},",
+		"scope-all": "тюм",
+		"question": "Гертилей де гириш берме истеймисен?",
+		"warning": "Буварыв!",
+		"deny": "Гиришни къорумакъ",
+		"grant": "Гириш бермек"
+	}
+}
