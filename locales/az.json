@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"AZISS"
+		]
+	},
+	"ui": {
+		"locale": "Dil",
+		"select-language": "Dili seçin"
+	},
+	"session": {
+		"authenticate": "Avtorizasiya",
+		"logging-in": "Sistemə giriş...",
+		"offline": "Şəbəkədə deyil"
+	},
+	"editor": {
+		"editor": "Redaktor",
+		"select-editor": "Redaktoru seçin",
+		"choose-editor": "Redaktoru seçin",
+		"not-found": "Tapılmadı!",
+		"load-error": "Xəta!",
+		"loading": "Yüklənir... ({progress}%)",
+		"undo": "Geri",
+		"redo": "İrəli"
+	},
+	"settings": {
+		"settings": "Nizamlamalar",
+		"user-settings": "İstifadəçi",
+		"document-settings": "Bu sənəd (hamı üçün)",
+		"personal-document-settings": "Bu sənəd (sənin üçün)"
+	},
+	"oauth": {
+		"authorization-required": "Avtorizasiya lazım",
+		"hello": "Salam, {user},",
+		"scope-all": "sizin bütün hesabınıza",
+		"warning": "Diqqət!",
+		"deny": "Girişi qadağan etmək",
+		"grant": "Girişə icazə vermək",
+		"redirecting": "Yönləndirmə..."
+	}
+}
