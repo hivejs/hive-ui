@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ramjit Tudu"
+		]
+	},
+	"ui": {
+		"select-language": "ᱟᱢᱟᱜ ᱯᱟᱹᱨᱥᱤ ᱵᱟᱪᱷᱚᱱᱢᱮ"
+	},
+	"session": {
+		"logging-in": "ᱞᱚᱜᱤᱝ ᱤᱱᱹᱹᱹ",
+		"offline": "ᱚᱯᱷᱞᱟᱭᱤᱱ"
+	},
+	"editor": {
+		"editor": "ᱥᱟᱯᱲᱮᱛ",
+		"select-editor": "ᱥᱟᱯᱲᱮᱛ ᱵᱟᱪᱷᱚᱱ",
+		"choose-editor": "ᱥᱟᱯᱲᱮᱛ ᱵᱟᱪᱷᱟᱣ",
+		"load-error": "ᱦᱩᱲᱟᱹᱜ!",
+		"undo": "ᱨᱩᱣᱟᱹᱲ ᱟᱹᱜᱩ",
+		"redo": "ᱵᱟᱹᱭᱥᱟᱣ ᱨᱩᱣᱟᱹᱲ"
+	},
+	"settings": {
+		"settings": "ᱥᱟᱡᱟᱣᱠᱚ",
+		"user-settings": "ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ",
+		"document-settings": "ᱱᱚᱶᱟ ᱰᱚᱠᱩᱢᱮᱸᱴ (ᱡᱚᱛᱚᱦᱚᱲ ᱞᱟᱹᱜᱤᱛ)"
+	}
+}
