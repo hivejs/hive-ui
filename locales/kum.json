@@ -8,6 +8,7 @@
 		"select-language": "Тилни сайла"
 	},
 	"editor": {
+		"editor": "Тюзлевчю",
 		"not-found": "Табылмагъан!",
 		"load-error": "Янгылыш!",
 		"undo": "Гери алмакъ",
