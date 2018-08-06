@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dr Lotus Black"
+		]
+	},
+	"ui": {
+		"select-language": "သင်၏ဘာသာစကားကို ရွေးရန်"
+	},
+	"session": {
+		"logging-in": "လော့ဂ်အင် ဝင်ရောက်နေသည်..."
+	},
+	"editor": {
+		"editor": "တည်းဖြတ်သူ",
+		"not-found": "မတွေ့ပါ",
+		"loading": "ဝန်ဆွဲနေသည်... ({progress}%)",
+		"undo": "နောက်ပြန် ပြန်ပြင်ရန်",
+		"redo": "ရှေ့သို့ ပြန်ပြင်ရန်"
+	},
+	"settings": {
+		"settings": "အပြင်အဆင်များ",
+		"user-settings": "အသုံးပြုသူ",
+		"document-settings": "ဤစာရွက်စာတမ်းသည် (လူတိုင်းအတွက်)",
+		"personal-document-settings": "ဤစာရွက်စာတမ်းသည် (သင့်အတွက်)"
+	},
+	"oauth": {
+		"authorization-required": "အခွင့်အာဏာ လိုအပ်သည်",
+		"hello": "မင်္ဂလာပါ {user}၊",
+		"warning": "သတိပေးချက်"
+	}
+}
