@@ -1,0 +1,51 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"ui": {
+		"locale": "Locale",
+		"select-language": "Scacchie 'a lènga toje"
+	},
+	"session": {
+		"authenticate": "Autendicazione",
+		"authenticate-explanation": "Autendicate ausanne une de le metode de autendicazione:",
+		"logging-in": "Stoche a tràse...",
+		"offline": "Fore linèe",
+		"offline-subheading": "Non ge ste connesse a 'u server de collabborazione.",
+		"offline-reasons": "Quiste pò accadè quanne 'u server avène stutate e appezzecate o quanne è perse combletamende 'a connessione a indernette.",
+		"offline-explanation": "No te scè preoccupanne però! Puè angore cangià 'u documende. 'Na vote ca tuèrne arrete in linèe, le cangiaminde avènene mannate arrete."
+	},
+	"editor": {
+		"editor": "Cangiatore",
+		"select-editor": "Scacchie 'nu cangiatore",
+		"choose-editor": "Scacchie 'nu cangiatore",
+		"choose-editor-explanation": "Scacchie une de le cangiature pe collabborà sus a le documinde {type}",
+		"not-found": "None acchiate!",
+		"not-found-explanation": "Pare ca non ge riuscime a acchià 'u documende. Ne despiace.",
+		"load-error": "Errore!",
+		"load-error-explanation": "Ha assute 'n'errore duranne 'u carecamende d'u cangiatore. Pruéve arrete.",
+		"loading": "Stoche a careche... ({progress}%)",
+		"undo": "Annulle",
+		"redo": "Fà arrete"
+	},
+	"settings": {
+		"settings": "'Mbostaziune",
+		"user-settings": "Utende",
+		"document-settings": "Stu documende (pe tutte)",
+		"personal-document-settings": "Stu documende (pe te)"
+	},
+	"oauth": {
+		"authorization-required": "Autorizzazzione obbligatorie",
+		"hello": "Cià {user},",
+		"authorization-explanation": "L'applicazione a {app_url} vole cu accede a le seguende funziune de l'utenza toje de hive.js:",
+		"scope-all": "tutte le cunde tune",
+		"question": "Vuè ccu dè l'accesse?",
+		"warning": "Iapre l'uecchije",
+		"warning-explanation": "L'applicazione ste comuniche cu 'nu protocolle insicure!",
+		"deny": "No dà l'accesse",
+		"grant": "Dà l'accesse",
+		"redirecting": "Stoche a redirezione..."
+	}
+}
