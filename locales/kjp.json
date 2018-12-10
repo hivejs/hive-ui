@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rul1902"
+		]
+	},
+	"ui": {
+		"locale": "အ်ုထါ်လင်ႋဍာ",
+		"select-language": "မ်ုလုဲႋ ဆ်ုခၠါင်ဘာႋသာ့"
+	},
+	"session": {
+		"logging-in": "လော့ဂ်အင်ႋ အွးလင်ထါင်...",
+		"offline": "အဝ့်လါင်ႋ"
+	},
+	"editor": {
+		"editor": "အယ်ဍေဝ်တါ",
+		"select-editor": "လုဲႋအယ်ဍေဝ်တါ",
+		"choose-editor": "မ်ုလုဲႋအယ်ဍေဝ်တါ",
+		"not-found": "လ်ုဍး!",
+		"load-error": "ဆ်ုမး!",
+		"undo": "မာကှ်ေအေ့",
+		"redo": "မ်ုမာၮါင်"
+	},
+	"settings": {
+		"settings": "အင်းတါင်ဆ်ုယိုင့်လ်ုဖး",
+		"user-settings": "ဆ်ုသုံႋဏင့်ဆာႋ",
+		"document-settings": "လိက်မေံဏါင်းယိုဝ် (ကိုဝ်ၯာၯာင်ႋ)",
+		"personal-document-settings": "လိက်မေံဏါင်းယိုဝ် (ဏ်ုၯာင်ႋ)"
+	},
+	"oauth": {
+		"hello": "ဝေ့ {user},",
+		"scope-all": "ဏ်ုဏင့်ဆာႋအ်ုကုဂ်လုက်ကၠာ",
+		"warning": "ဖှ်ေတ်ုဒှ်!"
+	}
+}
