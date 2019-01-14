@@ -1,21 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Elisardojm"
+			"Elisardojm",
+			"Navhy"
 		]
 	},
 	"ui": {
 		"locale": "Local",
-		"select-language": "Seleccione a súa lingua"
+		"select-language": "Escolla a súa lingua"
 	},
 	"session": {
 		"authenticate": "Autenticación",
-		"authenticate-explanation": "Autenticar usando un dos seguintes métodos de autenticación:",
-		"logging-in": "Accedendo ao sistema...",
+		"authenticate-explanation": "Autenticar empregando un dos seguintes métodos de autenticación:",
+		"logging-in": "Estase a acceder ó sistema...",
 		"offline": "Desconectado",
 		"offline-subheading": "Xa non está conectado ó servidor de colaboración.",
-		"offline-reasons": "Isto pode suceder cando o servidor está reiniciando ou cando se perde a conexión a Internet completamente.",
-		"offline-explanation": "Non se preocupe! Todavía pode editar o documento. Unha vez que estea en liña de novo, os cambios enviaranse automaticamente."
+		"offline-reasons": "Isto pode acontecer cando o servidor está a reiniciar ou cando se perde a conexión á Internet de xeito completo.",
+		"offline-explanation": "Non se preocupe! Aínda pode editar o documento. Unha vez que estea en liña de novo, os cambios enviaranse automaticamente."
 	},
 	"editor": {
 		"editor": "Editor",
@@ -41,8 +42,8 @@
 		"hello": "Boas {user},",
 		"authorization-explanation": "A aplicación en {app_url} quere ter acceso á seguinte funcionalidade da súa conta hive.js:",
 		"scope-all": "toda a súa conta",
-		"question": "Quere conceder o acceso?",
-		"warning": "Alarma!",
+		"question": "Desexa conceder o acceso?",
+		"warning": "Advertenciaǃ",
 		"warning-explanation": "A aplicación comunícase a través dun protocolo inseguro.",
 		"deny": "Denegar o acceso",
 		"grant": "Permitir o acceso",
