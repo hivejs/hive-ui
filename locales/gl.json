@@ -7,15 +7,15 @@
 	},
 	"ui": {
 		"locale": "Local",
-		"select-language": "Escolla a súa lingua"
+		"select-language": "Seleccione a súa lingua"
 	},
 	"session": {
 		"authenticate": "Autenticación",
-		"authenticate-explanation": "Autenticar empregando un dos seguintes métodos de autenticación:",
-		"logging-in": "Estase a acceder ó sistema...",
+		"authenticate-explanation": "Autenticar usando un dos seguintes métodos de autenticación:",
+		"logging-in": "Accedendo ao sistema...",
 		"offline": "Desconectado",
 		"offline-subheading": "Xa non está conectado ó servidor de colaboración.",
-		"offline-reasons": "Isto pode acontecer cando o servidor está a reiniciar ou cando se perde a conexión á Internet de xeito completo.",
+		"offline-reasons": "Isto pode suceder cando o servidor está reiniciando ou cando se perde a conexión a Internet completamente.",
 		"offline-explanation": "Non se preocupe! Aínda pode editar o documento. Unha vez que estea en liña de novo, os cambios enviaranse automaticamente."
 	},
 	"editor": {
