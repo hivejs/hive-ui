@@ -1,24 +1,52 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"Mirin"
 		]
 	},
 	"ui": {
+		"locale": "Lokaĵaro",
 		"select-language": "Elekti vian lingvon"
+	},
+	"session": {
+		"authenticate": "Konfirmi aŭtenton",
+		"authenticate-explanation": "Konfirmu aŭtenton per unu el la jenaj metodoj:",
+		"logging-in": "Ensalutante...",
+		"offline": "Ne konektita",
+		"offline-subheading": "Vi ne plu estas konektita al la kunlaborada servilo.",
+		"offline-reasons": "Tio povas okazi se la servilo estas restartiĝanta aŭ se vi tute perdis Interretan konekton.",
+		"offline-explanation": "Ne maltrankviliĝu, tamen! Vi ankoraŭ povas redakti la dokumenton. Kiam vi estos rete konektita denove, viaj ŝanĝoj sendiĝos aŭtomate."
 	},
 	"editor": {
 		"editor": "Redaktilo",
+		"select-editor": "Elekti redaktilon",
 		"choose-editor": "Elekti redaktilon",
+		"choose-editor-explanation": "Elekti unu el la jenaj redaktiloj por kunlaborado pri dokumentoj de tipo {type}",
+		"not-found": "Ne trovita!",
+		"not-found-explanation": "Ŝajne ni ne trovis vian dokumenton, domaĝe.",
 		"load-error": "Eraro!",
-		"loading": "Ŝargado... ({progress}%)"
+		"load-error-explanation": "Nekonata eraro okazis dum ŝargado de la redaktilo. Bonvolu reprovi.",
+		"loading": "Ŝargado... ({progress}%)",
+		"undo": "Malfari",
+		"redo": "Refari"
 	},
 	"settings": {
 		"settings": "Agordoj",
-		"user-settings": "Uzanto"
+		"user-settings": "Uzanto",
+		"document-settings": "Ĉi tiu dokumento (por ĉiu)",
+		"personal-document-settings": "Ĉi tiu dokumento (por vi)"
 	},
 	"oauth": {
+		"authorization-required": "Postulas konfirmon de aŭtento",
 		"hello": "Saluton {user},",
-		"warning": "Averto!"
+		"authorization-explanation": "La aplikaĵo ĉe {app_url} deziras atingon al la jenaj funkcioj de via hive.js-konto:",
+		"scope-all": "ĉion de via konto",
+		"question": "Ĉu vi volas permesi atingon?",
+		"warning": "Averto!",
+		"warning-explanation": "La aplikaĵo komunikadas per ne sekura protokolo!",
+		"deny": "Malpermesi atingon",
+		"grant": "Permesi atingon",
+		"redirecting": "Alidirektante..."
 	}
 }
